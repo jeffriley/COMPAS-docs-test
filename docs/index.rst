@@ -12,6 +12,9 @@ COMPAS
 
 **C**\ ompact **O**\ bject **M**\ ergers: **P**\ opulation **A**\ strophysics and **S**\ tatistics
 
+by TeamCOMPAS
+
+
 |br|
 COMPAS homepage: https://compas.science/index.html |br|
 Code repository: https://github.com/TeamCOMPAS/COMPAS/ |br|
