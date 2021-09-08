@@ -10,8 +10,8 @@ If you do not have ``git`` installed, visit https://www.atlassian.com/git/tutori
 Getting your first copy of the COMPAS source code
 -------------------------------------------------
 
-You will need a ``GitHub`` account to access the COMPAS ``GitHub`` repository.  Once you have a ``GitHub`` account, you can get your 
-first copy of the COMPAS source code.
+While you don't need a ``GitHub`` account to read the the COMPAS ``GitHub`` repository, you will need an account to push your code 
+changes to the repository. If you plan to contribute to the COMPAS code base, you will need to create a ``GitHub`` account.
 
 
 To Fork or Not to Fork?
