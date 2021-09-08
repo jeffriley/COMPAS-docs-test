@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>h5view.py &mdash; COMPAS v02.22.00 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="rewrite-H5.py" href="post-processing-rewrite-h5.html" />
+    <link rel="prev" title="h5copy.py" href="post-processing-h5copy.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> COMPAS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="user-guide.html">User guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program-options.html">Program options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-files.html">Grid files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random-seed.html">Random seed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running-via-cmdline.html">Running COMPAS from the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running-via-python.html">Running COMPAS via Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running-via-docker.html">Running COMPAS via Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html">COMPAS Output</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="post-processing.html">Post-processing tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="post-processing-h5copy.html">h5copy.py</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">h5view.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#h5view-py-usage">h5view.py usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="post-processing-rewrite-h5.html">rewrite-H5.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example-compas-run.html">Tutorial: simple COMPAS run</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer-guide.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">COMPAS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="user-guide.html">User guide</a> &raquo;</li>
+        
+          <li><a href="post-processing.html">Post-processing tools</a> &raquo;</li>
+        
+      <li>h5view.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="h5view-py">
+<h1>h5view.py<a class="headerlink" href="#h5view-py" title="Permalink to this headline">¶</a></h1>
+<p>This program displays summary, header, and content information for specified COMPAS <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file(s). It's fairly rudimetary - the
+<code class="docutils literal notranslate"><span class="pre">HDF5</span></code> package provides <code class="docutils literal notranslate"><span class="pre">h5dump</span></code> and <code class="docutils literal notranslate"><span class="pre">h5ls</span></code> which have far more options than this program - but this program is somewhat
+COMPAS aware.</p>
+<p>Detailed information regarding <code class="docutils literal notranslate"><span class="pre">h5view.py</span></code> functionality is documented at the top of the <cite>h5view.py</cite> source file.</p>
+<div class="section" id="h5view-py-usage">
+<h2>h5view.py usage<a class="headerlink" href="#h5view-py-usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h5view</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME_FILTER</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="p">[</span><span class="n">RECURSION_DEPTH</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">S</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">H</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">C</span> <span class="p">[</span><span class="n">CONTENTS</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span> <span class="n">EXCLUDE_GROUP</span> <span class="p">[</span><span class="n">EXCLUDE_GROUP</span> <span class="o">...</span><span class="p">]]</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">V</span> <span class="n">SEED_LIST</span> <span class="p">[</span><span class="n">SEED_LIST</span> <span class="o">...</span><span class="p">]]</span>
+               <span class="nb">input</span> <span class="p">[</span><span class="nb">input</span> <span class="o">...</span><span class="p">]</span>
+
+<span class="n">HDF5</span> <span class="n">file</span> <span class="n">content</span> <span class="n">viewer</span><span class="o">.</span>
+
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">input</span>
+    <span class="nb">input</span> <span class="n">directory</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">file</span> <span class="n">name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>
+    <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">-</span><span class="n">f</span> <span class="n">FILENAME_FILTER</span><span class="p">,</span> <span class="o">--</span><span class="nb">filter</span> <span class="n">FILENAME_FILTER</span>
+    <span class="nb">input</span> <span class="n">filename</span> <span class="nb">filter</span> <span class="p">(</span><span class="n">default</span> <span class="o">=</span> <span class="o">*</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">r</span> <span class="p">[</span><span class="n">RECURSION_DEPTH</span><span class="p">],</span> <span class="o">--</span><span class="n">recursive</span> <span class="p">[</span><span class="n">RECURSION_DEPTH</span><span class="p">]</span>
+    <span class="n">recursion</span> <span class="n">depth</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">recursion</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">S</span><span class="p">,</span> <span class="o">--</span><span class="n">summary</span>
+    <span class="n">display</span> <span class="n">summary</span> <span class="n">output</span> <span class="k">for</span> <span class="n">HDF5</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">displat</span> <span class="n">summary</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">H</span><span class="p">,</span> <span class="o">--</span><span class="n">headers</span>
+    <span class="n">display</span> <span class="n">file</span> <span class="n">headers</span> <span class="k">for</span> <span class="n">HDF5</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">display</span> <span class="n">headers</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">C</span> <span class="p">[</span><span class="n">CONTENTS</span><span class="p">],</span> <span class="o">--</span><span class="n">contents</span> <span class="p">[</span><span class="n">CONTENTS</span><span class="p">]</span>
+    <span class="n">display</span> <span class="n">file</span> <span class="n">contents</span> <span class="k">for</span> <span class="n">HDF5</span> <span class="n">file</span><span class="p">:</span> <span class="n">argument</span> <span class="ow">is</span> <span class="n">number</span> <span class="n">of</span> <span class="n">entries</span> <span class="p">(</span><span class="o">+</span><span class="n">ve</span> <span class="kn">from</span> <span class="nn">top</span><span class="p">,</span> <span class="o">-</span><span class="n">ve</span>
+    <span class="kn">from</span> <span class="nn">bottom</span><span class="p">)</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">display</span> <span class="n">contents</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">stop</span><span class="o">-</span><span class="n">on</span><span class="o">-</span><span class="n">error</span>
+    <span class="n">stop</span> <span class="nb">all</span> <span class="n">copying</span> <span class="k">if</span> <span class="n">an</span> <span class="n">error</span> <span class="n">occurs</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">skip</span> <span class="n">to</span> <span class="nb">next</span> <span class="n">file</span> <span class="ow">and</span> <span class="k">continue</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">x</span> <span class="n">EXCLUDE_GROUP</span> <span class="p">[</span><span class="n">EXCLUDE_GROUP</span> <span class="o">...</span><span class="p">],</span> <span class="o">--</span><span class="n">exclude</span> <span class="n">EXCLUDE_GROUP</span> <span class="p">[</span><span class="n">EXCLUDE_GROUP</span> <span class="o">...</span><span class="p">]</span>
+    <span class="nb">list</span> <span class="n">of</span> <span class="nb">input</span> <span class="n">groups</span> <span class="n">to</span> <span class="n">be</span> <span class="n">excluded</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="nb">all</span> <span class="n">groups</span> <span class="n">will</span> <span class="n">be</span> <span class="n">copied</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">V</span> <span class="n">SEED_LIST</span> <span class="p">[</span><span class="n">SEED_LIST</span> <span class="o">...</span><span class="p">],</span> <span class="o">--</span><span class="n">seeds</span> <span class="n">SEED_LIST</span> <span class="p">[</span><span class="n">SEED_LIST</span> <span class="o">...</span><span class="p">]</span>
+    <span class="nb">list</span> <span class="n">of</span> <span class="n">seeds</span> <span class="n">to</span> <span class="n">be</span> <span class="n">printed</span> <span class="p">(</span><span class="k">for</span> <span class="n">content</span> <span class="n">printing</span><span class="p">)</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="nb">print</span> <span class="nb">all</span> <span class="n">seeds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">h5view</span><span class="o">.</span><span class="n">py</span> <span class="n">compas</span><span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">h5</span>
+</pre></div>
+</div>
+<p>will result in summary output of the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file <cite>compas-output-file.h5</cite> that looks something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Summary</span> <span class="n">of</span> <span class="n">HDF5</span> <span class="n">file</span> <span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">compas</span><span class="o">/</span><span class="n">h5out</span><span class="o">.</span><span class="n">h5</span>
+<span class="o">=======================================</span>
+
+<span class="n">File</span> <span class="n">size</span>    <span class="p">:</span> <span class="mf">2.1520</span> <span class="n">GB</span>
+<span class="n">Last</span> <span class="n">modified</span><span class="p">:</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">26</span> <span class="mi">16</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">12.928401</span>
+
+<span class="n">COMPAS</span> <span class="n">Filename</span>              <span class="n">Columns</span>   <span class="n">Entries</span>   <span class="n">Unique</span> <span class="n">SEEDs</span>
+<span class="o">--------------------------</span>   <span class="o">-------</span>   <span class="o">-------</span>   <span class="o">------------</span>
+<span class="n">Run_Details</span>                      <span class="mi">346</span>        <span class="mi">30</span>
+<span class="n">BSE_Common_Envelopes</span>              <span class="mi">73</span>    <span class="mi">582485</span>         <span class="mi">476514</span>
+<span class="n">BSE_Double_Compact_Objects</span>        <span class="mi">12</span>      <span class="mi">8725</span>           <span class="mi">8725</span>
+<span class="n">BSE_RLOF</span>                          <span class="mi">34</span>   <span class="mi">2997481</span>         <span class="mi">536332</span>
+<span class="n">BSE_Supernovae</span>                    <span class="mi">32</span>    <span class="mi">103000</span>          <span class="mi">87162</span>
+<span class="n">BSE_Switch_Log</span>                    <span class="mi">13</span>   <span class="mi">7472234</span>         <span class="mi">956623</span>
+<span class="n">BSE_System_Parameters</span>             <span class="mi">33</span>   <span class="mi">1050000</span>        <span class="mi">1050000</span>
+</pre></div>
+</div>
+<p>Other <code class="docutils literal notranslate"><span class="pre">h5view.py</span></code> options (listed above) display headers and file contents.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="post-processing-rewrite-h5.html" class="btn btn-neutral float-right" title="rewrite-H5.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="post-processing-h5copy.html" class="btn btn-neutral float-left" title="h5copy.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, The Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SSE class hierarchy &mdash; COMPAS v02.22.00 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SSE evolution model" href="SSE-evolution-model.html" />
+    <link rel="prev" title="Single star evolution" href="SSE.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> COMPAS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developer-guide.html">Developer guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="SSE.html">Single star evolution</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SSE class hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SSE-evolution-model.html">SSE evolution model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BSE.html">Binary star evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-ids.html">Object identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floating-point-comparisons.html">Floating-point comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants-dot-h.html">Constants source file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming-style.html">Programming style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer-building-compas.html">COMPAS build methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">COMPAS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="developer-guide.html">Developer guide</a> &raquo;</li>
+        
+          <li><a href="SSE.html">Single star evolution</a> &raquo;</li>
+        
+      <li>SSE class hierarchy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sse-class-hierarchy">
+<h1>SSE class hierarchy<a class="headerlink" href="#sse-class-hierarchy" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="#fig-1"><span class="std std-ref">Figure 1</span></a> shows the <code class="docutils literal notranslate"><span class="pre">SSE</span></code> class diagram, where the arrows indicate inheritance. The COMPAS <code class="docutils literal notranslate"><span class="pre">C++</span></code> code is implemented
+using multiple inheritance, and all stellar classes also inherit directly from the <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class (arrows not shown in
+<a class="reference internal" href="#fig-1"><span class="std std-ref">Figure 1</span></a> for clarity). Each of the stellar classes encapsulates data structures and algorithms specific to the evolutionary
+phase corresponding to the class.</p>
+<p>The main class for <code class="docutils literal notranslate"><span class="pre">SSE</span></code> is the <code class="docutils literal notranslate"><span class="pre">Star</span></code> class. The <code class="docutils literal notranslate"><span class="pre">Star</span></code> class is a wrapper that abstracts away the details of the star and the
+evolution. Internally the <code class="docutils literal notranslate"><span class="pre">Star</span></code> class maintains a pointer to an object representing the star being evolved, with that object being
+an instance of one of the following classes:</p>
+<blockquote>
+<div><table border="1" class="colwidths-given aligned-text docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">MS_lte_07</span></code></td>
+<td>Main Sequence <span class="math notranslate nohighlight">\(\small \leq 0.07 M_\odot\)</span></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">MS_gt_07</span></code></td>
+<td>Main Sequence <span class="math notranslate nohighlight">\(\small \gt 0.07 M_\odot\)</span></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">CH</span></code></td>
+<td>Chemically Homogeneous</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HG</span></code></td>
+<td>Hertzsprung Gap</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FGB</span></code></td>
+<td>First Giant Branch</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">CHeB</span></code></td>
+<td>Core Helium Burning</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">EAGB</span></code></td>
+<td>Early Asymptotic Giant Branch</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">TPAGB</span></code></td>
+<td>Thermally Pulsing Asymptotic Giant Branch</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">HeMS</span></code></td>
+<td>Helium Main Sequence</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HeHG</span></code></td>
+<td>Helium Hertzsprung Gap</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">HeGB</span></code></td>
+<td>Helium Giant Branch</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HeWD</span></code></td>
+<td>Helium White Dwarf</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">COWD</span></code></td>
+<td>Carbon-Oxygen White Dwarf</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ONeWD</span></code></td>
+<td>Oxygen-Neon White Dwarf</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">NS</span></code></td>
+<td>Neutron Star</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">BH</span></code></td>
+<td>Black Hole</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">MR</span></code></td>
+<td>Massless Remnant</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>which track the phases from <a class="reference internal" href="references.html"><span class="doc">Hurley et al. (2000)</span></a>, with the exception of the <code class="docutils literal notranslate"><span class="pre">CH</span></code> class for Chemically Homogeneous stars,
+which are not described in <a class="reference internal" href="references.html"><span class="doc">Hurley et al. (2000)</span></a>.</p>
+<p>Several other <code class="docutils literal notranslate"><span class="pre">SSE</span></code> classes are defined:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> <br />
+<code class="docutils literal notranslate"><span class="pre">MainSequence</span></code> <br />
+<code class="docutils literal notranslate"><span class="pre">GiantBranch</span></code> <br />
+<code class="docutils literal notranslate"><span class="pre">Remnants</span></code> <br />
+<code class="docutils literal notranslate"><span class="pre">WhiteDwarfs</span></code> <br /></div></blockquote>
+<p>These extra classes are included to allow inheritance of common functionality.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class is the main class for the underlying star object held by the <code class="docutils literal notranslate"><span class="pre">Star</span></code> class. The <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class defines all member
+variables, and many member functions that provide common functionality. Similarly, the <code class="docutils literal notranslate"><span class="pre">MainSequence</span></code> and <code class="docutils literal notranslate"><span class="pre">GiantBranch</span></code> classes provide
+repositories for common functionality for main sequence and giant branch stars respectively, and the the <code class="docutils literal notranslate"><span class="pre">Remnants</span></code> and <code class="docutils literal notranslate"><span class="pre">WhiteDwarfs</span></code> classes
+provide repositories for common functionality for remnant and white dwarf stars respectively.</p>
+<div class="align-center figure" id="id1">
+<span id="fig-1"></span><a class="reference internal image-reference" href="_images/SSE-class-diagram-compressed.png"><img alt="SSE class diagram" src="_images/SSE-class-diagram-compressed.png" style="width: 650px; height: 455px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1 SSE class diagram.</span></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">CH</span></code> (Chemically Homogeneous) class stars inherit from the <code class="docutils literal notranslate"><span class="pre">MS_gt_07</span></code> class because (in this implementation) they are just (large) main
+sequence stars that have a static radius.</p>
+<p><code class="docutils literal notranslate"><span class="pre">HG</span></code> (Hertzsprung Gap) class stars inherit from the <code class="docutils literal notranslate"><span class="pre">GiantBranch</span></code> class because they share the giant branch parameters described in
+<a class="reference internal" href="references.html"><span class="doc">Hurley et al. (2000)</span></a>, section 5.2.</p>
+<p>Each class has its own set of member functions that calculate various attributes of the star according to the phase the class represents (using
+the equations and parameters from <a class="reference internal" href="references.html"><span class="doc">Hurley et al. (2000)</span></a> where applicable).</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="SSE-evolution-model.html" class="btn btn-neutral float-right" title="SSE evolution model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="SSE.html" class="btn btn-neutral float-left" title="Single star evolution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, The Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
