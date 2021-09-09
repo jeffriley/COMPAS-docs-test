@@ -4,7 +4,7 @@ COMPAS code repository
 The public COMPAS code resides in a ``GitHub``\ [#f1]_ repository.  You will need access to ``GitHub``, and the ``git`` version 
 control system installed.
 
-If you do not have ``git`` installed, visit `Install Git`` <https://www.atlassian.com/git/tutorials/install-git>__ and follow the instructions there.
+If you do not have ``git`` installed, visit `Install Git <https://www.atlassian.com/git/tutorials/install-git>`__ and follow the instructions there.
 
 
 Getting your first copy of the COMPAS source code
