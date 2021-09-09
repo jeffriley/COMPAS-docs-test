@@ -14,4 +14,4 @@ To start using COMPAS, get a copy of the code, and install the libraries and too
    git-details
    COMPAS-dependencies
 
-If you use COMPAS in preparing any publications, please cite the COMPAS code papers (:bolditalic:`list papers?`) in your publications.
+If you use COMPAS in preparing any publications, please cite the COMPAS code papers (:bolditalictext:`list papers?`) in your publications.
