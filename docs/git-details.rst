@@ -24,8 +24,9 @@ created, are linked on ``GitHub``.
 
 Cloning a repository creates a copy of the repository on your local system.
 
-You can read about the pros and cons of forking a ``GitHub`` repository here at 
-https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189
+See `The difference between forking and cloning a repository <https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189>`__ 
+to learn more about the pros and cons of forking a ``GitHub`` repository.
+
 
 If you choose to fork the COMPAS repository, use the “fork” button at the top right of the ``GitHub`` repository page.
 
