@@ -10,6 +10,6 @@ First check if you have ``python3`` installed. If you do, typing the following s
 
 If you do not have ``python3`` installed, install it by following the instructions below for your OS:
 
-- For macOS, We recommend installing ``Python`` and its libraries using MacPorts. You can follow the instructions on https://astrofrog.github.io/macports-python/
+- For macOS, We recommend installing ``Python`` and its libraries using MacPorts. You can follow the instructions on `MacPorts Python installation on Mac <https://astrofrog.github.io/macports-python/>__\.
 - For Linux, install `python3` using your package manager (e.g. in Ubuntu, run `sudo apt-get install python3`). We recommend installing the required python libraries using the package installer ``pip``. E.g. To install ``numpy``, run `pip install numpy`.
 
