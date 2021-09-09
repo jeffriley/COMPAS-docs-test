@@ -12,7 +12,7 @@ COMPAS
 
 **C**\ ompact **O**\ bject **M**\ ergers: **P**\ opulation **A**\ strophysics and **S**\ tatistics
 
-by TeamCOMPAS
+... `by TeamCOMPAS`
 
 
 |br|
