@@ -12,7 +12,7 @@ The ``BSE`` class diagram is shown in :ref:`Figure 3 <fig-3>`.
     :figclass: align-center
     :alt: BSE class diagram
 
-    Figure 3 BSE class diagram.
+    Figure 3 BSE class & container diagram.
 
 The ``BSE`` inheritance hierarchy is as follows:
 

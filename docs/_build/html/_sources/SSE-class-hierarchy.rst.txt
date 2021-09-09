@@ -77,7 +77,7 @@ provide repositories for common functionality for remnant and white dwarf stars 
     :figclass: align-center
     :alt: SSE class diagram
 
-    Figure 1 SSE class diagram.
+    Figure 1 SSE class & container diagram.
 
 ``CH`` (Chemically Homogeneous) class stars inherit from the ``MS_gt_07`` class because (in this implementation) they are just (large) main
 sequence stars that have a static radius.

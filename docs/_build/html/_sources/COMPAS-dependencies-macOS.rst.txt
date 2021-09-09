@@ -4,7 +4,7 @@ macOS installation
 It is strongly recommended to update to the latest version of macOS through the App Store. You can find what macOS version you are 
 using by clicking on the Apple symbol on the top left of your screen and clicking "About This Mac".
 
-The next step is to install or update Xcode. You can find it directly in the App Store or at https://developer.apple.com/xcode/. 
+The next step is to install or update Xcode. You can find it directly in the App Store or at `Xcode <https://developer.apple.com/xcode/>`__\ . 
 Note: Xcode installation requires around 20 GB of disk space. If you are low on disk space, you may consider installing a ``C++`` 
 compiler directly.
  

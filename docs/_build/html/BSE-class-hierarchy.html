@@ -163,12 +163,7 @@
       <li>BSE class hierarchy</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
   </ul>
 
   
@@ -182,7 +177,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">BSE</span></code> class diagram is shown in <a class="reference internal" href="#fig-3"><span class="std std-ref">Figure 3</span></a>.</p>
 <div class="align-center figure" id="id1">
 <span id="fig-3"></span><a class="reference internal image-reference" href="_images/BSE-class-diagram-compressed.png"><img alt="BSE class diagram" src="_images/BSE-class-diagram-compressed.png" style="width: 300px; height: 293px;" /></a>
-<p class="caption"><span class="caption-text">Figure 3 BSE class diagram.</span></p>
+<p class="caption"><span class="caption-text">Figure 3 BSE class &amp; container diagram.</span></p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">BSE</span></code> inheritance hierarchy is as follows:</p>
 <blockquote>
@@ -213,7 +208,7 @@ part of a binary system (there are some functions that are defined in the <code 
 attributes and behaviour – in some cases the stellar attributes that are required to make these calculations reside in the <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class so
 it is easier and cleaner to define the functions there).</p>
 <p>An instance of the <code class="docutils literal notranslate"><span class="pre">BinaryConstituentStar</span></code> class is a single component star of a binary system being evolved by COMPAS, and inhertis from the
-<code class="docutils literal notranslate"><span class="pre">Star</span></code>, so will evolve over time through various SSE classes shown in <a class="reference internal" href="SSE-class-hierarchy.html#fig-1"><span class="std std-ref">Figure 1 SSE class diagram.</span></a>. The <code class="docutils literal notranslate"><span class="pre">BinaryConstituentStar</span></code> class defines additional data
+<code class="docutils literal notranslate"><span class="pre">Star</span></code>, so will evolve over time through various SSE classes shown in <a class="reference internal" href="SSE-class-hierarchy.html#fig-1"><span class="std std-ref">Figure 1 SSE class &amp; container diagram.</span></a>. The <code class="docutils literal notranslate"><span class="pre">BinaryConstituentStar</span></code> class defines additional data
 structures and algorithms (to the data structures and algorithms provided by the <code class="docutils literal notranslate"><span class="pre">SSE</span></code> classes) required to support the evolution of a binary
 system component star.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">BaseBinaryStar</span></code> class is the main class for the underlying binary star object held by the <code class="docutils literal notranslate"><span class="pre">BinaryStar</span></code> class. The <code class="docutils literal notranslate"><span class="pre">BaseBinaryStar</span></code>

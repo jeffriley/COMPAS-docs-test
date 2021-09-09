@@ -4,14 +4,14 @@ COMPAS code repository
 The public COMPAS code resides in a ``GitHub``\ [#f1]_ repository.  You will need access to ``GitHub``, and the ``git`` version 
 control system installed.
 
-If you do not have ``git`` installed, visit https://www.atlassian.com/git/tutorials/install-git and follow the instructions there.
+If you do not have ``git`` installed, visit `Install Git <https://www.atlassian.com/git/tutorials/install-git>`__ and follow the instructions there.
 
 
 Getting your first copy of the COMPAS source code
 -------------------------------------------------
 
-You will need a ``GitHub`` account to access the COMPAS ``GitHub`` repository.  Once you have a ``GitHub`` account, you can get your 
-first copy of the COMPAS source code.
+While you don't need a ``GitHub`` account to read the COMPAS ``GitHub`` repository, you will need an account to push your code 
+changes to the repository. If you plan to contribute to the COMPAS code base, you will need to create a ``GitHub`` account.
 
 
 To Fork or Not to Fork?
@@ -24,8 +24,9 @@ created, are linked on ``GitHub``.
 
 Cloning a repository creates a copy of the repository on your local system.
 
-You can read about the pros and cons of forking a ``GitHub`` repository here at 
-https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189
+See `The difference between forking and cloning a repository <https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189>`__ 
+to learn more about the pros and cons of forking a ``GitHub`` repository.
+
 
 If you choose to fork the COMPAS repository, use the “fork” button at the top right of the ``GitHub`` repository page.
 
