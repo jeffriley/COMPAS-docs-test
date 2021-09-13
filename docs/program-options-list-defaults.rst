@@ -838,6 +838,8 @@ Multiplicative constant for Wolf Rayet winds. Note that wind mass loss will also
 ``overall-wind-mass-loss-multiplier``. |br|
 Default = 1.0
 
+.. _options-props-X:
+.. _options-props-Y:
 .. _options-props-Z:
 
 :ref:`Back to Top <options-props-top>`
