@@ -9,20 +9,20 @@ For example, to specify the program option property ``RANDOM_SEED``, use::
     PROGRAM OPTION::RANDOM_SEED
 
 
-.. _options-props-top:
+.. _spec-options-props-top:
 
 Following is an alphabetical list of program option properties available for inclusion in log file record specifiers.
 
 **Jump to**
-:ref:`A <options-props-A>` :ref:`B <options-props-B>` :ref:`C <options-props-C>` :ref:`D <options-props-D>`
-:ref:`E <options-props-E>` :ref:`F <options-props-F>` :ref:`G <options-props-G>` :ref:`H <options-props-H>`
-:ref:`I <options-props-I>` :ref:`J <options-props-J>` :ref:`K <options-props-K>` :ref:`L <options-props-L>`
-:ref:`M <options-props-M>` :ref:`N <options-props-N>` :ref:`O <options-props-O>` :ref:`P <options-props-P>`
-:ref:`Q <options-props-Q>` :ref:`R <options-props-R>` :ref:`S <options-props-S>` :ref:`T <options-props-T>`
-:ref:`U <options-props-U>` :ref:`V <options-props-V>` :ref:`W <options-props-W>` :ref:`X <options-props-X>`
-:ref:`Y <options-props-Y>` :ref:`Z <options-props-Z>`
+:ref:`A <spec-options-props-A>` :ref:`B <spec-options-props-B>` :ref:`C <spec-options-props-C>` :ref:`D <spec-options-props-D>`
+:ref:`E <spec-options-props-E>` :ref:`F <spec-options-props-F>` :ref:`G <spec-options-props-G>` :ref:`H <spec-options-props-H>`
+:ref:`I <spec-options-props-I>` :ref:`J <spec-options-props-J>` :ref:`K <spec-options-props-K>` :ref:`L <spec-options-props-L>`
+:ref:`M <spec-options-props-M>` :ref:`N <spec-options-props-N>` :ref:`O <spec-options-props-O>` :ref:`P <spec-options-props-P>`
+:ref:`Q <spec-options-props-Q>` :ref:`R <spec-options-props-R>` :ref:`S <spec-options-props-S>` :ref:`T <spec-options-props-T>`
+:ref:`U <spec-options-props-U>` :ref:`V <spec-options-props-V>` :ref:`W <spec-options-props-W>` :ref:`X <spec-options-props-X>`
+:ref:`Y <spec-options-props-Y>` :ref:`Z <spec-options-props-Z>`
 
-.. _options-props-A:
+.. _spec-options-props-A:
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -104,9 +104,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Conserve_AngMom@\ Circ
 
-.. _options-props-B:
+.. _spec-options-props-B:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -124,9 +124,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - BH_Kicks
 
-.. _options-props-C:
+.. _spec-options-props-C:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -352,11 +352,11 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - CE_Slope_Kruckow
 
-.. _options-props-D:
+.. _spec-options-props-D:
 
-.. _options-props-E:
+.. _spec-options-props-E:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -454,9 +454,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Envelope_State_Prscrptn
 
-.. _options-props-F:
+.. _spec-options-props-F:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -474,13 +474,13 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Fryer_SN_Engine
 
-.. _options-props-G:
+.. _spec-options-props-G:
 
-.. _options-props-H:
+.. _spec-options-props-H:
 
-.. _options-props-I:
+.. _spec-options-props-I:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -594,11 +594,11 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Initial_Mass_Func_Power
 
-.. _options-props-J:
+.. _spec-options-props-J:
 
-.. _options-props-K:
+.. _spec-options-props-K:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -952,9 +952,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - LBV_Factor
 
-.. _options-props-L:
+.. _spec-options-props-L:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -972,9 +972,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - LBV_Mass_Loss_Prscrptn
 
-.. _options-props-M:
+.. _spec-options-props-M:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1360,9 +1360,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - MM_Kick_Multiplier_NS
 
-.. _options-props-N:
+.. _spec-options-props-N:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1412,9 +1412,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - NS_EOS
 
-.. _options-props-O:
+.. _spec-options-props-O:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1480,9 +1480,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Orbital_Period_Min
 
-.. _options-props-P:
+.. _spec-options-props-P:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1708,11 +1708,11 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Pulsar_Minimum_Mag_Field
 
-.. _options-props-Q:
+.. _spec-options-props-Q:
 
-.. _options-props-R:
+.. _spec-options-props-R:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1778,9 +1778,9 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Rotational_Velocity_Dstrbtn
 
-.. _options-props-S:
+.. _spec-options-props-S:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1862,15 +1862,15 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - Stellar_Zeta_Prscrptn
 
-.. _options-props-T:
+.. _spec-options-props-T:
 
-.. _options-props-U:
+.. _spec-options-props-U:
 
-.. _options-props-V:
+.. _spec-options-props-V:
 
-.. _options-props-W:
+.. _spec-options-props-W:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -1888,13 +1888,13 @@ Following is an alphabetical list of program option properties available for inc
    * - Header String:
      - WR_Factor
 
-.. _options-props-X:
+.. _spec-options-props-X:
 
-.. _options-props-Y:
+.. _spec-options-props-Y:
 
-.. _options-props-Z:
+.. _spec-options-props-Z:
 
-:ref:`Back to Top <options-props-top>`
+:ref:`Back to Top <spec-options-props-top>`
 
 .. flat-table::
    :widths: 25 75 1 1
