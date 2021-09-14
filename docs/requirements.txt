@@ -5,4 +5,3 @@ sphinx==4.2.0
 sphinx_rtd_theme==0.5.1
 readthedocs-sphinx-search==0.1.0
 linuxdoc==20210324
-python==3.7
