@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -182,62 +184,62 @@ phase corresponding to the class.</p>
 evolution. Internally the <code class="docutils literal notranslate"><span class="pre">Star</span></code> class maintains a pointer to an object representing the star being evolved, with that object being
 an instance of one of the following classes:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given aligned-text docutils">
+<div><table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">MS_lte_07</span></code></td>
-<td>Main Sequence <span class="math notranslate nohighlight">\(\small \leq 0.07 M_\odot\)</span></td>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">MS_lte_07</span></code></p></td>
+<td><p>Main Sequence <span class="math notranslate nohighlight">\(\small \leq 0.07 M_\odot\)</span></p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">MS_gt_07</span></code></td>
-<td>Main Sequence <span class="math notranslate nohighlight">\(\small \gt 0.07 M_\odot\)</span></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">MS_gt_07</span></code></p></td>
+<td><p>Main Sequence <span class="math notranslate nohighlight">\(\small \gt 0.07 M_\odot\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">CH</span></code></td>
-<td>Chemically Homogeneous</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CH</span></code></p></td>
+<td><p>Chemically Homogeneous</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HG</span></code></td>
-<td>Hertzsprung Gap</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">HG</span></code></p></td>
+<td><p>Hertzsprung Gap</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">FGB</span></code></td>
-<td>First Giant Branch</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FGB</span></code></p></td>
+<td><p>First Giant Branch</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">CHeB</span></code></td>
-<td>Core Helium Burning</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CHeB</span></code></p></td>
+<td><p>Core Helium Burning</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">EAGB</span></code></td>
-<td>Early Asymptotic Giant Branch</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">EAGB</span></code></p></td>
+<td><p>Early Asymptotic Giant Branch</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">TPAGB</span></code></td>
-<td>Thermally Pulsing Asymptotic Giant Branch</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TPAGB</span></code></p></td>
+<td><p>Thermally Pulsing Asymptotic Giant Branch</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">HeMS</span></code></td>
-<td>Helium Main Sequence</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">HeMS</span></code></p></td>
+<td><p>Helium Main Sequence</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HeHG</span></code></td>
-<td>Helium Hertzsprung Gap</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">HeHG</span></code></p></td>
+<td><p>Helium Hertzsprung Gap</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">HeGB</span></code></td>
-<td>Helium Giant Branch</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">HeGB</span></code></p></td>
+<td><p>Helium Giant Branch</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">HeWD</span></code></td>
-<td>Helium White Dwarf</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">HeWD</span></code></p></td>
+<td><p>Helium White Dwarf</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">COWD</span></code></td>
-<td>Carbon-Oxygen White Dwarf</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">COWD</span></code></p></td>
+<td><p>Carbon-Oxygen White Dwarf</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ONeWD</span></code></td>
-<td>Oxygen-Neon White Dwarf</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONeWD</span></code></p></td>
+<td><p>Oxygen-Neon White Dwarf</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">NS</span></code></td>
-<td>Neutron Star</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NS</span></code></p></td>
+<td><p>Neutron Star</p></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">BH</span></code></td>
-<td>Black Hole</td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BH</span></code></p></td>
+<td><p>Black Hole</p></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">MR</span></code></td>
-<td>Massless Remnant</td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">MR</span></code></p></td>
+<td><p>Massless Remnant</p></td>
 </tr>
 </tbody>
 </table>
@@ -246,11 +248,12 @@ an instance of one of the following classes:</p>
 which are not described in <a class="reference internal" href="references.html"><span class="doc">Hurley et al. (2000)</span></a>.</p>
 <p>Several other <code class="docutils literal notranslate"><span class="pre">SSE</span></code> classes are defined:</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> <br />
+<div><p><code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> <br />
 <code class="docutils literal notranslate"><span class="pre">MainSequence</span></code> <br />
 <code class="docutils literal notranslate"><span class="pre">GiantBranch</span></code> <br />
 <code class="docutils literal notranslate"><span class="pre">Remnants</span></code> <br />
-<code class="docutils literal notranslate"><span class="pre">WhiteDwarfs</span></code> <br /></div></blockquote>
+<code class="docutils literal notranslate"><span class="pre">WhiteDwarfs</span></code> <br /></p>
+</div></blockquote>
 <p>These extra classes are included to allow inheritance of common functionality.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class is the main class for the underlying star object held by the <code class="docutils literal notranslate"><span class="pre">Star</span></code> class. The <code class="docutils literal notranslate"><span class="pre">BaseStar</span></code> class defines all member
 variables, and many member functions that provide common functionality. Similarly, the <code class="docutils literal notranslate"><span class="pre">MainSequence</span></code> and <code class="docutils literal notranslate"><span class="pre">GiantBranch</span></code> classes provide
@@ -258,7 +261,7 @@ repositories for common functionality for main sequence and giant branch stars r
 provide repositories for common functionality for remnant and white dwarf stars respectively.</p>
 <div class="align-center figure" id="id1">
 <span id="fig-1"></span><a class="reference internal image-reference" href="_images/SSE-class-diagram-compressed.png"><img alt="SSE class diagram" src="_images/SSE-class-diagram-compressed.png" style="width: 650px; height: 455px;" /></a>
-<p class="caption"><span class="caption-text">Figure 1 SSE class &amp; container diagram.</span></p>
+<p class="caption"><span class="caption-text">Figure 1 SSE class &amp; container diagram.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">CH</span></code> (Chemically Homogeneous) class stars inherit from the <code class="docutils literal notranslate"><span class="pre">MS_gt_07</span></code> class because (in this implementation) they are just (large) main
 sequence stars that have a static radius.</p>

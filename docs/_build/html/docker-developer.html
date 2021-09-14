@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -186,47 +187,47 @@
 <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> CI/CD process.</p>
 <p>Whenever a push to <a class="reference external" href="https://github.com/TeamCOMPAS/COMPAS/tree/dev">TeamCOMPAS/dev</a> occurs, a continuous deployment process
 automatically
-builds<a class="footnote-reference" href="#f1" id="id1">[1]</a> a new image and deploys it to <code class="docutils literal notranslate"><span class="pre">dockerHub</span></code> with a <cite>tag</cite><a class="footnote-reference" href="#f2" id="id2">[2]</a> that corresponds to the value of <code class="docutils literal notranslate"><span class="pre">VERSION_STRING</span></code>
+builds<a class="footnote-reference brackets" href="#f1" id="id1">1</a> a new image and deploys it to <code class="docutils literal notranslate"><span class="pre">dockerHub</span></code> with a <cite>tag</cite><a class="footnote-reference brackets" href="#f2" id="id2">2</a> that corresponds to the value of <code class="docutils literal notranslate"><span class="pre">VERSION_STRING</span></code>
 in <code class="docutils literal notranslate"><span class="pre">changelog.h</span></code> (see <a class="reference internal" href="changelog.html"><span class="doc">Change log</span></a> for detailed information regarding <code class="docutils literal notranslate"><span class="pre">changelog.h</span></code>).</p>
-<p>At time of writing, <cite>GitHub Actions</cite><a class="footnote-reference" href="#f3" id="id3">[3]</a> facilitates the above process. While this is convenient (because it's free and well
+<p>At time of writing, <cite>GitHub Actions</cite><a class="footnote-reference brackets" href="#f3" id="id3">3</a> facilitates the above process. While this is convenient (because it's free and well
 supported) it is somewhat slow - the COMPAS <code class="docutils literal notranslate"><span class="pre">Docker</span></code> image is available 5 - 10 minutes after pushing/merging. A future improvement
-may be to create a <cite>runner</cite><a class="footnote-reference" href="#f4" id="id4">[4]</a> locally with a high core count that can be used to compile COMPAS quickly.</p>
+may be to create a <cite>runner</cite><a class="footnote-reference brackets" href="#f4" id="id4">4</a> locally with a high core count that can be used to compile COMPAS quickly.</p>
 <p>The Github Actions configuration is in <code class="docutils literal notranslate"><span class="pre">/.github/workflows/dockerhub-ci.yml</span></code>.</p>
 <p>See the <a class="reference external" href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment">Atlassian CI/CD</a>
 documentation for detailed information regarding the <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> CI/CD process.</p>
 </div>
 <div class="section" id="dockerfile">
 <h2>Dockerfile<a class="headerlink" href="#dockerfile" title="Permalink to this headline">¶</a></h2>
-<p>The Dockerfile<a class="footnote-reference" href="#f5" id="id5">[5]</a> defines how the docker image is constructed.</p>
+<p>The Dockerfile<a class="footnote-reference brackets" href="#f5" id="id5">5</a> defines how the docker image is constructed.</p>
 <p>Images are created as a combination of layers. During the build process, each layer is cached and only updated on subsequent builds
 if that layer would change.</p>
 <p>The Dockerfile for COMPAS is made up of 8 layers:</p>
 <blockquote>
-<div><p><strong>FROM ubuntu:18.04</strong><a class="footnote-reference" href="#f6" id="id6">[6]</a> <br />
+<div><p><strong>FROM ubuntu:18.04</strong><a class="footnote-reference brackets" href="#f6" id="id6">6</a> <br />
 Use <a class="reference external" href="https://hub.docker.com/_/ubuntu">Ubuntu 18.04</a> as a base (provided by Docker Hub)</p>
-<p><strong>WORKDIR /app/COMPAS</strong><a class="footnote-reference" href="#f7" id="id7">[7]</a> <br />
+<p><strong>WORKDIR /app/COMPAS</strong><a class="footnote-reference brackets" href="#f7" id="id7">7</a> <br />
 Effectively <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/app/COMPAS</span></code> within the container.</p>
-<p><strong>RUN apt-get update &amp;&amp; apt-get install -y ...</strong><a class="footnote-reference" href="#f8" id="id8">[8]</a> <br />
+<p><strong>RUN apt-get update &amp;&amp; apt-get install -y ...</strong><a class="footnote-reference brackets" href="#f8" id="id8">8</a> <br />
 Install the required dependencies.</p>
 <blockquote>
 <div><ul class="simple">
-<li><cite>-y</cite> so there's no prompt to install any of the packages.</li>
-<li><cite>update</cite> and <cite>install</cite> are in the same layer because now if there are any updates, it will force all of the dependencies
-to be re-installed</li>
+<li><p><cite>-y</cite> so there's no prompt to install any of the packages.</p></li>
+<li><p><cite>update</cite> and <cite>install</cite> are in the same layer because now if there are any updates, it will force all of the dependencies
+to be re-installed</p></li>
 </ul>
 </div></blockquote>
-<p><strong>RUN pip3 install numpy</strong><a class="footnote-reference" href="#f8" id="id9">[8]</a> <br />
+<p><strong>RUN pip3 install numpy</strong><a class="footnote-reference brackets" href="#f8" id="id9">8</a> <br />
 Install numpy.</p>
-<p><strong>COPY src/ src</strong><a class="footnote-reference" href="#f9" id="id10">[9]</a> <br />
+<p><strong>COPY src/ src</strong><a class="footnote-reference brackets" href="#f9" id="id10">9</a> <br />
 Copy <code class="docutils literal notranslate"><span class="pre">./src/</span></code> directory from the local machine to <code class="docutils literal notranslate"><span class="pre">./src</span></code> in the container (remembering that <cite>WORKDIR</cite> changes the cwd).</p>
-<p><strong>RUN mkdir obj bin logs</strong><a class="footnote-reference" href="#f8" id="id11">[8]</a> <br />
+<p><strong>RUN mkdir obj bin logs</strong><a class="footnote-reference brackets" href="#f8" id="id11">8</a> <br />
 Create the directories required by COMPAS.</p>
-<p><strong>ENV COMPAS_ROOT_DIR /app/COMPAS</strong><a class="footnote-reference" href="#f10" id="id12">[10]</a> <br />
+<p><strong>ENV COMPAS_ROOT_DIR /app/COMPAS</strong><a class="footnote-reference brackets" href="#f10" id="id12">10</a> <br />
 Set the required environment variable(s).</p>
-<p><strong>RUN cd src &amp;&amp; make -f Makefile.docker -j $(nproc)</strong><a class="footnote-reference" href="#f8" id="id13">[8]</a> <br />
+<p><strong>RUN cd src &amp;&amp; make -f Makefile.docker -j $(nproc)</strong><a class="footnote-reference brackets" href="#f8" id="id13">8</a> <br />
 Change to the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory; make COMPAS using a specific makefile (see below) and as many cores as possible.</p>
 </div></blockquote>
-<p>A Dockerfile usually ends with a <code class="docutils literal notranslate"><span class="pre">CMD</span></code> directive that specifies what command should run when the container is started<a class="footnote-reference" href="#f11" id="id14">[11]</a>.
+<p>A Dockerfile usually ends with a <code class="docutils literal notranslate"><span class="pre">CMD</span></code> directive that specifies what command should run when the container is started<a class="footnote-reference brackets" href="#f11" id="id14">11</a>.
 The COMPAS Dockerfile doesn't have a <code class="docutils literal notranslate"><span class="pre">CMD</span></code> directive because some users will want to run the executable directly and some will
 want to use <code class="docutils literal notranslate"><span class="pre">pythonSubmit.py</span></code>.</p>
 </div>
@@ -235,8 +236,8 @@ want to use <code class="docutils literal notranslate"><span class="pre">pythonS
 <p>A separate makefile is required for <code class="docutils literal notranslate"><span class="pre">Docker</span></code> in this scenario for two reasons:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>To separate compiled files from source files</li>
-<li>To prevent the usage of the <code class="docutils literal notranslate"><span class="pre">gcc</span></code> <code class="docutils literal notranslate"><span class="pre">-march=native</span></code> compiler option</li>
+<li><p>To separate compiled files from source files</p></li>
+<li><p>To prevent the usage of the <code class="docutils literal notranslate"><span class="pre">gcc</span></code> <code class="docutils literal notranslate"><span class="pre">-march=native</span></code> compiler option</p></li>
 </ol>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">-march=native</span></code> is a very useful optimisation for users who compile and run COMPAS on the same machine, however it causes fatal
@@ -249,72 +250,41 @@ See <a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/x86-O
 <p>The Docker makefile provided (<code class="docutils literal notranslate"><span class="pre">Makefile.docker</span></code>) functions exactly like the local makefile provided (<code class="docutils literal notranslate"><span class="pre">Makefile</span></code>) in all other
 respects.  See <a class="reference internal" href="COMPAS-local-build.html"><span class="doc">Building COMPAS locally</span></a> for a detailed description of the local makefile functionality.</p>
 <p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/build/">https://docs.docker.com/engine/reference/commandline/build/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/tag/">https://docs.docker.com/engine/reference/commandline/tag/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><a class="reference external" href="https://github.com/features/actions">https://github.com/features/actions</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#runner">https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#runner</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id6">[6]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#from">https://docs.docker.com/engine/reference/builder/#from</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[7]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#workdir">https://docs.docker.com/engine/reference/builder/#workdir</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f8" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[8]</td><td><em>(<a class="fn-backref" href="#id8">1</a>, <a class="fn-backref" href="#id9">2</a>, <a class="fn-backref" href="#id11">3</a>, <a class="fn-backref" href="#id13">4</a>)</em> <a class="reference external" href="https://docs.docker.com/engine/reference/builder/#run">https://docs.docker.com/engine/reference/builder/#run</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f9" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id10">[9]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#copy">https://docs.docker.com/engine/reference/builder/#copy</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f10" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id12">[10]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#env">https://docs.docker.com/engine/reference/builder/#env</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f11" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id14">[11]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/build/">https://docs.docker.com/engine/reference/commandline/build/</a></p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/tag/">https://docs.docker.com/engine/reference/commandline/tag/</a></p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/features/actions">https://github.com/features/actions</a></p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p><a class="reference external" href="https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#runner">https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#runner</a></p>
+</dd>
+<dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></p>
+</dd>
+<dt class="label" id="f6"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#from">https://docs.docker.com/engine/reference/builder/#from</a></p>
+</dd>
+<dt class="label" id="f7"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#workdir">https://docs.docker.com/engine/reference/builder/#workdir</a></p>
+</dd>
+<dt class="label" id="f8"><span class="brackets">8</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id9">2</a>,<a href="#id11">3</a>,<a href="#id13">4</a>)</span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#run">https://docs.docker.com/engine/reference/builder/#run</a></p>
+</dd>
+<dt class="label" id="f9"><span class="brackets"><a class="fn-backref" href="#id10">9</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#copy">https://docs.docker.com/engine/reference/builder/#copy</a></p>
+</dd>
+<dt class="label" id="f10"><span class="brackets"><a class="fn-backref" href="#id12">10</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#env">https://docs.docker.com/engine/reference/builder/#env</a></p>
+</dd>
+<dt class="label" id="f11"><span class="brackets"><a class="fn-backref" href="#id14">11</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a></p>
+</dd>
+</dl>
 </div>
 </div>
 

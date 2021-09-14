@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -183,8 +185,8 @@
 <h1>Program option list and default values<a class="headerlink" href="#program-option-list-and-default-values" title="Permalink to this headline">¶</a></h1>
 <p>Any program options that are not specified take default values:</p>
 <ul class="simple">
-<li>On the command line, program options that are not explicitly specified default to the COMPAS default value for the option (as specified in the COMPAS code - may be sampled from a distribution).</li>
-<li>On a <a class="reference internal" href="grid-files.html"><span class="doc">grid file</span></a> line, program options that are not explicitly specified default to the value specified for that option on the command line. If the program option was not explicitly specified on the command line, it will default to the COMPAS default value for the option, as described above. That is, the value for any option not specified on a grid file line option falls back to the value specified on the command line, which falls back to the COMPAS default if it was not specified on the command line.</li>
+<li><p>On the command line, program options that are not explicitly specified default to the COMPAS default value for the option (as specified in the COMPAS code - may be sampled from a distribution).</p></li>
+<li><p>On a <a class="reference internal" href="grid-files.html"><span class="doc">grid file</span></a> line, program options that are not explicitly specified default to the value specified for that option on the command line. If the program option was not explicitly specified on the command line, it will default to the COMPAS default value for the option, as described above. That is, the value for any option not specified on a grid file line option falls back to the value specified on the command line, which falls back to the COMPAS default if it was not specified on the command line.</p></li>
 </ul>
 <p id="options-props-top">The full list of program options, and their default values is shown below.</p>
 <p><strong>Jump to</strong>
@@ -208,23 +210,23 @@ Prints COMPAS version string.</p>
 Add columns for program options to SSE System Parameters/BSE System Parameters file (mode dependent). <br />
 Options: { ALWAYS, GRID, NEVER } <br />
 Default = GRID</p>
-<table border="1" class="colwidths-given aligned-text docutils">
+<table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="12%" />
-<col width="88%" />
+<col style="width: 12%" />
+<col style="width: 88%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>ALWAYS</td>
-<td>indicates that the program options should be added to the sysparms file</td>
+<tbody>
+<tr class="row-odd"><td><p>ALWAYS</p></td>
+<td><p>indicates that the program options should be added to the sysparms file</p></td>
 </tr>
-<tr class="row-even"><td>GRID</td>
-<td>indicates that the program options should be added to the sysparms file <cite>only if</cite></td>
+<tr class="row-even"><td><p>GRID</p></td>
+<td><p>indicates that the program options should be added to the sysparms file <cite>only if</cite></p></td>
 </tr>
-<tr class="row-odd"><td>&#160;</td>
-<td>a GRID file is specified, or RANGEs or SETs are specified for options</td>
+<tr class="row-odd"><td></td>
+<td><p>a GRID file is specified, or RANGEs or SETs are specified for options</p></td>
 </tr>
-<tr class="row-even"><td>NEVER</td>
-<td>indicates that the program options should <cite>not</cite> be added to the sysparms file</td>
+<tr class="row-even"><td><p>NEVER</p></td>
+<td><p>indicates that the program options should <cite>not</cite> be added to the sysparms file</p></td>
 </tr>
 </tbody>
 </table>
@@ -634,8 +636,8 @@ Single stars for SSE mode; binary stars for BSE mode. <br />
 This option is ignored if either of the following is true: <br /></p>
 <blockquote>
 <div><ul class="simple">
-<li>the user specified a grid file <br /></li>
-<li>the user specified a range or set for any options - this implies a grid <br /></li>
+<li><p>the user specified a grid file <br /></p></li>
+<li><p>the user specified a range or set for any options - this implies a grid <br /></p></li>
 </ul>
 </div></blockquote>
 <p>In both cases the number of objects evolved will be the number specified by the grid. <br />

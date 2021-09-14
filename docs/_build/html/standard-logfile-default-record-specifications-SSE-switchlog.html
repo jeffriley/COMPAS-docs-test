@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -207,50 +208,50 @@ See <a class="reference internal" href="standard-logfile-record-specification.ht
 <p>Note that the SSE SwitchLog file has the following columns automatically appended to each record:</p>
 <blockquote>
 <div><ul class="simple">
-<li>The stellar type from which the star is switching.</li>
-<li>The stellar type to which the star is switching.</li>
+<li><p>The stellar type from which the star is switching.</p></li>
+<li><p>The stellar type to which the star is switching.</p></li>
 </ul>
 </div></blockquote>
 <p><br />
 <strong>SWITCHING_FROM</strong></p>
-<table border="1" class="colwidths-given aligned-text docutils">
+<table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="80%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Data type:</td>
-<td>INT</td>
+<tbody>
+<tr class="row-odd"><td><p>Data type:</p></td>
+<td><p>INT</p></td>
 </tr>
-<tr class="row-even"><td>COMPAS variable:</td>
-<td><cite>derived from</cite> <code class="docutils literal notranslate"><span class="pre">BaseStar::m_StellarType</span></code></td>
+<tr class="row-even"><td><p>COMPAS variable:</p></td>
+<td><p><cite>derived from</cite> <code class="docutils literal notranslate"><span class="pre">BaseStar::m_StellarType</span></code></p></td>
 </tr>
-<tr class="row-odd"><td>Description:</td>
-<td>The stellar type of the star immediately prior to the switch.</td>
+<tr class="row-odd"><td><p>Description:</p></td>
+<td><p>The stellar type of the star immediately prior to the switch.</p></td>
 </tr>
-<tr class="row-even"><td>Header String:</td>
-<td>&quot;SWITCHING_FROM&quot;</td>
+<tr class="row-even"><td><p>Header String:</p></td>
+<td><p>&quot;SWITCHING_FROM&quot;</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>SWITCHING_TO</strong></p>
-<table border="1" class="colwidths-given aligned-text docutils">
+<table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="80%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Data type:</td>
-<td>INT</td>
+<tbody>
+<tr class="row-odd"><td><p>Data type:</p></td>
+<td><p>INT</p></td>
 </tr>
-<tr class="row-even"><td>COMPAS variable:</td>
-<td>Not applicable</td>
+<tr class="row-even"><td><p>COMPAS variable:</p></td>
+<td><p>Not applicable</p></td>
 </tr>
-<tr class="row-odd"><td>Description:</td>
-<td>The stellar type to which the star will switch (i.e. the stellar type immediately following the switch).</td>
+<tr class="row-odd"><td><p>Description:</p></td>
+<td><p>The stellar type to which the star will switch (i.e. the stellar type immediately following the switch).</p></td>
 </tr>
-<tr class="row-even"><td>Header String:</td>
-<td>&quot;SWITCHING_TO&quot;</td>
+<tr class="row-even"><td><p>Header String:</p></td>
+<td><p>&quot;SWITCHING_TO&quot;</p></td>
 </tr>
 </tbody>
 </table>

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -201,15 +202,15 @@
 <p><strong>docker run</strong> <br />
 creates a container.</p>
 <p><strong>--rm</strong> <br />
-destroy the container once it finishes running the command<a class="footnote-reference" href="#f1" id="id1">[1]</a>.</p>
+destroy the container once it finishes running the command<a class="footnote-reference brackets" href="#f1" id="id1">1</a>.</p>
 <p><strong>-it</strong> <br />
-short for [-i and -t] - provides an interactive terminal<a class="footnote-reference" href="#f2" id="id2">[2]</a>.</p>
+short for [-i and -t] - provides an interactive terminal<a class="footnote-reference brackets" href="#f2" id="id2">2</a>.</p>
 <p><strong>-v &lt;path-on-host&gt;:&lt;path-in-container&gt;</strong> <br />
-mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference" href="#f3" id="id3">[3]</a>. <br />
+mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id3">3</a>. <br />
 This time we not only want to get the output from COMPAS on the host machine, we also want to supply a <code class="docutils literal notranslate"><span class="pre">pythonSubmit.py</span></code> to the
 container from the host machine.</p>
 <p><strong>-e VAR_NAME=value</strong> <br />
-set the environment variable <code class="docutils literal notranslate"><span class="pre">VAR_VAME</span></code> to <cite>value</cite><a class="footnote-reference" href="#f4" id="id4">[4]</a>.</p>
+set the environment variable <code class="docutils literal notranslate"><span class="pre">VAR_VAME</span></code> to <cite>value</cite><a class="footnote-reference brackets" href="#f4" id="id4">4</a>.</p>
 <p><strong>teamcompas/compas</strong> <br />
 the image to run.</p>
 <p><strong>python3 /app/starts/pythonSubmit.py</strong> <br />
@@ -230,13 +231,13 @@ the command to run when the container starts.</p>
 </div>
 <p>Breaking down this command:</p>
 <p><strong>docker run</strong> <br />
-creates a container<a class="footnote-reference" href="#f5" id="id5">[5]</a>.</p>
+creates a container<a class="footnote-reference brackets" href="#f5" id="id5">5</a>.</p>
 <p><strong>--rm</strong> <br />
-destroy the container once it finishes running the command<a class="footnote-reference" href="#f1" id="id6">[1]</a>.</p>
+destroy the container once it finishes running the command<a class="footnote-reference brackets" href="#f1" id="id6">1</a>.</p>
 <p><strong>-it</strong> <br />
-short for [-i and -t] - provides an interactive terminal<a class="footnote-reference" href="#f2" id="id7">[2]</a>.</p>
+short for [-i and -t] - provides an interactive terminal<a class="footnote-reference brackets" href="#f2" id="id7">2</a>.</p>
 <p><strong>-v &lt;path-on-host&gt;:&lt;path-in-container&gt;</strong> <br />
-mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference" href="#f3" id="id8">[3]</a>. <br />
+mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id8">3</a>. <br />
 In this instance, make it so <cite>$(pwd)/compas-logs</cite> on my machine is the same as <cite>/app/COMPAS/logs</cite> inside the container.</p>
 <p><strong>teamcompas/compas</strong> <br />
 the image to run.</p>
@@ -262,7 +263,7 @@ creates a different (i.e. non-mapped) directory for the output log files.</p>
 <div class="section" id="detached-mode">
 <h2>Detached mode<a class="headerlink" href="#detached-mode" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> examples above use the <code class="docutils literal notranslate"><span class="pre">-it</span></code> option.
-To run multiple instances of COMPAS, an alternative is to use detached mode (<cite>-d</cite>)<a class="footnote-reference" href="#f6" id="id9">[6]</a>. In detached mode, containers are run in
+To run multiple instances of COMPAS, an alternative is to use detached mode (<cite>-d</cite>)<a class="footnote-reference brackets" href="#f6" id="id9">6</a>. In detached mode, containers are run in
 the background of the current shell - they do not receive input or display output.</p>
 <p>Typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker run --rm -d -v $(pwd)/compas-logs/run_0:/app/COMPAS/logs -v $(pwd)/pythonSubmitMMsolar_01.py:/app/starts/pythonSubmit.py teamcompas/compas python3 /app/starts/pythonSubmit.py &amp;
@@ -281,42 +282,26 @@ docker run --rm -d -v $(pwd)/compas-logs/run_3:/app/COMPAS/logs -v $(pwd)/python
 </pre></div>
 </div>
 <p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> <a class="reference external" href="https://docs.docker.com/engine/reference/run/#clean-up---rm">https://docs.docker.com/engine/reference/run/#clean-up---rm</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id7">2</a>)</em> <a class="reference external" href="https://docs.docker.com/engine/reference/run/#foreground">https://docs.docker.com/engine/reference/run/#foreground</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[3]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id8">2</a>)</em> <a class="reference external" href="https://docs.docker.com/storage/bind-mounts/">https://docs.docker.com/storage/bind-mounts/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/run/#env-environment-variables">https://docs.docker.com/engine/reference/run/#env-environment-variables</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/run/">https://docs.docker.com/engine/reference/run/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id9">[6]</a></td><td><a class="reference external" href="https://docs.docker.com/engine/reference/run/#detached--d">https://docs.docker.com/engine/reference/run/#detached--d</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/run/#clean-up---rm">https://docs.docker.com/engine/reference/run/#clean-up---rm</a></p>
+</dd>
+<dt class="label" id="f2"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/run/#foreground">https://docs.docker.com/engine/reference/run/#foreground</a></p>
+</dd>
+<dt class="label" id="f3"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/storage/bind-mounts/">https://docs.docker.com/storage/bind-mounts/</a></p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/run/#env-environment-variables">https://docs.docker.com/engine/reference/run/#env-environment-variables</a></p>
+</dd>
+<dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/run/">https://docs.docker.com/engine/reference/run/</a></p>
+</dd>
+<dt class="label" id="f6"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/run/#detached--d">https://docs.docker.com/engine/reference/run/#detached--d</a></p>
+</dd>
+</dl>
 </div>
 </div>
 

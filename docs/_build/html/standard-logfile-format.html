@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -182,10 +183,10 @@
 <p>COMPAS can produce log files in several formats:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Hierarchical Data Format version 5 (<code class="docutils literal notranslate"><span class="pre">HDF5</span></code>)<a class="footnote-reference" href="#f1" id="id1">[1]</a></li>
-<li>Comma Separated Values (<code class="docutils literal notranslate"><span class="pre">CSV</span></code>)</li>
-<li>Tab Separated Values (<code class="docutils literal notranslate"><span class="pre">TSV</span></code>)</li>
-<li>Plain text: space separated values (<code class="docutils literal notranslate"><span class="pre">TXT</span></code>)</li>
+<li><p>Hierarchical Data Format version 5 (<code class="docutils literal notranslate"><span class="pre">HDF5</span></code>)<a class="footnote-reference brackets" href="#f1" id="id1">1</a></p></li>
+<li><p>Comma Separated Values (<code class="docutils literal notranslate"><span class="pre">CSV</span></code>)</p></li>
+<li><p>Tab Separated Values (<code class="docutils literal notranslate"><span class="pre">TSV</span></code>)</p></li>
+<li><p>Plain text: space separated values (<code class="docutils literal notranslate"><span class="pre">TXT</span></code>)</p></li>
 </ul>
 </div></blockquote>
 <p>The log file type is set using the <code class="docutils literal notranslate"><span class="pre">--logfile-type</span></code> program option.</p>
@@ -194,31 +195,32 @@
 are delimiter separated fields, and the fields as specified by the log file record specifier.</p>
 <p>The header records for all standard <code class="docutils literal notranslate"><span class="pre">CSV</span></code>, <code class="docutils literal notranslate"><span class="pre">TSV</span></code>, and <code class="docutils literal notranslate"><span class="pre">TXT</span></code> log files are:</p>
 <blockquote>
-<div>Header record 1: Column Data Type Names <br />
+<div><p>Header record 1: Column Data Type Names <br />
 Header record 2: Column Units (where applicable) <br />
-Header record 3: Column Headings</div></blockquote>
+Header record 3: Column Headings</p>
+</div></blockquote>
 <p>Column Data Type Names are taken from the set <strong>{ BOOL, INT, FLOAT, STRING }</strong>, where</p>
 <blockquote>
-<div><table border="1" class="colwidths-given aligned-text docutils">
+<div><table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="12%" />
-<col width="88%" />
+<col style="width: 12%" />
+<col style="width: 88%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>BOOL</strong></td>
-<td>indicates the data value will be a boolean value.</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>BOOL</strong></p></td>
+<td><p>indicates the data value will be a boolean value.</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>Boolean data values will be recorded in the log file in either numerical format (1 or 0, where 1 = TRUE and 0 = FALSE), or string format (&quot;TRUE&quot; or &quot;FALSE&quot;), depending upon the value of the <code class="docutils literal notranslate"><span class="pre">--print-bool-as-string</span></code> program option.</td>
+<tr class="row-even"><td></td>
+<td><p>Boolean data values will be recorded in the log file in either numerical format (1 or 0, where 1 = TRUE and 0 = FALSE), or string format (&quot;TRUE&quot; or &quot;FALSE&quot;), depending upon the value of the <code class="docutils literal notranslate"><span class="pre">--print-bool-as-string</span></code> program option.</p></td>
 </tr>
-<tr class="row-odd"><td><strong>INT</strong></td>
-<td>indicates the data value will be an integer number.</td>
+<tr class="row-odd"><td><p><strong>INT</strong></p></td>
+<td><p>indicates the data value will be an integer number.</p></td>
 </tr>
-<tr class="row-even"><td><strong>FLOAT</strong></td>
-<td>indicates the data value will be a floating-point number.</td>
+<tr class="row-even"><td><p><strong>FLOAT</strong></p></td>
+<td><p>indicates the data value will be a floating-point number.</p></td>
 </tr>
-<tr class="row-odd"><td><strong>STRING</strong></td>
-<td>indicates the data value will be a text string.</td>
+<tr class="row-odd"><td><p><strong>STRING</strong></p></td>
+<td><p>indicates the data value will be a text string.</p></td>
 </tr>
 </tbody>
 </table>
@@ -226,20 +228,20 @@ Header record 3: Column Headings</div></blockquote>
 <p>Column Units is a string indicating the units of the corresponding data values (e.g. &quot;Msol*AU<sup>2</sup>*yr<sup>-1</sup>&quot;,
 &quot;Msol&quot;, &quot;AU&quot;, etc.). The Column Units value may be blank where units are not applicable, or may be one of:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given aligned-text docutils">
+<div><table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="12%" />
-<col width="88%" />
+<col style="width: 12%" />
+<col style="width: 88%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Count</strong></td>
-<td>indicates the data value is the total of a counted entity.</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>Count</strong></p></td>
+<td><p>indicates the data value is the total of a counted entity.</p></td>
 </tr>
-<tr class="row-even"><td><strong>State</strong></td>
-<td>indicates the data value describes a state (e.g. &quot;Unbound&quot; state is &quot;TRUE&quot; or &quot;FALSE&quot;).</td>
+<tr class="row-even"><td><p><strong>State</strong></p></td>
+<td><p>indicates the data value describes a state (e.g. &quot;Unbound&quot; state is &quot;TRUE&quot; or &quot;FALSE&quot;).</p></td>
 </tr>
-<tr class="row-odd"><td><strong>Event</strong></td>
-<td>the data value describes an event status (e.g. &quot;Simultaneous_RLOF&quot; is &quot;TRUE&quot;).</td>
+<tr class="row-odd"><td><p><strong>Event</strong></p></td>
+<td><p>the data value describes an event status (e.g. &quot;Simultaneous_RLOF&quot; is &quot;TRUE&quot;).</p></td>
 </tr>
 </tbody>
 </table>
@@ -247,23 +249,23 @@ Header record 3: Column Headings</div></blockquote>
 <p>Column Headings are string labels that describe the corresponding data values. The heading strings for stellar properties of
 constituent stars of a binary will have appropriate identifiers appended. That is, heading strings for:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given aligned-text docutils">
+<div><table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="60%" />
-<col width="40%" />
+<col style="width: 60%" />
+<col style="width: 40%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>STAR_1 PROPERTY::properties</td>
-<td>will have &quot;<span class="boldtext">(1)</span>&quot; appended</td>
+<tbody>
+<tr class="row-odd"><td><p>STAR_1 PROPERTY::properties</p></td>
+<td><p>will have &quot;<span class="boldtext">(1)</span>&quot; appended</p></td>
 </tr>
-<tr class="row-even"><td>STAR_2 PROPERTY::properties</td>
-<td>will have &quot;<span class="boldtext">(2)</span>&quot; appended</td>
+<tr class="row-even"><td><p>STAR_2 PROPERTY::properties</p></td>
+<td><p>will have &quot;<span class="boldtext">(2)</span>&quot; appended</p></td>
 </tr>
-<tr class="row-odd"><td>SUPERNOVA_PROPERTY::properties</td>
-<td>will have &quot;<span class="boldtext">(SN)</span>&quot; appended</td>
+<tr class="row-odd"><td><p>SUPERNOVA_PROPERTY::properties</p></td>
+<td><p>will have &quot;<span class="boldtext">(SN)</span>&quot; appended</p></td>
 </tr>
-<tr class="row-even"><td>COMPANION_PROPERTY::properties</td>
-<td>will have &quot;<span class="boldtext">(CP)</span>&quot; appended</td>
+<tr class="row-even"><td><p>COMPANION_PROPERTY::properties</p></td>
+<td><p>will have &quot;<span class="boldtext">(CP)</span>&quot; appended</p></td>
 </tr>
 </tbody>
 </table>
@@ -278,12 +280,11 @@ other logfile types, as individual files (in this case, HDF5 files), in the ’D
 is typed, and the dataset data types are set to the column data types as described above. The column units described above are attached to
 their corresponding datasets in the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file as <cite>attributes</cite>.</p>
 <p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://www.hdfgroup.org/">https://www.hdfgroup.org/</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.hdfgroup.org/">https://www.hdfgroup.org/</a></p>
+</dd>
+</dl>
 </div>
 
 

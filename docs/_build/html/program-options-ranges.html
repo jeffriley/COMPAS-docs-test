@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -30,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -181,35 +182,37 @@
 point (or floating point variant) data types) that are not excluded from range specifications.</p>
 <p>Option value ranges are specified by:</p>
 <blockquote>
-<div>--option-name range-specifier</div></blockquote>
+<div><p>--option-name range-specifier</p>
+</div></blockquote>
 <p>where <cite>range-specifier</cite> is defined as:</p>
 <blockquote>
 <div><p>range-identifier[start,count,increment]</p>
-<table border="1" class="colwidths-given aligned-text docutils">
+<table class="colwidths-given aligned-text docutils align-default">
 <colgroup>
-<col width="19%" />
-<col width="81%" />
+<col style="width: 19%" />
+<col style="width: 81%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><cite>range-identifier</cite></td>
-<td>is one of {’r’, ’range’} (case is not significant)</td>
+<tbody>
+<tr class="row-odd"><td><p><cite>range-identifier</cite></p></td>
+<td><p>is one of {’r’, ’range’} (case is not significant)</p></td>
 </tr>
-<tr class="row-even"><td><cite>start</cite></td>
-<td>is the starting value of the range</td>
+<tr class="row-even"><td><p><cite>start</cite></p></td>
+<td><p>is the starting value of the range</p></td>
 </tr>
-<tr class="row-odd"><td><cite>count</cite></td>
-<td>is the number of values in the range (must be an unsigned long int)</td>
+<tr class="row-odd"><td><p><cite>count</cite></p></td>
+<td><p>is the number of values in the range (must be an unsigned long int)</p></td>
 </tr>
-<tr class="row-even"><td><cite>increment</cite></td>
-<td>is the amount by which the value increments for each value in the range</td>
+<tr class="row-even"><td><p><cite>increment</cite></p></td>
+<td><p>is the amount by which the value increments for each value in the range</p></td>
 </tr>
 </tbody>
 </table>
 <p>Note that:</p>
 <blockquote>
-<div><cite>range-identifier</cite> is optional for range-specifier. <br />
+<div><p><cite>range-identifier</cite> is optional for range-specifier. <br />
 <cite>start</cite> and <cite>increment</cite> must be the same data type as option-name. <br />
-<cite>count</cite> must be a positive integer value.</div></blockquote>
+<cite>count</cite> must be a positive integer value.</p>
+</div></blockquote>
 </div></blockquote>
 <p>To specify a range of values for the <code class="docutils literal notranslate"><span class="pre">--metallicity</span></code> option, a user, if running COMPAS from the command line
 and with no grid file, would type any of the following:</p>
