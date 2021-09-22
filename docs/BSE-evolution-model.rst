@@ -5,7 +5,7 @@ The high-level binary evolution model is shown in Figure 4.
 
 .. _fig-4:
 
-.. figure:: BSE-flow-chart-compressed.png
+.. figure:: ./images/BSE-flow-chart-compressed.svg
     :width: 650px
     :height: 1574px
     :align: center

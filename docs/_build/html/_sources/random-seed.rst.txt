@@ -21,7 +21,7 @@ This would evolve 100 binary stars, each with `metallicity = 0.015`, and other i
 100 binary stars will be evolved using the random seed 15, the second 16, the third 17, and so on - each binary star will evolve using
 a unique random seed.
 
-In the example shown above (see Section :ref:`Mixing ranges and sets`), all 104 binary stars would evolve with unique random seed values, 
+In the example shown above (see Section :doc:`program-options-mixing-ranges-sets`), all 104 binary stars would evolve with unique random seed values, 
 ranging from 0 (the default, since the option was not specified on either the command line or in the grid file), to 103.
 
 In both these examples, the random seed was incremented in the context of the command line. In the first example, the random seed was 

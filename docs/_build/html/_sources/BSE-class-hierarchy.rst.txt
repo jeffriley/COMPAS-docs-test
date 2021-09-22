@@ -5,7 +5,7 @@ The ``BSE`` class diagram is shown in :ref:`Figure 3 <fig-3>`.
 
 .. _fig-3:
 
-.. figure:: BSE-class-diagram-compressed.png
+.. figure:: ./images/BSE-class-diagram-compressed.svg
     :width: 600px
     :height: 184px
     :align: center

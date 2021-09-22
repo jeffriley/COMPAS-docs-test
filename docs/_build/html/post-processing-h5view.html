@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>h5view.py &mdash; COMPAS v02.22.00 documentation</title>
+  <title>h5view.py &mdash; COMPAS  documentation</title>
   
 
   
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -36,13 +38,14 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="rewrite-H5.py" href="post-processing-rewrite-h5.html" />
+    <link rel="next" title="rewrite_H5.py" href="notebooks/H5/3_rewritingH5.html" />
     <link rel="prev" title="h5copy.py" href="post-processing-h5copy.html" /> 
 </head>
 
@@ -100,13 +103,13 @@
 <li class="toctree-l2"><a class="reference internal" href="running-via-docker.html">Running COMPAS via Docker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">COMPAS Output</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="post-processing.html">Post-processing tools</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="post-processing-h5copy.html">h5copy.py</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">h5view.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#h5view-py-usage">h5view.py usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-processing-python-basics.html">Some Python basics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="post-processing-hdf5.html">Processing HDF5 files</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="post-processing-hdf5-info.html">HDF5 basics</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="post-processing-hdf5-tools.html">COMPAS HDF5 tools</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="post-processing-rewrite-h5.html">rewrite-H5.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-processing-cosmic-integration.html">Cosmic integration</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="example-compas-run.html">Tutorial: simple COMPAS run</a></li>
@@ -167,6 +170,10 @@
         
           <li><a href="post-processing.html">Post-processing tools</a> &raquo;</li>
         
+          <li><a href="post-processing-hdf5.html">Processing HDF5 files</a> &raquo;</li>
+        
+          <li><a href="post-processing-hdf5-tools.html">COMPAS HDF5 tools</a> &raquo;</li>
+        
       <li>h5view.py</li>
     
     
@@ -179,14 +186,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="h5view-py">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="h5view-py">
 <h1>h5view.py<a class="headerlink" href="#h5view-py" title="Permalink to this headline">¶</a></h1>
 <p>This program displays summary, header, and content information for specified COMPAS <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file(s). It's fairly rudimetary - the
 <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> package provides <code class="docutils literal notranslate"><span class="pre">h5dump</span></code> and <code class="docutils literal notranslate"><span class="pre">h5ls</span></code> which have far more options than this program - but this program is somewhat
 COMPAS aware.</p>
-<p>Detailed information regarding <code class="docutils literal notranslate"><span class="pre">h5view.py</span></code> functionality is documented at the top of the <cite>h5view.py</cite> source file.</p>
-<div class="section" id="h5view-py-usage">
-<h2>h5view.py usage<a class="headerlink" href="#h5view-py-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="h5view-usage">
+<h2>h5view usage<a class="headerlink" href="#h5view-usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h5view</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME_FILTER</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="p">[</span><span class="n">RECURSION_DEPTH</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">S</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">H</span><span class="p">]</span>
                <span class="p">[</span><span class="o">-</span><span class="n">C</span> <span class="p">[</span><span class="n">CONTENTS</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span> <span class="n">EXCLUDE_GROUP</span> <span class="p">[</span><span class="n">EXCLUDE_GROUP</span> <span class="o">...</span><span class="p">]]</span>
                <span class="p">[</span><span class="o">-</span><span class="n">V</span> <span class="n">SEED_LIST</span> <span class="p">[</span><span class="n">SEED_LIST</span> <span class="o">...</span><span class="p">]]</span>
@@ -247,6 +277,62 @@ COMPAS aware.</p>
 </div>
 <p>Other <code class="docutils literal notranslate"><span class="pre">h5view.py</span></code> options (listed above) display headers and file contents.</p>
 </div>
+<div class="section" id="h5view-functionality-overview">
+<h2>h5view functionality overview<a class="headerlink" href="#h5view-functionality-overview" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">h5view.py</span></code> displays summary, header and content information for specified COMPAS <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file(s). If none of the command-line
+options <code class="docutils literal notranslate"><span class="pre">--summary</span> <span class="pre">[-S]</span></code>, <code class="docutils literal notranslate"><span class="pre">--headers</span> <span class="pre">[-H]</span></code>, or <code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> are specified, <code class="docutils literal notranslate"><span class="pre">--summary</span> <span class="pre">[-s]</span></code> is assumed. If any of
+<code class="docutils literal notranslate"><span class="pre">--summary</span> <span class="pre">[-S]</span></code>, <code class="docutils literal notranslate"><span class="pre">--headers</span> <span class="pre">[-H]</span></code>, or <code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> are specified, then only the option(s) specified are actioned.</p>
+<div class="section" id="displaying-summary-information">
+<h3>Displaying summary information<a class="headerlink" href="#displaying-summary-information" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Summary information displays, for each COMPAS file in the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file:</dt><dd><ul class="simple">
+<li><p>the name of the COMPAS file</p></li>
+<li><p>the number of columns in the COMPAS file</p></li>
+<li><p>the number of entries in the COMPAS file (actually, the maximum number of entries in any column in the COMPAS file)</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="displaying-header-information">
+<h3>Displaying header information<a class="headerlink" href="#displaying-header-information" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Header information displays, for each COMPAS file in the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file:</dt><dd><ul class="simple">
+<li><p>the name of each column in the COMPAS file</p></li>
+<li><p>the number of entries in each column of the COMPAS file</p></li>
+<li><p>the data type of each column of the COMPAS file</p></li>
+<li><p>the units associated with each column of the COMPAS file
+(with the exception of the <code class="docutils literal notranslate"><span class="pre">Run_Details</span></code> file - there are no units associated with columns in the <code class="docutils literal notranslate"><span class="pre">Run_Details</span></code> file)</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="displaying-contents">
+<h3>Displaying contents<a class="headerlink" href="#displaying-contents" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Contents information displays, for each COMPAS file in the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file:</dt><dd><ul class="simple">
+<li><p>a header showing the column names in the COMPAS file</p></li>
+<li><p>a row for each entry in the COMPAS file, showing the column values for that row (comma delimited)</p></li>
+</ul>
+<p>The contents display can be limited in two ways:</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> option takes and optional argument: an integer number of rows to display. The argement to
+<code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> can be positive or negative: a positive value indicates that the number of rows specified by the
+argument should be displayed from the start of the file; a negative value indicates that the number of rows specified
+by the (absolute value of the) argument should be displayed from the end of the file.  The +ve and -ve arguments to
+the <code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> option are akin the the Unix <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">tail</span></code> commands.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">--seeds</span> <span class="pre">[-V]</span></code> option allows the user to specify a list of SEED values that should be printed. If the
+<code class="docutils literal notranslate"><span class="pre">--seeds</span> <span class="pre">[-V]</span></code> option is specified, only rows containing the seeds specified by the user will be printed - and only
+if they are in the entries printed if limited by the <code class="docutils literal notranslate"><span class="pre">--contents</span> <span class="pre">[-C]</span></code> argument  described in (a).</p>
+<p>Note that printing only seeds specified in a list of seeds could be slow - we effectively have to look through the
+entire dataset looking for the seeds required.</p>
+</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 
 
@@ -255,7 +341,7 @@ COMPAS aware.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="post-processing-rewrite-h5.html" class="btn btn-neutral float-right" title="rewrite-H5.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="notebooks/H5/3_rewritingH5.html" class="btn btn-neutral float-right" title="rewrite_H5.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="post-processing-h5copy.html" class="btn btn-neutral float-left" title="h5copy.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

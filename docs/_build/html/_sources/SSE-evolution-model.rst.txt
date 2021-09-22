@@ -5,7 +5,7 @@ The high-level stellar evolution model is shown in :ref:`Figure 2 <fig-2>`.
 
 .. _fig-2:
 
-.. figure:: SSE-flow-chart-compressed.png
+.. figure:: ./images/SSE-flow-chart-compressed.svg
     :width: 530px
     :height: 800px
     :align: center

@@ -12,21 +12,16 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'COMPAS'
 copyright = '2021, The Authors'
-author = 'Jeff Riley'
-
-# The short X.Y version
-version = ''
-# The full version, including alpha/beta/rc tags
-release = 'v02.22.00'
+author = 'TeamCOMPAS'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,14 +34,28 @@ release = 'v02.22.00'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-#    'sphinxfortran.fortran_domain',
-#    'sphinxfortran.fortran_autodoc',
+    'sphinx_rtd_theme',
+#    'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
-    'sphinx.ext.autosectionlabel',
+    'sphinx_math_dollar',
+#    'sphinx.ext.autosectionlabel',
 #    'sphinx_search.extension',
-    'linuxdoc.rstFlatTable'
+    'sphinx.ext.graphviz',
+    'sphinx.ext.intersphinx',
+    'linuxdoc.rstFlatTable',
+    'matplotlib.sphinxext.plot_directive',
+    'nbsphinx',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'IPython.sphinxext.ipython_directive',
+#    'sphinx_copybutton',
+    'sphinxcontrib.bibtex'
 ]
+
+intersphinx_mapping = {'python': ('https://docs.python.org/3', None),
+                       'matplotlib': ('https://matplotlib.org/stable', None),
+                       'seaborn': ('https://seaborn.pydata.org', None),
+                       'scipy': ('https://docs.scipy.org/doc/scipy/reference', None),
+                       'astropy': ('https://docs.astropy.org/en/stable', None)}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -192,6 +201,13 @@ epub_exclude_files = ['search.html']
 html_css_files = ['css/COMPAS.css']
 
 
-# -- rst gloabs ------------------------------------------------------------- JR
+# -- rst globals ------------------------------------------------------------- JR
 
 rst_prolog = open('globals.rst', 'r').read()
+
+
+# -- shinx bibtext------------------------------------------------------------ JR
+
+bibtex_bibfiles = ['refs.bib']
+bibtex_reference_style = 'author_year'
+bibtext_default_style = 'unsrt'

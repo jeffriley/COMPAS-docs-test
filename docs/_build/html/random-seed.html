@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Random seed &mdash; COMPAS v02.22.00 documentation</title>
+  <title>Random seed &mdash; COMPAS  documentation</title>
   
 
   
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
   
@@ -36,6 +38,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -168,7 +171,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="random-seed">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="random-seed">
 <h1>Random seed<a class="headerlink" href="#random-seed" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">--random-seed</span></code> option allows users to specify the initial value to be used to seed the pseudo-random number generator. Once set, the
 random seed values increments from its initial value for each star, or binary star, evolved. How the random seed increments depends upon the
@@ -186,7 +213,7 @@ evolved ensures that the evolution of specific stars, or binary stars, can be re
 <p>This would evolve 100 binary stars, each with <cite>metallicity = 0.015</cite>, and other initial attributes set to their defaults. The first of the
 100 binary stars will be evolved using the random seed 15, the second 16, the third 17, and so on - each binary star will evolve using
 a unique random seed.</p>
-<p>In the example shown above (see Section <a class="reference internal" href="program-options-mixing-ranges-sets.html#mixing-ranges-and-sets"><span class="std std-ref">Mixing ranges and sets</span></a>), all 104 binary stars would evolve with unique random seed values,
+<p>In the example shown above (see Section <a class="reference internal" href="program-options-mixing-ranges-sets.html"><span class="doc">Mixing ranges and sets</span></a>), all 104 binary stars would evolve with unique random seed values,
 ranging from 0 (the default, since the option was not specified on either the command line or in the grid file), to 103.</p>
 <p>In both these examples, the random seed was incremented in the context of the command line. In the first example, the random seed was
 explicitly specified on the command line, and in the second example the random seed defaulted to the command line default.</p>

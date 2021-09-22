@@ -31,7 +31,7 @@ This should produce the plot shown in :ref:`Figure 5 <fig-5>`:
 
 .. _fig-5:
 
-.. figure:: example-plot-compressed.png
+.. figure:: ./images/example-plot-compressed.svg
     :width: 1100px
     :height: 625px
     :align: center

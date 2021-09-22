@@ -5,11 +5,9 @@ This program displays summary, header, and content information for specified COM
 ``HDF5`` package provides ``h5dump`` and ``h5ls`` which have far more options than this program - but this program is somewhat 
 COMPAS aware.
 
-Detailed information regarding ``h5view.py`` functionality is documented at the top of the `h5view.py` source file.
 
-
-h5view.py usage
----------------
+h5view usage
+------------
 
 ::
 
@@ -73,4 +71,55 @@ will result in summary output of the ``HDF5`` file `compas-output-file.h5` that 
 
 
 Other ``h5view.py`` options (listed above) display headers and file contents.
+
+
+
+h5view functionality overview
+-----------------------------
+
+``h5view.py`` displays summary, header and content information for specified COMPAS ``HDF5`` file(s). If none of the command-line
+options ``--summary [-S]``, ``--headers [-H]``, or ``--contents [-C]`` are specified, ``--summary [-s]`` is assumed. If any of 
+``--summary [-S]``, ``--headers [-H]``, or ``--contents [-C]`` are specified, then only the option(s) specified are actioned.
+
+Displaying summary information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Summary information displays, for each COMPAS file in the ``HDF5`` file:
+   - the name of the COMPAS file
+   - the number of columns in the COMPAS file
+   - the number of entries in the COMPAS file (actually, the maximum number of entries in any column in the COMPAS file)
+
+
+Displaying header information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Header information displays, for each COMPAS file in the ``HDF5`` file:
+   - the name of each column in the COMPAS file
+   - the number of entries in each column of the COMPAS file
+   - the data type of each column of the COMPAS file
+   - the units associated with each column of the COMPAS file
+     (with the exception of the ``Run_Details`` file - there are no units associated with columns in the ``Run_Details`` file)
+
+
+Displaying contents
+~~~~~~~~~~~~~~~~~~~
+
+Contents information displays, for each COMPAS file in the ``HDF5`` file:
+   - a header showing the column names in the COMPAS file
+   - a row for each entry in the COMPAS file, showing the column values for that row (comma delimited)
+
+   The contents display can be limited in two ways:
+
+      (a) The ``--contents [-C]`` option takes and optional argument: an integer number of rows to display. The argement to 
+          ``--contents [-C]`` can be positive or negative: a positive value indicates that the number of rows specified by the 
+          argument should be displayed from the start of the file; a negative value indicates that the number of rows specified
+          by the (absolute value of the) argument should be displayed from the end of the file.  The +ve and -ve arguments to 
+          the ``--contents [-C]`` option are akin the the Unix ``head`` and ``tail`` commands.
+
+      (b) The ``--seeds [-V]`` option allows the user to specify a list of SEED values that should be printed. If the 
+          ``--seeds [-V]`` option is specified, only rows containing the seeds specified by the user will be printed - and only 
+          if they are in the entries printed if limited by the ``--contents [-C]`` argument  described in (a).
+
+          Note that printing only seeds specified in a list of seeds could be slow - we effectively have to look through the 
+          entire dataset looking for the seeds required.
 

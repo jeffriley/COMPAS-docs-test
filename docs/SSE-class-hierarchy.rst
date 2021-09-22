@@ -70,7 +70,7 @@ provide repositories for common functionality for remnant and white dwarf stars 
 
 .. _fig-1:
 
-.. figure:: SSE-class-diagram-compressed.png
+.. figure:: ./images/SSE-class-diagram-compressed.svg
     :width: 650px
     :height: 455px
     :align: center
