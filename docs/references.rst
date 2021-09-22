@@ -23,7 +23,4 @@ References
 #. Xu, X.-J., & Li, X.-D. 2010, Apj, 716, 114
 
 
-
-Ref to Riley: :cite:t:`Riley:2020`
-
 .. bibliography::
