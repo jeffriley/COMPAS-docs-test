@@ -854,7 +854,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseBinaryStar::m RLOFDetails.propsPostMT→stellarType1
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the primary star immediately after RLOF.
+     - Stellar type (per :cite:`Hurley2000`) of the primary star immediately after RLOF.
    * - Header String:
      - Type_1
 
@@ -873,7 +873,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - `derived from` BaseBinaryStar::m_RLOFDetails.propsPostMT→stellarType1
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the secondary star immediately after RLOF.
+     - Stellar type (per :cite:`Hurley2000`) of the secondary star immediately after RLOF.
    * - Header String:
      - Type_2
 
@@ -1058,7 +1058,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType1
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the primary star at the onset of RLOF.
+     - Stellar type (per :cite:`Hurley2000`) of the primary star at the onset of RLOF.
    * - Header String:
      - Type_1_Prev
 
@@ -1077,7 +1077,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType2
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the secondary star at the onset of RLOF.
+     - Stellar type (per :cite:`Hurley2000`) of the secondary star at the onset of RLOF.
    * - Header String:
      - Type_2_Prev
 
@@ -1448,7 +1448,7 @@ are printed then the file will contain two columns with the same header string.`
    * - COMPAS variable:
      - BinaryConstituentStar::m_CEDetails.postCEE.stellarType
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the primary star immediately following common envelope event.
+     - Stellar type (per :cite:`Hurley2000`) of the primary star immediately following common envelope event.
    * - Header String:
      - Stellar_Type_1>CE
 
@@ -1467,7 +1467,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BinaryConstituentStar::m_CEDetails.preCEE.stellarType
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the primary star at the onset of RLOF leading to the common-envelope episode.
+     - Stellar type (per :cite:`Hurley2000`) of the primary star at the onset of RLOF leading to the common-envelope episode.
    * - Header String:
      - Stellar_Type_1<CE
 
@@ -1486,7 +1486,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BinaryConstituentStar::m_CEDetails.postCEE.stellarType
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the secondary star immediately following common envelope event.
+     - Stellar type (per :cite:`Hurley2000`) of the secondary star immediately following common envelope event.
    * - Header String:
      - Stellar_Type_2>CE
 
@@ -1505,7 +1505,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BinaryConstituentStar::m_CEDetails.preCEE.stellarType
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) of the secondary star at the onset of RLOF leading to the common-envelope episode.
+     - Stellar type (per :cite:`Hurley2000`) of the secondary star at the onset of RLOF leading to the common-envelope episode.
    * - Header String:
      - Stellar_Type_2<CE
 
@@ -1524,7 +1524,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - `derived from` BinaryConstituentStar::m_CEDetails.postCEE.stellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) of the primary star immediately following common envelope event. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) of the primary star immediately following common envelope event. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header String:
      - Stellar_Type_1>CE
 
@@ -1543,7 +1543,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - `derived from` BinaryConstituentStar::m_CEDetails.preCEE.stellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) of the primary star at the onset of RLOF leading to the common-envelope episode. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) of the primary star at the onset of RLOF leading to the common-envelope episode. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header String:
      - Stellar_Type_1<CE
 
@@ -1562,7 +1562,7 @@ both. If both are printed then the file will contain two columns with the same h
    * - COMPAS variable:
      - `derived from` BinaryConstituentStar::m_CEDetails.postCEE.stellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) of the secondary star immediately following common envelope event. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) of the secondary star immediately following common envelope event. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header String:
      - Stellar_Type_2>CE
 
@@ -1581,7 +1581,7 @@ both. If both are printed then the file will contain two columns with the same h
    * - COMPAS variable:
      - `derived from` BinaryConstituentStar::m_CEDetails.preCEE.stellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) of the secondary star at the onset of RLOF leading to the common-envelope episode. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) of the secondary star at the onset of RLOF leading to the common-envelope episode. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header String:
      - Stellar_Type_2<CE
 

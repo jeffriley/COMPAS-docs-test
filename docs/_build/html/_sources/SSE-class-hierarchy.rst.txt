@@ -50,8 +50,8 @@ an instance of one of the following classes:
        * - ``MR``
          - Massless Remnant
 
-which track the phases from :doc:`Hurley et al. (2000) <references>`, with the exception of the ``CH`` class for Chemically Homogeneous stars,
-which are not described in :doc:`Hurley et al. (2000) <references>`.
+which track the phases from :cite:`Hurley2000`, with the exception of the ``CH`` class for Chemically Homogeneous stars,
+which are not described in :cite:`Hurley2000`.
 
 Several other ``SSE`` classes are defined:
 
@@ -83,7 +83,7 @@ provide repositories for common functionality for remnant and white dwarf stars 
 sequence stars that have a static radius.
 
 ``HG`` (Hertzsprung Gap) class stars inherit from the ``GiantBranch`` class because they share the giant branch parameters described in 
-:doc:`Hurley et al. (2000) <references>`, section 5.2.
+:cite:`Hurley2000`, section 5.2.
 
 Each class has its own set of member functions that calculate various attributes of the star according to the phase the class represents (using
-the equations and parameters from :doc:`Hurley et al. (2000) <references>` where applicable).
+the equations and parameters from :cite:`Hurley2000` where applicable).

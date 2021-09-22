@@ -112,7 +112,7 @@ Following is an alphabetical list of stellar properties available for inclusion 
    * - COMPAS variable:
      - BaseStar::m_BindingEnergies.kruckow
    * - Description:
-     - Absolute value of the envelope binding energy calculated using the fit by :doc:`Vigna-Gomez et al. (2018) <references>` to :doc:`Kruckow et al. (2016) <references>` (erg). Calculated using alpha = OPTIONS→CommonEnvelopeSlopeKruckow().
+     - Absolute value of the envelope binding energy calculated using the fit by :cite:`Vigna-Gomez2018` to :cite:`Kruckow2016` (erg). Calculated using alpha = OPTIONS→CommonEnvelopeSlopeKruckow().
    * - Header Strings:
      - BE_Kruckow, BE_Kruckow(1), BE_Kruckow(2), BE_Kruckow(SN), BE_Kruckow(CP)
 
@@ -128,7 +128,7 @@ Following is an alphabetical list of stellar properties available for inclusion 
    * - COMPAS variable:
      - BaseStar::m_BindingEnergies.loveridge
    * - Description:
-     - Absolute value of the envelope binding energy calculated as per :doc:`Loveridge et al. (2011) <references>` (erg). Calculated using lambda = m_Lambdas.loveridge.
+     - Absolute value of the envelope binding energy calculated as per :cite:`Loveridge2011` (erg). Calculated using lambda = m_Lambdas.loveridge.
    * - Header Strings:
      - BE_Loveridge, BE_Loveridge(1), BE_Loveridge(2), BE_Loveridge(SN), BE_Loveridge(CP)
 
@@ -144,7 +144,7 @@ Following is an alphabetical list of stellar properties available for inclusion 
    * - COMPAS variable:
      - BaseStar::m_BindingEnergies.loveridgeWinds
    * - Description:
-     - Absolute value of the envelope binding energy calculated as per :doc:`Webbink (1984) <references>` & :doc:`Loveridge et al. (2011) <references>` including winds (erg). Calculated using lambda = m_Lambdas.loveridgeWinds.
+     - Absolute value of the envelope binding energy calculated as per :cite:`Webbink1984` & :cite:`Loveridge2011` including winds (erg). Calculated using lambda = m_Lambdas.loveridgeWinds.
    * - Header Strings:
      - BE_Loveridge_Winds, BE_Loveridge_Winds(1), BE_Loveridge_Winds(2), BE_Loveridge_Winds(SN), BE_Loveridge_Winds(CP)
 
@@ -480,7 +480,7 @@ Following is an alphabetical list of stellar properties available for inclusion 
    * - COMPAS variable:
      - BaseStar::m_EnvMass
    * - Description:
-     - Envelope mass calculated using :doc:`Hurley et al. (2000) <references>` (\ :math:`M\odot`).
+     - Envelope mass calculated using :cite:`Hurley2000` (\ :math:`M\odot`).
    * - Header Strings:
      - Mass_Env, Mass_Env(1), Mass_Env(2), Mass_Env(SN), Mass_Env(CP)
 
@@ -747,7 +747,7 @@ the other is printed in any file, but not both. If both are printed then the fil
    * - COMPAS variable:
      - BaseStar::m_StellarType
    * - Description:
-     - Stellar type at zero age main-sequence (per :doc:`Hurley et al. (2000) <references>`).
+     - Stellar type at zero age main-sequence (per :cite:`Hurley2000`).
    * - Header Strings:
      - Stellar_Type@\ ZAMS, Stellar_Type@ZAMS(1), Stellar_Type@ZAMS(2), Stellar_Type@ZAMS(SN), Stellar_Type@ZAMS(CP)
 
@@ -766,7 +766,7 @@ file, but not both. If both are printed then the file will contain two columns w
    * - COMPAS variable:
      - `derived from` BaseStar::m_StellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) at zero age main-sequence. e.g. "First Giant Branch", "Core Helium Burning", "Helium White Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) at zero age main-sequence. e.g. "First Giant Branch", "Core Helium Burning", "Helium White Dwarf", etc.
    * - Header Strings:
      - Stellar_Type@\ ZAMS, Stellar_Type@ZAMS(1), Stellar_Type@ZAMS(2), Stellar_Type@ZAMS(SN), Stellar_Type@ZAMS(CP)
 
@@ -943,7 +943,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.dewi
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Dewi & Tauris (2000) <references>` using the fit from Appendix A of :doc:`Claeys et al. (2014) <references>`.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Dewi2000` using the fit from Appendix A of :doc:`Claeys et al. (2014) <references>`.
    * - Header Strings:
      - Dewi, Dewi(1), Dewi(2), Dewi(SN), Dewi(CP)
 
@@ -975,7 +975,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.kruckow
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Kruckow et al. (2016) <references>` with the alpha exponent set by program option ``--common-envelope-slope-Kruckow``. Spectrum fit to the region bounded by the upper and lower limits as shown in :doc:`Kruckow et al. (2016) <references>`, Fig. 1.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Kruckow2016` with the alpha exponent set by program option ``--common-envelope-slope-Kruckow``. Spectrum fit to the region bounded by the upper and lower limits as shown in :cite:`Kruckow2016`, Fig. 1.
    * - Header Strings:
      - Kruckow, Kruckow(1), Kruckow(2), Kruckow(SN), Kruckow(CP)
 
@@ -991,7 +991,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.kruckowBottom
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Kruckow et al. (2016) <references>` with the alpha exponent set to −1. Spectrum fit to the region bounded by the upper and lower limits as shown in :doc:`Kruckow et al. (2016) <references>`, Fig. 1.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Kruckow2016` with the alpha exponent set to −1. Spectrum fit to the region bounded by the upper and lower limits as shown in :cite:`Kruckow2016`, Fig. 1.
    * - Header Strings:
      - Kruckow_Bottom, Kruckow_Bottom(1), Kruckow_Bottom(2), Kruckow_Bottom(SN), Kruckow_Bottom(CP)
 
@@ -1007,7 +1007,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.kruckowMiddle
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Kruckow et al. (2016) <references>` with the alpha exponent set to :math:`-\frac{4}{5}`. Spectrum fit to the region bounded by the upper and lower limits as shown in :doc:`Kruckow et al. (2016) <references>`, Fig. 1.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Kruckow2016` with the alpha exponent set to :math:`-\frac{4}{5}`. Spectrum fit to the region bounded by the upper and lower limits as shown in :cite:`Kruckow2016`, Fig. 1.
    * - Header Strings:
      - Kruckow_Middle, Kruckow_Middle(1), Kruckow_Middle(2), Kruckow_Middle(SN), Kruckow_Middle(CP)
 
@@ -1023,7 +1023,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.kruckowTop
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Kruckow et al. (2016) <references>` with the alpha exponent set to :math:`-\frac{2}{3}`. Spectrum fit to the region bounded by the upper and lower limits as shown in :doc:`Kruckow et al. (2016) <references>`, Fig. 1.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Kruckow2016` with the alpha exponent set to :math:`-\frac{2}{3}`. Spectrum fit to the region bounded by the upper and lower limits as shown in :cite:`Kruckow2016`, Fig. 1.
    * - Header Strings:
      - Kruckow_Top, Kruckow_Top(1), Kruckow_Top(2), Kruckow_Top(SN), Kruckow_Top(CP)
 
@@ -1039,7 +1039,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.loveridge
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Webbink (1984) <references>` & :doc:`Loveridge et al. (2011) <references>`.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Webbink1984` & :cite:`Loveridge2011`.
    * - Header Strings:
      - Loveridge, Loveridge(1), Loveridge(2), Loveridge(SN), Loveridge(CP)
 
@@ -1055,7 +1055,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - BaseStar::m_Lambdas.loveridgeWinds
    * - Description:
-     - Envelope binding energy parameter lambda calculated as per :doc:`Webbink (1984) <references>` & :doc:`Loveridge et al. (2011) <references>` including winds.
+     - Envelope binding energy parameter lambda calculated as per :cite:`Webbink1984` & :cite:`Loveridge2011` including winds.
    * - Header Strings:
      - Loveridge_Winds, Loveridge_Winds(1), Loveridge_Winds(2), Loveridge_Winds(SN), Loveridge_Winds(CP)
 
@@ -1726,7 +1726,7 @@ same header string.`
    * - COMPAS variable:
      - BaseStar::m_StellarType
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`).
+     - Stellar type (per :cite:`Hurley2000`).
    * - Header Strings:
      - Stellar_Type, Stellar_Type(1), Stellar_Type(2), Stellar_Type(SN), Stellar_Type(CP)
 
@@ -1745,7 +1745,7 @@ but not both. If both are printed then the file will contain two columns with th
    * - COMPAS variable:
      - `derived from` BaseStar::m_StellarType
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`). e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`). e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header Strings:
      - Stellar_Type, Stellar_Type(1), Stellar_Type(2), Stellar_Type(SN), Stellar_Type(CP)
 
@@ -1764,7 +1764,7 @@ not both. If both are printed then the file will contain two columns with the sa
    * - COMPAS variable:
      - BaseStar::m_StellarTypePrev
    * - Description:
-     - Stellar type (per :doc:`Hurley et al. (2000) <references>`) at previous timestep.
+     - Stellar type (per :cite:`Hurley2000`) at previous timestep.
    * - Header Strings:
      - Stellar_Type_Prev, Stellar_Type_Prev(1), Stellar_Type_Prev(2), Stellar_Type_Prev(SN), Stellar_Type_Prev(CP)
 
@@ -1783,7 +1783,7 @@ file, but not both. If both are printed then the file will contain two columns w
    * - COMPAS variable:
      - `derived from` BaseStar::m_StellarTypePrev
    * - Description:
-     - Stellar type name (per :doc:`Hurley et al. (2000) <references>`) at previous timestep. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
+     - Stellar type name (per :cite:`Hurley2000`) at previous timestep. e.g. "First_Giant_Branch", "Core_Helium_Burning", "Helium_White_Dwarf", etc.
    * - Header Strings:
      - Stellar_Type_Prev, Stellar_Type_Prev(1), Stellar_Type_Prev(2), Stellar_Type_Prev(SN), Stellar_Type_Prev(CP)
 
@@ -2040,7 +2040,7 @@ or the other is printed in any file, but not both. If both are printed then the 
    * - COMPAS variable:
      - BaseStar::m_Zetas.hurley
    * - Description:
-     - Adiabatic exponent calculated per :doc:`Hurley et al. (2000) <references>` using core mass.
+     - Adiabatic exponent calculated per :cite:`Hurley2000` using core mass.
    * - Header Strings:
      - Zeta_Hurley, Zeta_Hurley(1), Zeta_Hurley(2), Zeta_Hurley(SN), Zeta_Hurley(CP)
 
@@ -2056,7 +2056,7 @@ or the other is printed in any file, but not both. If both are printed then the 
    * - COMPAS variable:
      - BaseStar::m_Zetas.hurleyHe
    * - Description:
-     - Adiabatic exponent calculated per :doc:`Hurley et al. (2000) <references>` using He core mass.
+     - Adiabatic exponent calculated per :cite:`Hurley2000` using He core mass.
    * - Header Strings:
      - Zeta_Hurley_He, Zeta_Hurley_He(1), Zeta_Hurley_He(2), Zeta_Hurley_He(SN), Zeta_Hurley_He(CP)
 
@@ -2072,7 +2072,7 @@ or the other is printed in any file, but not both. If both are printed then the 
    * - COMPAS variable:
      - BaseStar::m_Zetas.soberman
    * - Description:
-     - Adiabatic exponent calculated per :doc:`Soberman et al. (1997) <references>` using core mass.
+     - Adiabatic exponent calculated per :cite:`Soberman1997` using core mass.
    * - Header Strings:
      - Zeta_Soberman, Zeta_Soberman(1), Zeta_Soberman(2), Zeta_Soberman(SN), Zeta_Soberman(CP)
 
@@ -2088,7 +2088,7 @@ or the other is printed in any file, but not both. If both are printed then the 
    * - COMPAS variable:
      - BaseStar::m_Zetas.sobermanHe
    * - Description:
-     - Adiabatic exponent calculated per :doc:`Soberman et al. (1997) <references>` using He core mass.
+     - Adiabatic exponent calculated per :cite:`Soberman1997` using He core mass.
    * - Header Strings:
      - Zeta_Soberman_He, Zeta_Soberman_He(1), Zeta_Soberman_He(2), Zeta_Soberman_He(SN), Zeta_Soberman_He(CP)
 

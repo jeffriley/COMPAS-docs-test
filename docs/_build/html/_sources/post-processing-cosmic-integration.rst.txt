@@ -3,7 +3,7 @@ Cosmic integration
 
 
 This section contains a series of tutorials on how to use and get the most out of the COMPAS Cosmic Integration tools. The COMPAS
-Cosmic Integration tools are based on work done in `Neijssel et al. 2019 <https://arxiv.org/abs/1906.08136>`__.
+Cosmic Integration tools are based on work done in :cite:`Neijssel2019`.
 
 The duration from the birth of the binary until the merger as a double compact object (DCO) can range from a few million years 
 (lifetime of the stars) to more than 100 Gigayears depending on the evolution of the system.
@@ -39,7 +39,7 @@ pipelines for other (mock-)simulations, provided all the information is given (s
 
 If you make use of any these pipelines, we would appreciate you citing the following papers:
 
-    - For Cosmic integration: `Neijssel et al. 2019 <https://arxiv.org/abs/1906.08136>`__ |br|
-    - For Selection effects: `Barrett et al. 2018 <https://arxiv.org/pdf/1711.06287>`__ 
+    - For Cosmic integration: :cite:`Neijssel2019` |br|
+    - For Selection effects: :cite:`Barrett2018` 
 
 

@@ -58,7 +58,7 @@ using symbolic names rather than an ordinal number. The stellar types enum class
     };
 
 Ordinal numbers can still be used to reference the stellar types, and because of the order of definition in the enum class the ordinal numbers
-match those given in :doc:`Hurley et al. (2000) <references>`.
+match those given in :cite:`Hurley2000`.
 
 The label map ``STELLAR_TYPE_LABEL`` can be used to print text descriptions of the stellar types, and is declared as::
 

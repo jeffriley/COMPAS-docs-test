@@ -91,7 +91,7 @@ Check the photon tiring limit is not exceeded during mass loss. |br|
 Default = FALSE
 
 **--chemically-homogeneous-evolution** |br|
-Chemically Homogeneous Evolution mode. See :doc:`Riley et al. (2021) <references>` for details of the implementation
+Chemically Homogeneous Evolution mode. See :cite:`Riley2021` for details of the implementation
 of Chemically Homogeneous Evolution in COMPAS |br|
 Options: { NONE, OPTIMISTIC, PESSIMISTIC } |br|
 Default = NONE
@@ -229,7 +229,7 @@ Fix dimensionless kick magnitude to this value. |br|
 Default = n/a (not used if option not present)
 
 **--fryer-supernova-engine** |br|
-Supernova engine type if using the fallback prescription from :doc:`Fryer et al. (2012) <references>`. |br|
+Supernova engine type if using the fallback prescription from :cite:`Fryer2012`. |br|
 Options: { DELAYED, RAPID }
 Default = DELAYED
 
@@ -556,7 +556,7 @@ Default = 99999
 
 **--mcbur1** |br|
 Minimum core mass at base of AGB to avoid fully degnerate CO core formation (:math:`M_\odot`). |br|
-e.g. 1.6 in :doc:`Hurley et al. (2000) <references>` presciption; 1.83 in :doc:`Fryer et al. (2012) <references>` and :doc:`Belczynski et al. (2008) <references>` models. |br|
+e.g. 1.6 in :cite:`Hurley2000` presciption; 1.83 in :cite:`Fryer2012` and :doc:`Belczynski et al. (2008) <references>` models. |br|
 Default = 1.6
 
 **--metallicity [ -z ]** |br|
