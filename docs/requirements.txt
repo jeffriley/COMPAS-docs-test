@@ -6,3 +6,8 @@ sphinx_rtd_theme==0.5.1
 readthedocs-sphinx-search==0.1.0
 linuxdoc==20210324
 sphinx-math-dollar==1.2
+nbsphinx
+numpydoc
+sphinxcontrib.bibtex
+IPython
+matplotlib
