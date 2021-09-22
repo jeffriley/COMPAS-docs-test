@@ -57,6 +57,8 @@ intersphinx_mapping = {'python': ('https://docs.python.org/3', None),
                        'scipy': ('https://docs.scipy.org/doc/scipy/reference', None),
                        'astropy': ('https://docs.astropy.org/en/stable', None)}
 
+nbsphinx_allow_errors = True
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
