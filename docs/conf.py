@@ -212,4 +212,4 @@ rst_prolog = open('globals.rst', 'r').read()
 
 bibtex_bibfiles = ['refs.bib']
 bibtex_reference_style = 'author_year'
-bibtext_default_style = 'unsrt'
+#bibtext_default_style = 'unsrt'

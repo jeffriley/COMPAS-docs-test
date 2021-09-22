@@ -1,6 +1,9 @@
 # File: docs/requirements.txt
 
 # Defining the exact version will make sure things don't break
+
+-e .[docs]
+
 sphinx==1.8.5
 sphinx_rtd_theme==0.5.1
 readthedocs-sphinx-search==0.1.0
@@ -10,6 +13,6 @@ nbsphinx
 numpydoc
 sphinxcontrib.bibtex
 ipykernel
-IPython==7.12.0
+IPython
 matplotlib
 h5py

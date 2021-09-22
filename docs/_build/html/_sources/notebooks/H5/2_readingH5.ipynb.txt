@@ -29,8 +29,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "import os\n",
-    "pathToH5 = os.getcwd() + '/../COMPAS_Output.h5' # Set this to the appropriate path for you"
+    "pathToH5 = '../COMPAS_Output.h5' # Set this to the appropriate path for you"
    ]
   },
   {
