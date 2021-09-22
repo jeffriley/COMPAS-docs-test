@@ -9,6 +9,5 @@ sphinx-math-dollar==1.2
 nbsphinx
 numpydoc
 sphinxcontrib.bibtex
-python
 IPython
 matplotlib
