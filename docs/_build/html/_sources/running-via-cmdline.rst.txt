@@ -29,7 +29,7 @@ This should produce output that looks something like::
 
 To run COMPAS from the command line, and have COMPAS output a list of the command-line options available, type::
 
-    ./comapas -h
+    ./compas -h
 
 Note the single dash before the option name.  This should produce output that looks something like::
 
@@ -60,7 +60,7 @@ The options are listed in `ASCIIbetical` order (digits come before uppercase alp
 To run COMPAS from the command line, and have COMPAS output a list of the command-line options available, together with a brief description
 of  the option, and its default value in the COMPAS code, type::
 
-    ./comapas --help
+    ./compas --help
 
 Note two dashes before the option name.  This should produce output that looks something like::
 

@@ -834,7 +834,7 @@ Prints COMPAS version string.
 :ref:`Back to Top <options-props-top>`
 
 **--wolf-rayet-multiplier** |br|
-Multiplicative constant for Wolf Rayet winds. Note that wind mass loss will also be multiplied by the |br|
+Multiplicative constant for Wolf Rayet winds. Note that wind mass loss will also be multiplied by the
 ``overall-wind-mass-loss-multiplier``. |br|
 Default = 1.0
 
