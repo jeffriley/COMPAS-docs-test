@@ -6,7 +6,9 @@ us your paper reference and making your input settings and output data publicly 
 
 Please also cite: 
 
-    Team COMPAS: J. Riley `et al.` [:cite:year:`compas2021`].
+.. _cite-compas:
+
+    Team COMPAS: J. Riley `et al.` [:cite:year:`compas2021`]. |_| |_| |_| |_| |_| |_| :download:`Bibtex citation <COMPAS-2021methodsPaper.bib>`
 
 |br|
 We would also greatly appreciate an acknowledgement of the form:
