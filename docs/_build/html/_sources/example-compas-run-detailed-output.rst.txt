@@ -5,7 +5,7 @@ The COMPAS run from the tutorial creates a new directory ``COMPAS_Output``, insi
 (here we assume ``logfile_type = 'HDF5'`` in the python submit file):
 
 **Run_Details** |br|
-An record of the COMPAS command-line program options specified for this tutorial (these are the values set by ``pythonSubmit.py``, or 
+A record of the COMPAS command-line program options specified for this tutorial (these are the values set by ``pythonSubmit.py``, or 
 the COMPAS default values if not set by ``pythonSubmit.py``).
 
 **COMPAS_Output.h5** |br|
