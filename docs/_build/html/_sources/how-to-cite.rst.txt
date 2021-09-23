@@ -6,7 +6,7 @@ us your paper reference and making your input settings and output data publicly 
 
 Please also kindly include citations to the following papers:
 
-TeamCOMPAS, J. Riley `et al.` [2021].
+:cite:t:`compas2021`.
 
 :cite:t:`Stevenson2017`.
 
