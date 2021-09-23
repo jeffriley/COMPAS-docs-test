@@ -4,14 +4,11 @@ Citing COMPAS
 If you use this code or parts of this code for results presented in a scientific publication, we would greatly appreciate you sending
 us your paper reference and making your input settings and output data publicly available by uploading it to the COMPAS Zenodo community. 
 
-Please also kindly include citations to the following papers:
+Please also cite: 
 
-Team COMPAS: J. Riley `et al.` [:cite:year:`compas2021`].
+    Team COMPAS: J. Riley `et al.` [:cite:year:`compas2021`].
 
-:cite:t:`Stevenson2017`.
-
-:cite:t:`Vigna-Gomez2018`.
-
+|br|
 We would also greatly appreciate an acknowledgement of the form:
 
 "Simulations in this paper made use of the COMPAS rapid binary population synthesis code (version x.y.z), which is freely available at http://github.com/TeamCOMPAS/COMPAS."
