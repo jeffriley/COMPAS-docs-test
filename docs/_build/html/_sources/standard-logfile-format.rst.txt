@@ -71,9 +71,9 @@ constituent stars of a binary will have appropriate identifiers appended. That i
          - will have ":boldtext:`(CP)`" appended
 
 ``HDF5`` files are not human-readable. The ``HDF5`` file format supports large, complex, heterogeneous data, enabling the data to be stored
-in a structured way in a single file. When the HDF5 format is specified for COMPAS log files, a single HDF5 file is produced for 
+in a structured way in a single file. When the ``HDF5`` format is specified for COMPAS log files, a single ``HDF5`` file is produced for 
 non-detailed output log files, containing all non-detailed output log files described above. Detailed output files are created, as for
-other logfile types, as individual files (in this case, HDF5 files), in the ’Detailed_Output’ container directory.
+other logfile types, as individual files (in this case, ``HDF5`` files), in the ’Detailed_Output’ container directory.
 
 Each file described above is created as a `group` within the ``HDF5`` file, with the name of the group set to the name of the file
 (e.g. "BSE_System_Parameters"). Each column in the files described above is created as a `dataset` within its corresponding group in the

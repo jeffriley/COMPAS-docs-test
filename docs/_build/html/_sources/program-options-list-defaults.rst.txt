@@ -254,11 +254,11 @@ Default = Process to EOF
 :ref:`Back to Top <options-props-top>`
 
 **--hdf5-buffer-size** |br|
-The HDF5 IO buffer size for writing to HDF5 logfiles (number of HDF5 chunks). |br|
+The ``HDF5`` IO buffer size for writing to ``HDF5`` logfiles (number of ``HDF5`` chunks). |br|
 Default = 1
 
 **--hdf5-chunk-size** |br|
-The HDF5 dataset chunk size to be used when creating HDF5 logfiles (number of logfile entries). |br|
+The ``HDF5`` dataset chunk size to be used when creating ``HDF5`` logfiles (number of logfile entries). |br|
 Default = 100000
 
 **--help [ -h ]** |br|

@@ -261,7 +261,7 @@ post-creation analysis software can disable the cache or not when accessing <cod
 here does not affect how other software accesses the files post-creation).</p>
 <p>So many small chunks is not so good, and neither is just a few very large chunks. So what's the optimum chunk size? That depends
 upon several things, and probably the most important of those are the final size of the dataset and the access pattern.</p>
-<p>As mentioned above, we tend to access datasets serially, and generally from to to bottom, so larger chunks would seem appropriate,
+<p>As mentioned above, we tend to access datasets serially, and generally from top to bottom, so larger chunks would seem appropriate,
 but not so large that we generate <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files with lots of unused space. However, disk space, even SSD space, is cheap, so
 trading space against performance is probably a good trade.</p>
 <p>Also as mentioned above, we don't know the final size of (most of) the datasets when creating the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> in COMPAS - though we do

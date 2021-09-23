@@ -212,9 +212,9 @@
 </style>
 <div class="section" id="h5copy-py">
 <h1>h5copy.py<a class="headerlink" href="#h5copy-py" title="Permalink to this headline">¶</a></h1>
-<p>This program copies <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file(s) to a designated output HDF5 file. If the output file is an existing <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file, the
-user can  specify whether the existing content should be erased before copying begins, or whether the copied data should be
-appended to the existing data. If multiple files are given as input files, the resultant <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file is the concatenation
+<p>This program copies <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file(s) to a designated output <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file. If the output file is an existing <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file,
+the user can  specify whether the existing content should be erased before copying begins, or whether the copied data should
+be appended to the existing data. If multiple files are given as input files, the resultant <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file is the concatenation
 of the input files.</p>
 <div class="section" id="some-nomenclature">
 <h2>Some nomenclature<a class="headerlink" href="#some-nomenclature" title="Permalink to this headline">¶</a></h2>
@@ -279,7 +279,7 @@ to the new output file.</p></li>
 existing output file will be preserved and data from the input file(s) will be appended to the existing output file if the
 output file was created with chunking enabled (see <a class="reference internal" href="post-processing-hdf5-info.html#hdf5-chunking"><span class="std std-ref">HDF5 file chunking and IO</span></a> - only files that were created with chunking enabled
 can be extended).</p>
-<p>Attempting to append data to an existing HDF5 file that was not created with chunking enabled will result in the following
+<p>Attempting to append data to an existing <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file that was not created with chunking enabled will result in the following
 message being displayed for each dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Only</span> <span class="n">chunked</span> <span class="n">datasets</span> <span class="n">can</span> <span class="n">be</span> <span class="n">resized</span>
 </pre></div>

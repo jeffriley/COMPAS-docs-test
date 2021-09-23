@@ -66,7 +66,7 @@ here does not affect how other software accesses the files post-creation).
 So many small chunks is not so good, and neither is just a few very large chunks. So what's the optimum chunk size? That depends 
 upon several things, and probably the most important of those are the final size of the dataset and the access pattern.
  
-As mentioned above, we tend to access datasets serially, and generally from to to bottom, so larger chunks would seem appropriate, 
+As mentioned above, we tend to access datasets serially, and generally from top to bottom, so larger chunks would seem appropriate, 
 but not so large that we generate ``HDF5`` files with lots of unused space. However, disk space, even SSD space, is cheap, so 
 trading space against performance is probably a good trade.
  

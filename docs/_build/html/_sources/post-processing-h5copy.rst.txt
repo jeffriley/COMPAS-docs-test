@@ -1,9 +1,9 @@
 h5copy.py
 =========
 
-This program copies ``HDF5`` file(s) to a designated output HDF5 file. If the output file is an existing ``HDF5`` file, the 
-user can  specify whether the existing content should be erased before copying begins, or whether the copied data should be 
-appended to the existing data. If multiple files are given as input files, the resultant ``HDF5`` file is the concatenation
+This program copies ``HDF5`` file(s) to a designated output ``HDF5`` file. If the output file is an existing ``HDF5`` file,
+the user can  specify whether the existing content should be erased before copying begins, or whether the copied data should
+be appended to the existing data. If multiple files are given as input files, the resultant ``HDF5`` file is the concatenation
 of the input files.
 
 
@@ -79,7 +79,7 @@ Output file
   output file was created with chunking enabled (see :ref:`HDF5-chunking` - only files that were created with chunking enabled 
   can be extended).
 
-  Attempting to append data to an existing HDF5 file that was not created with chunking enabled will result in the following 
+  Attempting to append data to an existing ``HDF5`` file that was not created with chunking enabled will result in the following 
   message being displayed for each dataset::
 
       Only chunked datasets can be resized

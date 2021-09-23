@@ -298,9 +298,9 @@ constituent stars of a binary will have appropriate identifiers appended. That i
 </table>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files are not human-readable. The <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file format supports large, complex, heterogeneous data, enabling the data to be stored
-in a structured way in a single file. When the HDF5 format is specified for COMPAS log files, a single HDF5 file is produced for
+in a structured way in a single file. When the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> format is specified for COMPAS log files, a single <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file is produced for
 non-detailed output log files, containing all non-detailed output log files described above. Detailed output files are created, as for
-other logfile types, as individual files (in this case, HDF5 files), in the ’Detailed_Output’ container directory.</p>
+other logfile types, as individual files (in this case, <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files), in the ’Detailed_Output’ container directory.</p>
 <p>Each file described above is created as a <cite>group</cite> within the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file, with the name of the group set to the name of the file
 (e.g. &quot;BSE_System_Parameters&quot;). Each column in the files described above is created as a <cite>dataset</cite> within its corresponding group in the
 <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file, with the name of the datset set to the column header as described above (e.g. &quot;Mass(1)&quot;). Each dataset in an <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> file
