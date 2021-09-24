@@ -12,13 +12,8 @@ COMPAS
 
 **C**\ ompact **O**\ bject **M**\ ergers: **P**\ opulation **A**\ strophysics and **S**\ tatistics
 
-... `by TeamCOMPAS`
+`... by` `TeamCOMPAS <https://compas.science/index.html>`_
 
-
-|br|
-COMPAS homepage: https://compas.science/index.html |br|
-Code repository: https://github.com/TeamCOMPAS/COMPAS/ |br|
-Documentation: https://compas-docs-readthedocs.readthedocs.io/en/latest/index.html
 
 
 Contents
@@ -31,10 +26,15 @@ Contents
 
    user-guide
    developer-guide
+
+    Code repository <https://github.com/TeamCOMPAS/COMPAS>
+    Request an enhancement <https://github.com/TeamCOMPAS/COMPAS/issues/new>
+    Report a problem <https://github.com/TeamCOMPAS/COMPAS/issues/new>
    
    references
 
    contact-us
+
 
 If you use COMPAS in the preparation of a publication, please :doc:`cite COMPAS <how-to-cite>`.
 
