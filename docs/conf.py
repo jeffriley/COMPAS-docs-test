@@ -35,25 +35,19 @@ author = 'TeamCOMPAS'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
-#    'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx_math_dollar',
-#    'sphinx.ext.autosectionlabel',
-#    'sphinx_search.extension',
-#    'sphinx.ext.graphviz',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.bibtex',
     'linuxdoc.rstFlatTable',
     'nbsphinx',
     'matplotlib.sphinxext.plot_directive',
     'IPython.sphinxext.ipython_console_highlighting',
-    'IPython.sphinxext.ipython_directive',
-#    'sphinx_copybutton',
+    'IPython.sphinxext.ipython_directive'
 ]
 
 intersphinx_mapping = {'python': ('https://docs.python.org/3', None),
                        'matplotlib': ('https://matplotlib.org/stable', None),
-#                       'seaborn': ('https://seaborn.pydata.org', None),
                        'scipy': ('https://docs.scipy.org/doc/scipy/reference', None),
                        'astropy': ('https://docs.astropy.org/en/stable', None)}
 
@@ -212,4 +206,3 @@ rst_prolog = open('globals.rst', 'r').read()
 
 bibtex_bibfiles = ['refs.bib']
 bibtex_reference_style = 'author_year'
-#bibtext_default_style = 'alpha'
