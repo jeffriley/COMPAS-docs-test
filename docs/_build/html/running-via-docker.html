@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
   <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/COMPAS.css" type="text/css" />
 
@@ -211,12 +210,13 @@ with a single command.</p>
 <p>This also gives users the ability to run COMPAS on cloud solutions like <code class="docutils literal notranslate"><span class="pre">AWS</span> <span class="pre">EC2</span></code><a class="footnote-reference brackets" href="#f1" id="id1">1</a> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Compute</span> <span class="pre">Engine</span></code><a class="footnote-reference brackets" href="#f2" id="id2">2</a> where hundreds
 of cores can be provisioned without having to manually configure the environment.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Docker</span></code> works by creating an isolated and standalone environment known as a <cite>container</cite><a class="footnote-reference brackets" href="#f3" id="id3">3</a>. Containers can be created or destroyed
-without affecting the host machine or other containers<a class="footnote-reference brackets" href="#f4" id="id4">4</a>.</p>
+without affecting the host machine or other containers (containers can still interact with each other and the host machine through mounted
+directories/files or exposed ports).</p>
 <p>Containers are instances of images. An image is a pre-defined setup/environment that is instantiated when started as a container (containers
-are to images what objects are to classes in the OO paradigm)<a class="footnote-reference brackets" href="#f5" id="id5">5</a>.</p>
+are to images what objects are to classes in the OO paradigm)<a class="footnote-reference brackets" href="#f4" id="id4">4</a>.</p>
 <p>Containers are (almost) always run as a <code class="docutils literal notranslate"><span class="pre">Linux</span></code> environment. A major benefit of this is the ability to run Linux applications in a <code class="docutils literal notranslate"><span class="pre">Windows</span></code>
 or <code class="docutils literal notranslate"><span class="pre">macOS</span></code> environment without having to jump through hoops or have a diminished experience.</p>
-<p>Image definitions can be defined by users (e.g. <code class="docutils literal notranslate"><span class="pre">Dockerfiles</span></code>); there are also standard images publicly available on <code class="docutils literal notranslate"><span class="pre">dockerHub</span></code><a class="footnote-reference brackets" href="#f6" id="id6">6</a></p>
+<p>Image definitions can be defined by users (e.g. <code class="docutils literal notranslate"><span class="pre">Dockerfiles</span></code>); there are also standard images publicly available on <code class="docutils literal notranslate"><span class="pre">dockerHub</span></code><a class="footnote-reference brackets" href="#f5" id="id5">5</a></p>
 <p>This following sections assume <code class="docutils literal notranslate"><span class="pre">Docker</span></code> has been installed and is running. For Windows and MacOS users, see
 <a class="reference external" href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>.</p>
 <div class="toctree-wrapper compound">
@@ -237,12 +237,9 @@ or <code class="docutils literal notranslate"><span class="pre">macOS</span></co
 <dd><p><a class="reference external" href="https://www.docker.com/resources/what-container">https://www.docker.com/resources/what-container</a></p>
 </dd>
 <dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Containers can still interact with each other and the host machine through mounted directories/files or exposed ports.</p>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container#:~:text=An%20instance%20of%20an%20image,of%20layers%20as%20you%20describe.&amp;text=You%20can%20see%20all%20your,an%20image%20is%20a%20container">https://stackoverflow.com/questions/23735149</a></p>
 </dd>
 <dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p><a class="reference external" href="https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container#:~:text=An%20instance%20of%20an%20image,of%20layers%20as%20you%20describe.&amp;text=You%20can%20see%20all%20your,an%20image%20is%20a%20container">https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container#:~:text=An%20instance%20of%20an%20image,of%20layers%20as%20you%20describe.&amp;text=You%20can%20see%20all%20your,an%20image%20is%20a%20container</a></p>
-</dd>
-<dt class="label" id="f6"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p><a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
 </dd>
 </dl>
