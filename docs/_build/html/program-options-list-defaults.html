@@ -213,7 +213,7 @@
 </style>
 <div class="section" id="program-option-list-and-default-values">
 <h1>Program option list and default values<a class="headerlink" href="#program-option-list-and-default-values" title="Permalink to this headline">¶</a></h1>
-<p>Any program options that are not specified take default values:</p>
+<p>Any program options that are not specified take default values.</p>
 <ul class="simple">
 <li><p>On the command line, program options that are not explicitly specified default to the COMPAS default value for the option (as specified in the COMPAS code - may be sampled from a distribution).</p></li>
 <li><p>On a <a class="reference internal" href="grid-files.html"><span class="doc">grid file</span></a> line, program options that are not explicitly specified default to the value specified for that option on the command line. If the program option was not explicitly specified on the command line, it will default to the COMPAS default value for the option, as described above. That is, the value for any option not specified on a grid file line option falls back to the value specified on the command line, which falls back to the COMPAS default if it was not specified on the command line.</p></li>
@@ -262,7 +262,7 @@ Default = GRID</p>
 </table>
 <p><strong>--allow-rlof-at-birth</strong> <br />
 Allow binaries that have one or both stars in RLOF at birth to evolve as over-contact systems. <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--allow-touching-at-birth</strong> <br />
 Allow binaries that are touching at birth to be included in the sampling. <br />
 Default = FALSE</p>
@@ -286,13 +286,13 @@ Default = FALSE</p>
 Chemically Homogeneous Evolution mode. See <span id="id1">[<a class="reference internal" href="references.html#id16" title="Jeff Riley, Ilya Mandel, Pablo Marchant, Ellen Butler, Kaila Nathaniel, Coenraad Neijssel, Spencer Shortt, and Alejandro Vigna-Gomez. Chemically homogeneous evolution: a rapid population synthesis approach. Mon. Not. Roy. Astron. Soc., 505(1):663–676, 2021. arXiv:2010.00002, doi:10.1093/mnras/stab1291.">Riley <em>et al.</em>, 2021</a>]</span> for details of the implementation
 of Chemically Homogeneous Evolution in COMPAS <br />
 Options: { NONE, OPTIMISTIC, PESSIMISTIC } <br />
-Default = NONE</p>
+Default = PESSIMISTIC</p>
 <p><strong>--circulariseBinaryDuringMassTransfer</strong> <br />
 Circularise binary when it enters a Mass Transfer episode. <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--common-envelope-allow-main-sequence-survive</strong> <br />
 Allow main sequence donors to survive common envelope evolution. <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--common-envelope-alpha</strong> <br />
 Common Envelope efficiency alpha. <br />
 Default = 1.0</p>
@@ -327,9 +327,9 @@ Default = ZERO</p>
 <p><strong>--common-envelope-recombination-energy-density</strong> <br />
 Recombination energy density (erg g−1). <br />
 Default = <span class="math notranslate nohighlight">\(1.5 \times 10^{13}\)</span></p>
-<p><strong>--common-envelope-slope-Kruckow</strong> <br />
+<p><strong>--common-envelope-slope-kruckow</strong> <br />
 Common Envelope slope for Kruckow lambda. <br />
-Default = −0.8</p>
+Default = −0.833333</p>
 <p><strong>--cool-wind-mass-loss-multiplier</strong> <br />
 Multiplicative constant for wind mass loss of cool stars, i.e. those with temperatures below the
 VINK_MASS_LOSS_MINIMUM_TEMP (default 12500K). <br />
@@ -365,6 +365,9 @@ Default = 0.0</p>
 <p><strong>--eddington-accretion-factor</strong> <br />
 Multiplication factor for Eddington accretion for NS &amp; BH (i.e. &gt; 1 is super-eddington and 0 is no accretion). <br />
 Default = 1.0</p>
+<p><strong>--enable-warnings</strong> <br />
+Display warning messages to stdout. <br />
+Default = FALSE</p>
 <p><strong>--envelope-state-prescription</strong> <br />
 Prescription for determining whether the envelope of the star is convective or radiative. <br />
 Options: { LEGACY, HURLEY, FIXED_TEMPERATURE } <br />
@@ -390,12 +393,12 @@ Default = DELAYED</p>
 <p><strong>--grid</strong> <br />
 Grid filename. <br />
 Default = ’’ (None)</p>
-<p><strong>--grid-start-line</strong> <br />
-The first line of the grid file to be processed. <br />
-Default = 0</p>
 <p><strong>--grid-lines-to-process</strong> <br />
 The number of grid file lines to be processed. <br />
 Default = Process to EOF</p>
+<p><strong>--grid-start-line</strong> <br />
+The first line of the grid file to be processed. <br />
+Default = 0</p>
 <p id="options-props-h"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--hdf5-buffer-size</strong> <br />
 The <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> IO buffer size for writing to <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> logfiles (number of <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> chunks). <br />
@@ -421,13 +424,13 @@ Options: { SALPETER, POWERLAW, UNIFORM, KROUPA } <br />
 Default = KROUPA</p>
 <p><strong>--initial-mass-max</strong> <br />
 Maximum mass to generate using given IMF (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
-Default = 100.0</p>
+Default = 150.0</p>
 <p><strong>--initial-mass-min</strong> <br />
 Minimum mass to generate using given IMF (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
-Default = 8.0</p>
+Default = 5.0</p>
 <p><strong>--initial-mass-power</strong> <br />
 Single power law power to generate primary mass using POWERLAW IMF. <br />
-Default = −2.3</p>
+Default = 0.0</p>
 <p id="options-props-k"><span id="options-props-j"></span><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--kick-direction</strong> <br />
 Natal kick direction distribution. <br />
@@ -436,13 +439,9 @@ Default = ISOTROPIC</p>
 <p><strong>--kick-direction-power</strong> <br />
 Power for power law kick direction distribution, where 0.0 = isotropic, +ve = polar, -ve = in plane. <br />
 Default = 0.0 (isotropic)</p>
-<p><strong>--kick-scaling-factor</strong> <br />
-Arbitrary factor used to scale kicks. <br />
-Default = 1.0</p>
 <p><strong>--kick-magnitude</strong> <br />
 Value to be used as the (drawn) kick magnitude for a single star when evolving in SSE mode, should the star
-undergo a supernova event (km s−1
-). <br />
+undergo a supernova event (<span class="math notranslate nohighlight">\(km s^{−1}\)</span>). <br />
 If a value for option <code class="docutils literal notranslate"><span class="pre">--kick-magnitude-random</span></code> is specified, it will be used in preference to <code class="docutils literal notranslate"><span class="pre">--kick-magnitude</span></code>. <br />
 Default = 0.0</p>
 <p><strong>--kick-magnitude-1</strong> <br />
@@ -462,7 +461,7 @@ Default = MAXWELLIAN</p>
 <p><strong>--kick-magnitude-max</strong> <br />
 Maximum drawn kick magnitude (<span class="math notranslate nohighlight">\(km s^{−1}\)</span>). <br />
 Must be &gt; 0 if using <code class="docutils literal notranslate"><span class="pre">--kick-magnitude-distribution</span> <span class="pre">=</span> <span class="pre">FLAT</span></code>. <br />
-Default = −(1.0)</p>
+Default = −1.0</p>
 <p><strong>--kick-magnitude-random</strong> <br />
 Value to be used to draw the kick magnitude for a single star when evolving in SSE mode, should the star
 undergo a supernova event. <br />
@@ -483,10 +482,10 @@ The specified value for this option will be used in preference to any specified 
 Default = Random number drawn uniformly from <span class="math notranslate nohighlight">\([0.0, 1.0)\)</span></p>
 <p><strong>--kick-magnitude-sigma-CCSN-BH</strong> <br />
 Sigma for chosen kick magnitude distribution for black holes (<span class="math notranslate nohighlight">\(km s^{−1}\)</span>). <br />
-Default = 250.0</p>
+Default = 265.0</p>
 <p><strong>--kick-magnitude-sigma-CCSN-NS</strong> <br />
 Sigma for chosen kick magnitude distribution for neutron stars (<span class="math notranslate nohighlight">\(km s^{−1}\)</span>). <br />
-Default = 250.0</p>
+Default = 265.0</p>
 <p><strong>--kick-magnitude-sigma-ECSN</strong> <br />
 Sigma for chosen kick magnitude distribution for ECSN (<span class="math notranslate nohighlight">\(km s^{−1}\)</span>). <br />
 Default = 30.0</p>
@@ -511,6 +510,9 @@ Default = Random number drawn uniformly from <span class="math notranslate nohig
 The angle between ’x’ and ’y’, both in the orbital plane of the supernova vector, for the for the secondary
 star of a binary system when evolving in BSE mode, should it undergo a supernova event (radians). <br />
 Default = Random number drawn uniformly from <span class="math notranslate nohighlight">\([0.0, 2\pi)\)</span></p>
+<p><strong>--kick-scaling-factor</strong> <br />
+Arbitrary factor used to scale kicks. <br />
+Default = 1.0</p>
 <p><strong>--kick-theta-1</strong> <br />
 The angle between the orbital plane and the ’z’ axis of the supernova vector for the for the primary star of a
 binary system when evolving in BSE mode, should it undergo a supernova event (radians). <br />
@@ -520,49 +522,49 @@ Default = Random number drawn uniformly from <span class="math notranslate nohig
 Logging classes enabled. <br />
 Default = ’’ (None)</p>
 <p><strong>--logfile-common-envelopes</strong> <br />
-Filename for BSE Common Envelopes logfile. <br />
-Default = ’BSE Common Envelopes’</p>
+Filename for Common Envelopes logfile (BSE mode). <br />
+Default = ’BSE_Common_Envelopes’</p>
 <p><strong>--logfile-definitions</strong> <br />
 Filename for logfile record definitions file. <br />
 Default = ’’ (None)</p>
 <p><strong>--logfile-detailed-output</strong> <br />
-Filename for the Detailed Output logfile. <br />
-Default = ’SSE Detailed Output’ for SSE mode; ’BSE Detailed Output’ for BSE mode <br /></p>
+Filename for the Detailed_Output logfile. <br />
+Default = ’SSE_Detailed_Output’ for SSE mode; ’BSE_Detailed_Output’ for BSE mode <br /></p>
 <p><strong>--logfile-double-compact-objects</strong> <br />
 Filename for the Double Compact Objects logfile (BSE mode). <br />
-Default = ’BSE Double Compact Objects’</p>
+Default = ’BSE_Double_Compact_Objects’</p>
 <p><strong>--logfile-name-prefix</strong> <br />
 Prefix for logfile names. <br />
 Default = ’’ (None)</p>
 <p><strong>--logfile-pulsar-evolution</strong> <br />
 Filename for the Pulsar Evolution logfile (BSE mode). <br />
-Default = ’BSE Pulsar Evolution’</p>
+Default = ’BSE_Pulsar_Evolution’</p>
 <p><strong>--logfile-rlof-parameters</strong> <br />
 Filename for the RLOF Printing logfile (BSE mode). <br />
-Default = ’BSE RLOF’</p>
+Default = ’BSE_RLOF’</p>
 <p><strong>--logfile-supernovae</strong> <br />
 Filename for the Supernovae logfile. <br />
-Default = ’SSE Supernovae’ for SSE mode; ’BSE Supernovae’ for BSE mode <br /></p>
+Default = ’SSE_Supernovae’ for SSE mode; ’BSE_Supernovae’ for BSE mode <br /></p>
 <p><strong>--logfile-switch-log</strong> <br />
 Filename for the Switch Log logfile. <br />
-Default = ’SSE Switch Log’ for SSE mode; ’BSE Switch Log’ for BSE mode <br /></p>
+Default = ’SSE_Switch_Log’ for SSE mode; ’BSE_Switch_Log’ for BSE mode <br /></p>
 <p><strong>--logfile-system-parameters</strong> <br />
 Filename for the System Parameters logfile (BSE mode). <br />
-Default = ’BSE System Parameters’</p>
+Default = ’SSE_System_Parameters’ for SSE mode; ’BSE_System_Parameters’ for BSE mode <br /></p>
 <p><strong>--logfile-type</strong> <br />
 The type of logfile to be produced by COMPAS. <br />
 Default = ’HDF5’</p>
 <p><strong>--log-level</strong> <br />
 Determines which print statements are included in the logfile. <br />
 Default = 0</p>
-<p><strong>--luminous-blue-variable-prescription</strong> <br />
-Luminous blue variable mass loss prescription. <br />
-Options: { NONE, HURLEY, HURLEY_ADD, BELCZYNSKI } <br />
-Default = HURLEY_ADD</p>
 <p><strong>--luminous-blue-variable-multiplier</strong> <br />
 Multiplicative constant for LBV mass loss. (Use 10 for Mennekens &amp; Vanbeveren (2014)). <br />
 Note that wind mass loss will also be multiplied by the <code class="docutils literal notranslate"><span class="pre">--overall-wind-mass-loss-multiplier</span></code>. <br />
 Default = 1.5</p>
+<p><strong>--luminous-blue-variable-prescription</strong> <br />
+Luminous blue variable mass loss prescription. <br />
+Options: { NONE, HURLEY, HURLEY_ADD, BELCZYNSKI } <br />
+Default = HURLEY_ADD</p>
 <p id="options-props-m"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--mass-loss-prescription</strong> <br />
 Mass loss prescription. <br />
@@ -581,13 +583,13 @@ Default = 1.0</p>
 <p><strong>--mass-ratio-min</strong> <br />
 Minimum mass ratio <span class="math notranslate nohighlight">\(\frac{m2}{m1}\)</span> to generate. <br />
 Default = 0.01</p>
-<p><strong>--massTransfer</strong> <br />
+<p><strong>--mass-transfer</strong> <br />
 Enable mass transfer. <br />
 Default = TRUE</p>
 <p><strong>--mass-transfer-accretion-efficiency-prescription</strong> <br />
 Mass transfer accretion efficiency prescription. <br />
 Options: { THERMAL, FIXED, CENTRIFUGAL } <br />
-Default = ISOTROPIC</p>
+Default = THERMAL</p>
 <p><strong>--mass-transfer-angular-momentum-loss-prescription</strong> <br />
 Mass Transfer Angular Momentum Loss prescription. <br />
 Options: { JEANS, ISOTROPIC, CIRCUMBINARY, ARBITRARY } <br />
@@ -595,30 +597,31 @@ Default = ISOTROPIC</p>
 <p><strong>--mass-transfer-fa</strong> <br />
 Mass Transfer fraction accreted. <br />
 Used when <code class="docutils literal notranslate"><span class="pre">--mass-transfer-accretion-efficiency-prescription</span> <span class="pre">=</span> <span class="pre">FIXED_FRACTION</span></code>. <br />
-Default = 1.0 (fully conservative)</p>
+Default = 0.5</p>
 <p><strong>--mass-transfer-jloss</strong> <br />
 Specific angular momentum with which the non-accreted system leaves the system. <br />
 Used when <code class="docutils literal notranslate"><span class="pre">--mass-transfer-angular-momentum-loss-prescription</span> <span class="pre">=</span> <span class="pre">ARBITRARY</span></code>, ignored otherwise. <br />
 Default = 1.0</p>
-<p><strong>--mass-transfer-thermal-limit-accretor</strong> <br />
-Mass Transfer Thermal Accretion limit multiplier. <br />
-Options: { CFACTOR, ROCHELOBE }</p>
-<p><strong>--mass-transfer-thermal-limit-C</strong> <br />
-Mass Transfer Thermal rate factor for the accretor. <br />
-Default = 10.0</p>
 <p><strong>--mass-transfer-rejuvenation-prescription</strong> <br />
 Mass Transfer Rejuvenation prescription. <br />
 Options: { NONE, STARTRACK } <br />
-Default = NONE</p>
+Default = STARTRACK</p>
+<p><strong>--mass-transfer-thermal-limit-accretor</strong> <br />
+Mass Transfer Thermal Accretion limit multiplier. <br />
+Options: { CFACTOR, ROCHELOBE } <br />
+Default = CFACTOR</p>
+<p><strong>--mass-transfer-thermal-limit-C</strong> <br />
+Mass Transfer Thermal rate factor for the accretor. <br />
+Default = 10.0</p>
 <p><strong>--maximum-evolution-time</strong> <br />
 Maximum time to evolve binaries (Myr). Evolution of the binary will stop if this number is reached. <br />
 Default = 13700.0</p>
-<p><strong>--maximum-mass-donor-Nandez-Ivanova</strong> <br />
+<p><strong>--maximum-mass-donor-nandez-ivanova</strong> <br />
 Maximum donor mass allowed for the revised common envelope formalism of Nandez &amp; Ivanova (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
 Default = 2.0</p>
 <p><strong>--maximum-neutron-star-mass</strong> <br />
 Maximum mass of a neutron star (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
-Default = 3.0</p>
+Default = 2.5</p>
 <p><strong>--maximum-number-timestep-iterations</strong> <br />
 Maximum number of timesteps to evolve binary. Evolution of the binary will stop if this number is reached. <br />
 Default = 99999</p>
@@ -629,30 +632,36 @@ Default = 1.6</p>
 <p><strong>--metallicity [ -z ]</strong> <br />
 Metallicity. <br />
 The value specified for metallicity is applied to both stars for BSE mode. <br />
-Default = 0.02</p>
+Default = 0.0142</p>
 <p><strong>--metallicity-distribution</strong> <br />
 Metallicity distribution. <br />
 Options: { ZSOLAR, LOGUNIFORM } <br />
 Default = ZSOLAR</p>
 <p><strong>--metallicity-max</strong> <br />
 Maximum metallicity to generate. <br />
-Default = 0.04</p>
+Default = 0.03</p>
 <p><strong>--metallicity-min</strong> <br />
 Minimum metallicity to generate. <br />
 Default = 0.0001</p>
 <p><strong>--minimum-secondary-mass</strong> <br />
 Minimum mass of secondary to generate (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
-Default = 0.00007 if <code class="docutils literal notranslate"><span class="pre">--initial-mass-2</span></code> specified; value of <code class="docutils literal notranslate"><span class="pre">--initial-mass-min</span></code> if <code class="docutils literal notranslate"><span class="pre">--initial-mass-2</span></code> not specified.</p>
+Default = 0.1 if <code class="docutils literal notranslate"><span class="pre">--initial-mass-2</span></code> specified; value of <code class="docutils literal notranslate"><span class="pre">--initial-mass-min</span></code> if <code class="docutils literal notranslate"><span class="pre">--initial-mass-2</span></code> not specified.</p>
 <p><strong>--mode</strong> <br />
 The mode of evolution. <br />
 Options: { SSE, BSE } <br />
 Default = BSE</p>
+<p><strong>--muller-mandel-kick-multiplier-BH</strong> <br />
+Scaling prefactor for BH kicks when using the <cite>MULLERMANDEL</cite> kick magnitude distribution <br />
+Default = 200.0</p>
+<p><strong>--muller-mandel-kick-multiplier-NS</strong> <br />
+Scaling prefactor for NS kicks when using the <cite>MULLERMANDEL</cite> kick magnitude distribution <br />
+Default = 400.0</p>
 <p id="options-props-n"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
-<p><strong>--neutrino-mass-loss-bh-formation</strong> <br />
+<p><strong>--neutrino-mass-loss-BH-formation</strong> <br />
 Assumption about neutrino mass loss during BH formation. <br />
 Options: { FIXED_FRACTION, FIXED_MASS } <br />
-Default = FIXED_FRACTION</p>
-<p><strong>--neutrino-mass-loss-bh-formation-value</strong> <br />
+Default = FIXED_MASS</p>
+<p><strong>--neutrino-mass-loss-BH-formation-value</strong> <br />
 Amount of mass lost in neutrinos during BH formation (either as fraction or in solar masses, <br />
 depending on the value of <code class="docutils literal notranslate"><span class="pre">--neutrino-mass-loss-bh-formation</span></code>). <br />
 Default = 0.1</p>
@@ -677,6 +686,10 @@ Default = 10</p>
 Initial orbital period for a binary star when evolving in BSE mode (days). <br />
 Used only if the semi-major axis is not specified via <code class="docutils literal notranslate"><span class="pre">--semi-major-axis</span></code>. <br />
 Default = Value is sampled if option not specified.</p>
+<p><strong>--orbital-period-distribution</strong> <br />
+Initial orbital period distribution. <br />
+Options: { FLATINLOG } <br />
+Default = FLATINLOG</p>
 <p><strong>--orbital-period-max</strong> <br />
 Maximum period to generate (days). <br />
 Default = 1000.0</p>
@@ -697,7 +710,7 @@ Default = 1.0</p>
 <p id="options-props-p"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--pair-instability-supernovae</strong> <br />
 Enable pair instability supernovae (PISN). <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--PISN-lower-limit</strong> <br />
 Minimum core mass for PISN (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
 Default = 60.0</p>
@@ -735,7 +748,7 @@ Maximum pulsar birth spin period (ms). <br />
 Default = 100.0</p>
 <p><strong>--pulsar-birth-spin-period-distribution-min</strong> <br />
 Minimum pulsar birth spin period (ms). <br />
-Default = 0.0</p>
+Default = 10.0</p>
 <p><strong>--pulsar-magnetic-field-decay-massscale</strong> <br />
 Mass scale on which magnetic field decays during accretion (<span class="math notranslate nohighlight">\(M_\odot\)</span>). <br />
 Default = 0.025</p>
@@ -747,11 +760,11 @@ Default = 1000.0</p>
 Default = 8.0</p>
 <p><strong>--pulsational-pair-instability</strong> <br />
 Enable mass loss due to pulsational-pair-instability (PPI). <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--pulsational-pair-instability-prescription</strong> <br />
 Pulsational pair instability prescription. <br />
 Options: { COMPAS, STARTRACK, MARCHANT, FARMER } <br />
-Default = COMPAS</p>
+Default = MARCHANT</p>
 <p id="options-props-q"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--quiet</strong> <br />
 Suppress printing to stdout. <br />
@@ -764,12 +777,12 @@ Default = 0</p>
 Remnant mass prescription. <br />
 Options: { HURLEY2000, BELCZYNSKI2002, FRYER2012, MULLER2016, MULLERMANDEL, SCHNEIDER2020, SCHNEIDER2020ALT } <br />
 Default = FRYER2012</p>
-<p><strong>--revised-energy-formalism-Nandez-Ivanova</strong> <br />
+<p><strong>--revised-energy-formalism-nandez-ivanova</strong> <br />
 Enable revised energy formalism of Nandez &amp; Ivanova. <br />
 Default = FALSE</p>
 <p><strong>--rlof-printing</strong> <br />
 Print RLOF events to logfile. <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p><strong>--rotational-frequency</strong> <br />
 Initial rotational frequency of the star for SSE (Hz). <br />
 Default = 0.0 (<code class="docutils literal notranslate"><span class="pre">--rotational-velocity-distribution</span></code> used if <code class="docutils literal notranslate"><span class="pre">--rotational-frequency</span></code> not specified)</p>
@@ -786,7 +799,7 @@ Default = ZERO</p>
 <p id="options-props-s"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--semi-major-axis</strong> <br />
 Initial semi-major axis for a binary star when evolving in BSE mode (AU). <br />
-Default = 1000.0</p>
+Default = 0.1</p>
 <p><strong>--semi-major-axis-distribution [ -a ]</strong> <br />
 Initial semi-major axis distribution. <br />
 Options: { FLATINLOG, CUSTOM, DUQUENNOYMAYOR1991, SANA2012 } <br />
@@ -796,7 +809,7 @@ Maximum semi-major axis to generate (AU). <br />
 Default = 1000.0</p>
 <p><strong>--semi-major-axis-min</strong> <br />
 Minimum semi-major axis to generate (AU). <br />
-Default = 0.1</p>
+Default = 0.01</p>
 <p><strong>--stellar-zeta-prescription</strong> <br />
 Prescription for stellar zeta. <br />
 Options: { STARTRACK, SOBERMAN, HURLEY, ARBITRARY } <br />
@@ -814,7 +827,7 @@ Default = 1.0</p>
 <p id="options-props-u"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--use-mass-loss</strong> <br />
 Enable mass loss. <br />
-Default = FALSE</p>
+Default = TRUE</p>
 <p id="options-props-v"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--version [ -v ]</strong> <br />
 Prints COMPAS version string.</p>
