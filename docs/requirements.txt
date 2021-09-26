@@ -2,12 +2,12 @@
 
 # Defining the exact version will make sure things don't break
 
-sphinx   #==1.8.5
+# sphinx is required, but readthedocs does that automatically, so it doesn't need to be here
+# but you will need it if you want to build the html files locally
 
 sphinx_rtd_theme==0.5.1
-sphinx-math-dollar   #==1.2
+sphinx-math-dollar>=1.2
 
-sphinx.ext.mathjax
 sphinx.ext.intersphinx
 
 sphinxcontrib.bibtex
@@ -18,6 +18,8 @@ linuxdoc.rstFlatTable
 nbsphinx
 
 python
+
+sphinx.ext.mathjax
 
 ipykernel
 IPython
