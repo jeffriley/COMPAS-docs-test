@@ -8,18 +8,13 @@
 sphinx_rtd_theme==0.5.1
 sphinx-math-dollar>=1.2
 
-#sphinx.ext.intersphinx
-
 sphinxcontrib.bibtex
 
 linuxdoc==20210324
-linuxdoc.rstFlatTable
 
 nbsphinx
 
 python
-
-#sphinx.ext.mathjax
 
 ipykernel
 IPython
