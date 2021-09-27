@@ -241,7 +241,7 @@ and the size of the B-tree, and therefore the traversal time, depends directly u
 dataset - so the access time for a chunk increases as the number of chunks in the dataset increases. So many small chunks will
 degrade performance.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Chunks</span></code> are the unit of IO for <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files - all IO to <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> is performed on the basis of chunks. This means that
-whenever dataset values are accessed (read or written (i.e. changed)), if the value is not already in memory, the entire chunck
+whenever dataset values are accessed (read or written (i.e. changed)), if the value is not already in memory, the entire chunk
 containing the value must be read from, or written to, the storage media - even if the dataset value being accessed is the only
 value in the chunk. So few large chunks could cause empty, &quot;wasted&quot;, space in the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files (at the end of datasets) - but
 they could also adversely affect performance by causing unecessary IO traffic (although probably not much in the way we access
@@ -277,7 +277,7 @@ group (columns in the file). We are not bound to reading or writing a single chu
 an integral multiple of whole chunks at a time.</p>
 <p>We want to reduce the number of storage media accesses when writing (or later reading) the <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files, so larger chunk sizes are
 appropriate, but not so large that we create excessively large <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files that have lots of unused space (bearing in mind the
-trade-off mentioned above), especially when were evolving just a few systems (rather than millions).</p>
+trade-off mentioned above), especially when we're evolving just a few systems (rather than millions).</p>
 <p>To really optimise IO performance for <code class="docutils literal notranslate"><span class="pre">HDF5</span></code> files we'd choose chunk sizes that are close to multiples of storage media block sizes,
 but that would be too problematic given the number of disparate systems COMPAS could be run on...</p>
 <p>Based on everything written above, and some tests, we've chosen a default chunk size of <span class="math notranslate nohighlight">\(\small{100,000}\)</span> (dataset entries) for all

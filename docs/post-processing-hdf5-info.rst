@@ -40,7 +40,7 @@ dataset - so the access time for a chunk increases as the number of chunks in th
 degrade performance.
  
 ``Chunks`` are the unit of IO for ``HDF5`` files - all IO to ``HDF5`` is performed on the basis of chunks. This means that 
-whenever dataset values are accessed (read or written (i.e. changed)), if the value is not already in memory, the entire chunck
+whenever dataset values are accessed (read or written (i.e. changed)), if the value is not already in memory, the entire chunk
 containing the value must be read from, or written to, the storage media - even if the dataset value being accessed is the only
 value in the chunk. So few large chunks could cause empty, "wasted", space in the ``HDF5`` files (at the end of datasets) - but
 they could also adversely affect performance by causing unecessary IO traffic (although probably not much in the way we access 
@@ -83,7 +83,7 @@ an integral multiple of whole chunks at a time.
  
 We want to reduce the number of storage media accesses when writing (or later reading) the ``HDF5`` files, so larger chunk sizes are 
 appropriate, but not so large that we create excessively large ``HDF5`` files that have lots of unused space (bearing in mind the 
-trade-off mentioned above), especially when were evolving just a few systems (rather than millions).
+trade-off mentioned above), especially when we're evolving just a few systems (rather than millions).
  
 To really optimise IO performance for ``HDF5`` files we'd choose chunk sizes that are close to multiples of storage media block sizes,
 but that would be too problematic given the number of disparate systems COMPAS could be run on...
