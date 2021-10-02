@@ -1,5 +1,5 @@
-Program option propertiess
-==========================
+Program option properties
+=========================
 
 When specifying known properties in a log file record specification record, the property name must be prefixed with 
 the property type. Currently there is a single binary property type available for use: PROGRAM_OPTION.
