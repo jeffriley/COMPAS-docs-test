@@ -25,7 +25,7 @@ This file, and directory, is only produced if ``detailed_output = True`` in the 
 We examine ``BSE_Detailed_Output_0.h5`` to look at the evolution of the two stars. A default python plotting script has been included to 
 visualise the data. Let's run the script::
 
-  python3 single_sys_plotter.py
+  python3 detailed_evol_plotter.py
 
 This should produce the plot shown in :ref:`Figure 5 <fig-5>`:
 
