@@ -57,7 +57,7 @@ Column Headings are string labels that describe the corresponding data values. T
 constituent stars of a binary will have appropriate identifiers appended. That is, heading strings for:
 
     .. list-table::
-       :widths: 60 40 
+       :widths: 38 62 
        :header-rows: 0
        :class: aligned-text
 
@@ -66,9 +66,9 @@ constituent stars of a binary will have appropriate identifiers appended. That i
        * - STAR_2 PROPERTY::properties
          - will have ":boldtext:`(2)`" appended
        * - SUPERNOVA_PROPERTY::properties
-         - will have ":boldtext:`(SN)`" appended
+         - will have ":boldtext:`(SN)`" appended: any column with a header with a suffix of ":boldtext:`(SN)`" represents an attribute of the the remnant after the supernova event.
        * - COMPANION_PROPERTY::properties
-         - will have ":boldtext:`(CP)`" appended
+         - will have ":boldtext:`(CP)`" appended: any column with a header with a suffix of ":boldtext:`(CP)`" represents an attribute of the the companion after the supernova event.
 
 ``HDF5`` files are not human-readable. The ``HDF5`` file format supports large, complex, heterogeneous data, enabling the data to be stored
 in a structured way in a single file. When the ``HDF5`` format is specified for COMPAS log files, a single ``HDF5`` file is produced for 
