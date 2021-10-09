@@ -66,7 +66,7 @@ constituent stars of a binary will have appropriate identifiers appended. That i
        * - STAR_2 PROPERTY::properties
          - will have ":boldtext:`(2)`" appended
        * - SUPERNOVA_PROPERTY::properties
-         - will have ":boldtext:`(SN)`" appended: any column with a header with a suffix of ":boldtext:`(SN)`" represents an attribute of the the remnant after the supernova event.
+         - will have ":boldtext:`(SN)`" appended: any column with a header with a suffix of ":boldtext:`(SN)`" represents an attribute of the star undergoing a supernova event, either just before the supernova [e.g., `Mass_Total@CO(SN)`] or just after the supernovae [e.g., `Mass(SN)`].
        * - COMPANION_PROPERTY::properties
          - will have ":boldtext:`(CP)`" appended: any column with a header with a suffix of ":boldtext:`(CP)`" represents an attribute of the the companion after the supernova event.
 

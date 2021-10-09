@@ -14001,7 +14001,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>   <span class="c1"># for adding path python Script to python environment</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>   <span class="c1"># for adding path python Script to python environment</span>
 <span class="kn">import</span> <span class="nn">os</span>    <span class="c1"># for handling paths</span>
 <span class="c1">#Note that the script has its own imports</span>
 
@@ -14041,11 +14041,11 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython"><pre><span></span><span class="n">dataRootDir</span>    <span class="o">=</span> <span class="s1">&#39;.&#39;</span>                <span class="c1"># Location of root directory of the data     # defaults to &#39;.&#39;            </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataRootDir</span>    <span class="o">=</span> <span class="s1">&#39;.&#39;</span>                <span class="c1"># Location of root directory of the data     # defaults to &#39;.&#39;            </span>
 <span class="n">prefix</span>         <span class="o">=</span> <span class="s1">&#39;BSE_&#39;</span>             <span class="c1"># Prefix of the data files                   # defaults to &#39;BSE_&#39;  </span>
 <span class="n">delimiter</span>      <span class="o">=</span> <span class="s1">&#39;,&#39;</span>                <span class="c1"># Delimeter used in the output csv files     # defaults to &#39;,&#39;        </span>
 <span class="n">extension</span>      <span class="o">=</span> <span class="s1">&#39;csv&#39;</span>              <span class="c1"># Extension of the data files                # defaults to &#39;csv&#39;</span>
-<span class="n">h5Name</span>         <span class="o">=</span> <span class="s1">&#39;COMPAS_Output.h5&#39;</span> <span class="c1"># Name of the output h5 file                 # defaults to &#39;COMPAS_Output.h5&#39;</span>
+<span class="n">h5Name</span>         <span class="o">=</span> <span class="s1">&#39;COMPAS_Output.h5&#39;</span> <span class="c1"># Name of the output h5 file                 # defaults to &#39;COMPAS_Output.h5&#39; </span>
 </pre></div>
 
      </div>
@@ -14066,7 +14066,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython"><pre><span></span><span class="n">filesToCombine</span> <span class="o">=</span> <span class="kc">None</span>    <span class="c1"># default None means to use all of them (apologies if that&#39;s counterintuitive...)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">filesToCombine</span> <span class="o">=</span> <span class="kc">None</span>    <span class="c1"># default None means to use all of them (apologies if that&#39;s counterintuitive...)</span>
 
 <span class="c1">#filesToCombine = [\</span>
 <span class="c1">#    &#39;SystemParameters&#39;,\</span>
@@ -14076,7 +14076,7 @@ a.anchor-link {
 <span class="c1">#    &#39;RLOF&#39;,\</span>
 <span class="c1">#    &#39;errors&#39;,\            </span>
 <span class="c1">#    &#39;output&#39;\</span>
-<span class="c1">#]</span>
+<span class="c1">#]  </span>
 </pre></div>
 
      </div>
@@ -14103,7 +14103,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython"><pre><span></span><span class="n">postProc</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">dataRootDir</span>    <span class="o">=</span> <span class="n">dataRootDir</span><span class="p">,</span> \
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">postProc</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">dataRootDir</span>    <span class="o">=</span> <span class="n">dataRootDir</span><span class="p">,</span> \
               <span class="n">prefix</span>         <span class="o">=</span> <span class="n">prefix</span><span class="p">,</span>      \
               <span class="n">delimiter</span>      <span class="o">=</span> <span class="n">delimiter</span><span class="p">,</span>   \
               <span class="n">extension</span>      <span class="o">=</span> <span class="n">extension</span><span class="p">,</span>   \
