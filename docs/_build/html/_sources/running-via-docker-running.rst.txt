@@ -34,6 +34,7 @@ short for [-i and -t] - provides an interactive terminal\ [#f2]_.
 
 **-v <path-on-host>:<path-in-container>** |br|
 mount ``<path-on-host>`` to ``<path-in-container>``\ [#f3]_. |br|
+
 This time we not only want to get the output from COMPAS on the host machine, we also want to supply a ``pythonSubmit.py`` to the 
 container from the host machine.
 
@@ -75,6 +76,7 @@ short for [-i and -t] - provides an interactive terminal\ [#f2]_.
 
 **-v <path-on-host>:<path-in-container>** |br|
 mount ``<path-on-host>`` to ``<path-in-container>``\ [#f3]_. |br|
+
 In this instance, make it so `$(pwd)/compas-logs` on my machine is the same as `/app/COMPAS/logs` inside the container.
 
 **teamcompas/compas** |br|
@@ -128,7 +130,7 @@ To see the console output of detached containers to check progress, first type::
 
   docker ps
 
-to get the container id of interes, then type::
+to get the container id of interest, then type::
 
     docker logs container_id
 

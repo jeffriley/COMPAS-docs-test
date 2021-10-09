@@ -235,8 +235,8 @@ destroy the container once it finishes running the command<a class="footnote-ref
 <p><strong>-it</strong> <br />
 short for [-i and -t] - provides an interactive terminal<a class="footnote-reference brackets" href="#f2" id="id2">2</a>.</p>
 <p><strong>-v &lt;path-on-host&gt;:&lt;path-in-container&gt;</strong> <br />
-mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id3">3</a>. <br />
-This time we not only want to get the output from COMPAS on the host machine, we also want to supply a <code class="docutils literal notranslate"><span class="pre">pythonSubmit.py</span></code> to the
+mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id3">3</a>. <br /></p>
+<p>This time we not only want to get the output from COMPAS on the host machine, we also want to supply a <code class="docutils literal notranslate"><span class="pre">pythonSubmit.py</span></code> to the
 container from the host machine.</p>
 <p><strong>-e VAR_NAME=value</strong> <br />
 set the environment variable <code class="docutils literal notranslate"><span class="pre">VAR_VAME</span></code> to <cite>value</cite><a class="footnote-reference brackets" href="#f4" id="id4">4</a>.</p>
@@ -266,8 +266,8 @@ destroy the container once it finishes running the command<a class="footnote-ref
 <p><strong>-it</strong> <br />
 short for [-i and -t] - provides an interactive terminal<a class="footnote-reference brackets" href="#f2" id="id7">2</a>.</p>
 <p><strong>-v &lt;path-on-host&gt;:&lt;path-in-container&gt;</strong> <br />
-mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id8">3</a>. <br />
-In this instance, make it so <cite>$(pwd)/compas-logs</cite> on my machine is the same as <cite>/app/COMPAS/logs</cite> inside the container.</p>
+mount <code class="docutils literal notranslate"><span class="pre">&lt;path-on-host&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;path-in-container&gt;</span></code><a class="footnote-reference brackets" href="#f3" id="id8">3</a>. <br /></p>
+<p>In this instance, make it so <cite>$(pwd)/compas-logs</cite> on my machine is the same as <cite>/app/COMPAS/logs</cite> inside the container.</p>
 <p><strong>teamcompas/compas</strong> <br />
 the image to run.</p>
 <p><strong>bin/COMPAS</strong> <br />
@@ -306,7 +306,7 @@ docker run --rm -d -v $(pwd)/compas-logs/run_3:/app/COMPAS/logs -v $(pwd)/python
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span>
 </pre></div>
 </div>
-<p>to get the container id of interes, then type:</p>
+<p>to get the container id of interest, then type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logs</span> <span class="n">container_id</span>
 </pre></div>
 </div>
