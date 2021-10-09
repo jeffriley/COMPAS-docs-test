@@ -83,12 +83,11 @@ the image to run.
 **bin/COMPAS** |br|
 the command to run when the container starts.
 
-**--number-of-binaries** |br|
-anything after the given start command is passed to that command. In this case, the flag to set the number of binaries.
+**--number-of-binaries=5** |br|
+the flag to set the number of binaries.
 
-**--outputPath /app/COMPAS/logs** |br|
-as above, anything after the start command is given to that start command. Here it forces logs to go to the directory that is 
-mapped to the host machine.
+**--output-path=/app/COMPAS/logs** |br|
+forces logs to go to the directory that is mapped to the host machine.
 
 
 
