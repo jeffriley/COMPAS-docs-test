@@ -50,7 +50,7 @@ This should produce an output similar to::
 Note that Python prints the Python version, the executes the command to run COMPAS.  The command exceuted is echoed to the stdout.  COMPAS
 then runs and produces its usual output.
 
-When using Python and a script file (such as `pythonSubmit.py`) to run COMPAS, care must be taked to specify program optin values correctly.
+When using Python and a script file (such as `pythonSubmit.py`) to run COMPAS, care must be taken to specify program option values correctly.
 For example, ranges and sets can be specified for options in the Python script file, but the range or set parameter must be enclosed in quotes – 
 otherwise python tries to parse the construct. For example, to specify a set of metallicity values in the Python script file, use::
 
