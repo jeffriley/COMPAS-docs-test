@@ -57,7 +57,7 @@
     "pathNoteBook    = os.getcwd()\n",
     "pathScripts     = pathNoteBook + '/PythonScripts/'\n",
     "\n",
-    "pathData        = 'path-to-data'"
+    "pathData        = '../'"
    ]
   },
   {
