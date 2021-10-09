@@ -59,7 +59,7 @@ To run the COMPAS executable from the command line (i.e. without ``pythonSubmit.
         teamcompas/compas                       \
         bin/COMPAS                              \
         --number-of-binaries=5                  \
-        --outputPath=/app/COMPAS/logs
+        --output-path=/app/COMPAS/logs
 
 
 Breaking down this command:
