@@ -512,7 +512,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--initial-mass-1``
    * - Header String:
-     - Initial_Mass_1
+     - Initial_Mass(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -528,7 +528,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--initial-mass-2``
    * - Header String:
-     - Initial_Mass_2
+     - Initial_Mass(2)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -678,7 +678,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-magnitude-1``
    * - Header String:
-     - Kick_Magnitude_1
+     - Kick_Magnitude(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -694,7 +694,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-magnitude-2``
    * - Header String:
-     - Kick_Magnitude_2
+     - Kick_Magnitude(2)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -806,7 +806,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-mean-anomaly-1``
    * - Header String:
-     - Kick_Mean_Anomaly_1
+     - Kick_Mean_Anomaly(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -822,7 +822,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-mean-anomaly-2``
    * - Header String:
-     - Kick_Mean_Anomaly_2
+     - Kick_Mean_Anomaly(2)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -854,7 +854,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-magnitude-random-1``
    * - Header String:
-     - Kick_Magnitude_Random_1
+     - Kick_Magnitude_Random(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -870,7 +870,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-magnitude-random-2``
    * - Header String:
-     - Kick_Magnitude_Random_2
+     - Kick_Magnitude_Random(2)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -886,7 +886,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-phi-1``
    * - Header String:
-     - Kick_Mean_Phi_1
+     - Kick_Mean_Phi(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -902,7 +902,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-phi-2``
    * - Header String:
-     - Kick_Mean_Phi_2
+     - Kick_Mean_Phi(2)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -918,7 +918,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-theta-1``
    * - Header String:
-     - Kick_Mean_Theta_1
+     - Kick_Mean_Theta(1)
 
 .. flat-table::
    :widths: 25 75 1 1
@@ -934,7 +934,7 @@ Following is an alphabetical list of program option properties available for inc
    * - Description:
      - Value of program option ``--kick-theta-2``
    * - Header String:
-     - Kick_Mean_Theta 2
+     - Kick_Mean_Theta(2)
 
 .. flat-table::
    :widths: 25 75 1 1

@@ -287,8 +287,6 @@ Binary Properties</p>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as RLOF_POST_MT_COMMON ENVELOPE. It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -310,7 +308,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>The number of common envelope events.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>CE_Event_Count</p></td>
+<td colspan="3"><p>CE_Event_Counter</p></td>
 </tr>
 </tbody>
 </table>
@@ -592,8 +590,6 @@ but not both. If both are printed then the file will contain two columns with th
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as ANY_STAR_PROPERTY::ID &amp; RLOF_POST_MT_ID. It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -628,31 +624,6 @@ but not both. If both are printed then the file will contain two columns with th
 <col style="width: 1%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td colspan="3"><p> <strong>MASS_1_FINAL</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data type:</p></td>
-<td colspan="3"><p>DOUBLE</p></td>
-</tr>
-<tr class="row-odd"><td><p>COMPAS variable:</p></td>
-<td colspan="3"><p>BaseBinaryStar::m_Mass1Final</p></td>
-</tr>
-<tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Mass of the primary star after losing its envelope (assumes complete loss of envelope) (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
-</tr>
-<tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Core_Mass_1</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 74%" />
-<col style="width: 1%" />
-<col style="width: 1%" />
-</colgroup>
-<tbody>
 <tr class="row-odd"><td colspan="3"><p> <strong>MASS_1_POST_COMMON_ENVELOPE</strong></p></td>
 <td></td>
 </tr>
@@ -666,7 +637,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass of the primary star immediately following common envelope event (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_1&gt;CE</p></td>
+<td colspan="3"><p>Mass(1)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -691,32 +662,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass of the primary star immediately prior to common envelope event (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_1&lt;CE</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 74%" />
-<col style="width: 1%" />
-<col style="width: 1%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td colspan="3"><p> <strong>MASS_2_FINAL</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data type:</p></td>
-<td colspan="3"><p>DOUBLE</p></td>
-</tr>
-<tr class="row-odd"><td><p>COMPAS variable:</p></td>
-<td colspan="3"><p>BaseBinaryStar::m_Mass2Final</p></td>
-</tr>
-<tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Mass of the secondary star after losing its envelope (assumes complete loss of envelope) (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
-</tr>
-<tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Core_Mass_2</p></td>
+<td colspan="3"><p>Mass(1)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -741,7 +687,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass of the secondary star immediately following common envelope event (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_2&gt;CE</p></td>
+<td colspan="3"><p>Mass(2)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -766,7 +712,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass of the secondary star immediately prior to common envelope event (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_2&lt;CE</p></td>
+<td colspan="3"><p>Mass(2)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -791,7 +737,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Envelope mass of the primary star (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_Env_1</p></td>
+<td colspan="3"><p>Mass_Env(1)</p></td>
 </tr>
 </tbody>
 </table>
@@ -816,7 +762,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Envelope mass of the secondary star (<span class="math notranslate nohighlight">\(M_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_Env_2</p></td>
+<td colspan="3"><p>Mass_Env(2)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1053,7 +999,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius of the primary star immediately following common envelope event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_1&gt;CE</p></td>
+<td colspan="3"><p>Radius(1)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1078,7 +1024,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius of the primary star at the onset of RLOF leading to the common-envelope episode (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_1&lt;CE</p></td>
+<td colspan="3"><p>Radius(1)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1103,7 +1049,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius of the secondary star immediately following common envelope event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_2&gt;CE</p></td>
+<td colspan="3"><p>Radius(2)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1128,7 +1074,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius of the secondary star at the onset of RLOF leading to the common-envelope episode (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_2&lt;CE</p></td>
+<td colspan="3"><p>Radius(2)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1178,12 +1124,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Flag to indicate if the RLOF leads to a common-envelope event</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>CEE</p></td>
+<td colspan="3"><p>CEE&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as COMMON_ENVELOPE_AT_LEAST_ONCE. It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1205,7 +1149,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Eccentricity immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Eccentricity</p></td>
+<td colspan="3"><p>Eccentricity&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1230,7 +1174,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>The number of times the binary has overflowed its Roche lobe up to and including this episode</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Event_Counter</p></td>
+<td colspan="3"><p>MT_Event_Counter</p></td>
 </tr>
 </tbody>
 </table>
@@ -1255,12 +1199,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major Axis(<span class="math notranslate nohighlight">\(R_\odot\)</span>) immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>SemiMajorAxis</p></td>
+<td colspan="3"><p>SemiMajorAxis&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as SEMI_MAJOR_AXIS, SEMI_MAJOR_AXIS_RSOL. It is expected that one or the other is printed in
-any file, but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1282,12 +1224,10 @@ any file, but not both. If both are printed then the file will contain two colum
 <td colspan="3"><p>Mass (<span class="math notranslate nohighlight">\(M_\odot\)</span>) of the primary immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_1</p></td>
+<td colspan="3"><p>Mass(1)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as ANY_STAR_PROPERTY::MASS (Star 1). It is expected that one or the other is printed in any
-file, but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1309,12 +1249,10 @@ file, but not both. If both are printed then the file will contain two columns w
 <td colspan="3"><p>Mass (<span class="math notranslate nohighlight">\(M_\odot\)</span>) of the secondary immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_2</p></td>
+<td colspan="3"><p>Mass(2)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as ANY_STAR_PROPERTY::MASS (Star 2). It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1336,12 +1274,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius (<span class="math notranslate nohighlight">\(R_\odot\)</span>) of the primary immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_1</p></td>
+<td colspan="3"><p>Radius(1)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as ANY_STAR_PROPERTY::RADIUS (Star 1). It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1363,12 +1299,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius (<span class="math notranslate nohighlight">\(R_\odot\)</span>) of the secondary immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_2</p></td>
+<td colspan="3"><p>Radius(2)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as ANY_STAR_PROPERTY::RADIUS (Star 2). It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1390,7 +1324,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Flag to indicate whether the primary is overflowing its Roche Lobe.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RLOF_1</p></td>
+<td colspan="3"><p>RLOF(1)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1415,7 +1349,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Flag to indicate whether the secondary is overflowing its Roche Lobe.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RLOF_2</p></td>
+<td colspan="3"><p>RLOF(2)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1431,7 +1365,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Data type:</p></td>
-<td colspan="3"><p>DOUBLE</p></td>
+<td colspan="3"><p>INT</p></td>
 </tr>
 <tr class="row-odd"><td><p>COMPAS variable:</p></td>
 <td colspan="3"><p>BaseBinaryStar::m RLOFDetails.propsPostMT→stellarType1</p></td>
@@ -1440,7 +1374,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Stellar type (per <span id="id1">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Type_1</p></td>
+<td colspan="3"><p>Stellar_Type(1)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1454,24 +1388,78 @@ but not both. If both are printed then the file will contain two columns with th
 <col style="width: 1%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td colspan="3"><p> <strong>RLOF_POST_MT_STAR1_STELLAR_TYPE_NAME</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data type:</p></td>
+<td colspan="3"><p>STRING</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAS variable:</p></td>
+<td colspan="3"><p><cite>derived from</cite> BaseBinaryStar::m RLOFDetails.propsPostMT→stellarType1</p></td>
+</tr>
+<tr class="row-even"><td><p>Description:</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id2">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately after RLOF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Header String:</p></td>
+<td colspan="3"><p>Stellar_Type(1)&gt;MT</p></td>
+</tr>
+</tbody>
+</table>
+<p><cite>Note that this property has the same header string as RLOF_POST_MT_STAR1_STELLAR_TYPE. It is expected that one or the other is printed in any file,
+but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+</colgroup>
+<tbody>
 <tr class="row-odd"><td colspan="3"><p> <strong>RLOF_POST_MT_STAR2_STELLAR_TYPE</strong></p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Data type:</p></td>
-<td colspan="3"><p>DOUBLE</p></td>
+<td colspan="3"><p>INT</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAS variable:</p></td>
+<td colspan="3"><p>BaseBinaryStar::m_RLOFDetails.propsPostMT→stellarType1</p></td>
+</tr>
+<tr class="row-even"><td><p>Description:</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id3">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately after RLOF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Header String:</p></td>
+<td colspan="3"><p>Stellar_Type(2)&gt;MT</p></td>
+</tr>
+</tbody>
+</table>
+<p><cite>Note that this property has the same header string as RLOF_POST_MT_STAR2_STELLAR_TYPE_NAME. It is expected that one or the other is printed in any file,
+but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p> <strong>RLOF_POST_MT_STAR2_STELLAR_TYPE_NAME</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data type:</p></td>
+<td colspan="3"><p>STRING</p></td>
 </tr>
 <tr class="row-odd"><td><p>COMPAS variable:</p></td>
 <td colspan="3"><p><cite>derived from</cite> BaseBinaryStar::m_RLOFDetails.propsPostMT→stellarType1</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id2">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately after RLOF.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id4">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Type_2</p></td>
+<td colspan="3"><p>Stellar_Type(2)&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as RLOF_POST_MT_STAR2_STELLAR_TYPE_NAME. It is expected that one or the other is printed in any file,
+<p><cite>Note that this property has the same header string as RLOF_POST_MT_STAR2_STELLAR_TYPE. It is expected that one or the other is printed in any file,
 but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
@@ -1494,12 +1482,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Time since ZAMS (Myr) immediately after RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Time</p></td>
+<td colspan="3"><p>Time&gt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as TIME &amp; ANY_STAR_PROPERTY::TIME. It is expected that one or the other is printed in any file, but not
-both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1521,32 +1507,7 @@ both. If both are printed then the file will contain two columns with the same h
 <td colspan="3"><p>Eccentricity at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Eccentricity_Prev</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 74%" />
-<col style="width: 1%" />
-<col style="width: 1%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td colspan="3"><p> <strong>RLOF_PRE_MT_EVENT_COUNTER</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data type:</p></td>
-<td colspan="3"><p>UNSIGNED INT</p></td>
-</tr>
-<tr class="row-odd"><td><p>COMPAS variable:</p></td>
-<td colspan="3"><p>BaseBinaryStar::m_RLOFDetails.propsPreMT→eventCounter</p></td>
-</tr>
-<tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>The number of times the binary has overflowed its Roche lobe up to and excluding this episode.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Event_Counter_Prev</p></td>
+<td colspan="3"><p>Eccentricity&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1571,12 +1532,10 @@ both. If both are printed then the file will contain two columns with the same h
 <td colspan="3"><p>Semi-major Axis (<span class="math notranslate nohighlight">\(R_\odot\)</span>) at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>SemiMajorAxis_Prev</p></td>
+<td colspan="3"><p>SemiMajorAxis&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
-<p><cite>Note that this property has the same header string as SEMI_MAJOR_AXIS, SEMI_MAJOR_AXIS_RSOL. It is expected that one or the other is printed in any file,
-but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1598,7 +1557,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass (<span class="math notranslate nohighlight">\(M_\odot\)</span>) of the primary at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_1_Prev</p></td>
+<td colspan="3"><p>Mass(1)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1623,7 +1582,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Mass (<span class="math notranslate nohighlight">\(M_\odot\)</span>) of the secondary at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Mass_2_Prev</p></td>
+<td colspan="3"><p>Mass(2)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1648,7 +1607,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius (<span class="math notranslate nohighlight">\(R_\odot\)</span>) of the primary at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_1_Prev</p></td>
+<td colspan="3"><p>Radius(1)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1673,7 +1632,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Radius (<span class="math notranslate nohighlight">\(R_\odot\)</span>) of the secondary at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Radius_2_Prev</p></td>
+<td colspan="3"><p>Radius(2)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1698,7 +1657,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Flag to indicate whether the primary is overflowing its Roche Lobe.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RLOF_1_Prev</p></td>
+<td colspan="3"><p>RLOF(1)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1723,7 +1682,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Flag to indicate whether the secondary is overflowing its Roche Lobe.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RLOF_2_Prev</p></td>
+<td colspan="3"><p>RLOF(2)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1745,14 +1704,41 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType1</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id3">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id5">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Type_1_Prev</p></td>
+<td colspan="3"><p>Stellar_Type(1)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
 <p><cite>Note that this property has the same header string as RLOF_PRE_MT_STAR1_STELLAR_TYPE_NAME. It is expected that one or the other is printed in any file,
+but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p> <strong>RLOF_PRE_MT_STAR1_STELLAR_TYPE_NAME</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data type:</p></td>
+<td colspan="3"><p>STRING</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAS variable:</p></td>
+<td colspan="3"><p><cite>derived from</cite> BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType1</p></td>
+</tr>
+<tr class="row-even"><td><p>Description:</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id6">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Header String:</p></td>
+<td colspan="3"><p>Stellar_Type(1)&lt;MT</p></td>
+</tr>
+</tbody>
+</table>
+<p><cite>Note that this property has the same header string as RLOF_PRE_MT_STAR1_STELLAR_TYPE. It is expected that one or the other is printed in any file,
 but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
@@ -1772,14 +1758,41 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType2</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id4">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id7">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Type_2_Prev</p></td>
+<td colspan="3"><p>Stellar_Type(2)&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
 <p><cite>Note that this property has the same header string as RLOF_PRE_MTvSTAR2_STELLAR_TYPE_NAME. It is expected that one or the other is printed in any file,
+but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p> <strong>RLOF_PRE_MT_STAR2_STELLAR_TYPE_NAME</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data type:</p></td>
+<td colspan="3"><p>STRING</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAS variable:</p></td>
+<td colspan="3"><p><cite>derived from</cite> BaseBinaryStar::m_RLOFDetails.propsPreMT→stellarType2</p></td>
+</tr>
+<tr class="row-even"><td><p>Description:</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id8">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Header String:</p></td>
+<td colspan="3"><p>Stellar_Type(2)&lt;MT</p></td>
+</tr>
+</tbody>
+</table>
+<p><cite>Note that this property has the same header string as RLOF_PRE_MT_STAR2_STELLAR_TYPE. It is expected that one or the other is printed in any file,
 but not both. If both are printed then the file will contain two columns with the same header string.</cite></p>
 <table class="docutils align-default">
 <colgroup>
@@ -1802,7 +1815,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Time since ZAMS (Myr) at the onset of RLOF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Time_Prev</p></td>
+<td colspan="3"><p>Time&lt;MT</p></td>
 </tr>
 </tbody>
 </table>
@@ -1877,7 +1890,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Roche radius of the primary star immediately following common envelope event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RocheLobe_1&gt;CE</p></td>
+<td colspan="3"><p>RocheLobe(1)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1902,7 +1915,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Roche radius of the secondary star immediately following common envelope event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RocheLobe_2&gt;CE</p></td>
+<td colspan="3"><p>RocheLobe(2)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1927,7 +1940,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Roche radius of the primary star at the onset of RLOF leading to the common-envelope episode (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RocheLobe_1&lt;CE</p></td>
+<td colspan="3"><p>RocheLobe(1)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -1952,7 +1965,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Roche radius of the secondary star at the onset of RLOF leading to the common-envelope episode (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>RocheLobe_2&lt;CE</p></td>
+<td colspan="3"><p>RocheLobe(2)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2028,7 +2041,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major axis at DCO formation (AU).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&#64;DCO</p></td>
+<td colspan="3"><p>SemiMajorAxis&#64;DCO</p></td>
 </tr>
 </tbody>
 </table>
@@ -2053,7 +2066,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major axis at ZAMS (AU).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&#64;ZAMS</p></td>
+<td colspan="3"><p>SemiMajorAxis&#64;ZAMS</p></td>
 </tr>
 </tbody>
 </table>
@@ -2078,7 +2091,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major axis immediately following common envelope event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&gt;CE</p></td>
+<td colspan="3"><p>SemiMajorAxis&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2103,7 +2116,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major axis immediately prior to supernova event (AU).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&lt;SN</p></td>
+<td colspan="3"><p>SemiMajorAxis&lt;SN</p></td>
 </tr>
 </tbody>
 </table>
@@ -2130,7 +2143,7 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>Semi-major axis immediately prior to supernova event (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&lt;SN</p></td>
+<td colspan="3"><p>SemiMajorAxis&lt;SN</p></td>
 </tr>
 </tbody>
 </table>
@@ -2157,7 +2170,7 @@ not both. If both are printed then the file will contain two columns with the sa
 <td colspan="3"><p>Semi-major axis at the onset of RLOF leading to the common-envelope episode (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&lt;CE</p></td>
+<td colspan="3"><p>SemiMajorAxis&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2182,7 +2195,7 @@ not both. If both are printed then the file will contain two columns with the sa
 <td colspan="3"><p>Semi-major axis at ZAMS (AU).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&#64;ZAMS</p></td>
+<td colspan="3"><p>SemiMajorAxis&#64;ZAMS</p></td>
 </tr>
 </tbody>
 </table>
@@ -2209,7 +2222,7 @@ If both are printed then the file will contain two columns with the same header 
 <td colspan="3"><p>Semi-major axis at ZAMS (<span class="math notranslate nohighlight">\(R_\odot\)</span>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Separation&#64;ZAMS</p></td>
+<td colspan="3"><p>SemiMajorAxis&#64;ZAMS</p></td>
 </tr>
 </tbody>
 </table>
@@ -2333,10 +2346,10 @@ are printed then the file will contain two columns with the same header string.<
 <td colspan="3"><p>BinaryConstituentStar::m_CEDetails.postCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id5">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately following common envelope event.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id9">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately following common envelope event.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_1&gt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(1)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2350,7 +2363,7 @@ but not both. If both are printed then the file will contain two columns with th
 <col style="width: 1%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td colspan="3"><p> <strong>STELLAR_TYPE_1_PRE_COMMONvENVELOPE</strong></p></td>
+<tr class="row-odd"><td colspan="3"><p> <strong>STELLAR_TYPE_1_PRE_COMMON_ENVELOPE</strong></p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Data type:</p></td>
@@ -2360,10 +2373,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>BinaryConstituentStar::m_CEDetails.preCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id6">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF leading to the common-envelope episode.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id10">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF leading to the common-envelope episode.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_1&lt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(1)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2387,10 +2400,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>BinaryConstituentStar::m_CEDetails.postCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id7">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately following common envelope event.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id11">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately following common envelope event.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_2&gt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(2)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2414,10 +2427,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p>BinaryConstituentStar::m_CEDetails.preCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type (per <span id="id8">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF leading to the common-envelope episode.</p></td>
+<td colspan="3"><p>Stellar type (per <span id="id12">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF leading to the common-envelope episode.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_2&lt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(2)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2441,10 +2454,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p><cite>derived from</cite> BinaryConstituentStar::m_CEDetails.postCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type name (per <span id="id9">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately following common envelope event. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
+<td colspan="3"><p>Stellar type name (per <span id="id13">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star immediately following common envelope event. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_1&gt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(1)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2468,10 +2481,10 @@ but not both. If both are printed then the file will contain two columns with th
 <td colspan="3"><p><cite>derived from</cite> BinaryConstituentStar::m_CEDetails.preCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type name (per <span id="id10">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF leading to the common-envelope episode. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
+<td colspan="3"><p>Stellar type name (per <span id="id14">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the primary star at the onset of RLOF leading to the common-envelope episode. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_1&lt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(1)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2495,10 +2508,10 @@ both. If both are printed then the file will contain two columns with the same h
 <td colspan="3"><p><cite>derived from</cite> BinaryConstituentStar::m_CEDetails.postCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type name (per <span id="id11">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately following common envelope event. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
+<td colspan="3"><p>Stellar type name (per <span id="id15">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star immediately following common envelope event. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_2&gt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(2)&gt;CE</p></td>
 </tr>
 </tbody>
 </table>
@@ -2522,10 +2535,10 @@ both. If both are printed then the file will contain two columns with the same h
 <td colspan="3"><p><cite>derived from</cite> BinaryConstituentStar::m_CEDetails.preCEE.stellarType</p></td>
 </tr>
 <tr class="row-even"><td><p>Description:</p></td>
-<td colspan="3"><p>Stellar type name (per <span id="id12">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF leading to the common-envelope episode. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
+<td colspan="3"><p>Stellar type name (per <span id="id16">[<a class="reference internal" href="references.html#id10" title="Jarrod R. Hurley, Onno R. Pols, and Christopher A. Tout. Comprehensive analytic formulae for stellar evolution as a function of mass and metallicity. \mnras , 315(3):543-569, Jul 2000. arXiv:astro-ph/0001295, doi:10.1046/j.1365-8711.2000.03426.x.">Hurley <em>et al.</em>, 2000</a>]</span>) of the secondary star at the onset of RLOF leading to the common-envelope episode. e.g. &quot;First_Giant_Branch&quot;, &quot;Core_Helium_Burning&quot;, &quot;Helium_White_Dwarf&quot;, etc.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Header String:</p></td>
-<td colspan="3"><p>Stellar_Type_2&lt;CE</p></td>
+<td colspan="3"><p>Stellar_Type(2)&lt;CE</p></td>
 </tr>
 </tbody>
 </table>
