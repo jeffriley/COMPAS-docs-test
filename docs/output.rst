@@ -19,8 +19,9 @@ specified on the command line, not the values specified in a ``grid`` file (if u
    :maxdepth: 1
 
    standard-logfiles
-   standard-logfile-record-specifiers
-   standard-logfile-record-specification
-   standard-logfile-format
-   standard-logfile-example-definitions-file
-   standard-logfile-default-record-specifications
+   standard-logfiles-record-specifiers
+   standard-logfiles-record-specification
+   standard-logfiles-format
+   standard-logfiles-annotations
+   standard-logfiles-example-definitions-file
+   standard-logfiles-default-record-specifications

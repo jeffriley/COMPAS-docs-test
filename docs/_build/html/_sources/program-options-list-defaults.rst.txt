@@ -83,7 +83,7 @@ Default = FALLBACK
 
 **--case-bb-stability-prescription** |br|
 Prescription for the stability of case BB/BC mass transfer. |br|
-Options: { ALWAYS_STABLE, ALWAYS_STABLE_ONTO_NSBH, TREAT_AS_OTHER_MT, NEVER_STABLE } |br|
+Options: { ALWAYS_STABLE, ALWAYS_STABLE_ONTO_NSBH, TREAT_AS_OTHER_MT, ALWAYS_UNSTABLE } |br|
 Default = ALWAYS_STABLE
 
 **--check-photon-tiring-limit** |br|
@@ -163,8 +163,8 @@ Default = 1.0
 :ref:`Back to Top <options-props-top>`
 
 **--debug-classes** |br|
-Debug classes enabled. |br|
-Default = ’’ (None)
+Debug classes enabled to be enable (vactor). |br|
+Default = `All debug classes enabled (e.g. no filtering)`
 
 **--debug-level** |br|
 Determines which print statements are displayed for debugging. |br|
@@ -417,8 +417,8 @@ Default = Random number drawn uniformly from :math:`[0.0, 2\pi)`
 :ref:`Back to Top <options-props-top>`
 
 **--log-classes** |br|
-Logging classes enabled. |br|
-Default = ’’ (None)
+Logging classes to be enabled (vector). |br|
+Default = `All debug classes enabled (e.g. no filtering)`
 
 **--logfile-common-envelopes** |br|
 Filename for Common Envelopes logfile (BSE mode). |br|
@@ -616,6 +616,14 @@ Default = 0.1
 Neutron star equation of state. |br|
 Options: { SSE, ARP3 } |br|
 Default = SSE
+
+**--notes** |br|
+Annotation strings (vector). |br|
+Default = ""
+
+**--notes-hdrs** |br|
+Annotations header strings (vector). |br|
+Default = `No annotations`
 
 **--number-of-systems [ -n ]** |br|
 The number of systems to simulate. |br|

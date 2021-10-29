@@ -21,6 +21,7 @@ COMPAS will issue an error message if ranges or sets are specified for options f
    program-options-ranges
    program-options-sets
    program-options-mixing-ranges-sets
+   program-options-vector-options
    program-options-list-defaults
 
 See :doc:`program-options-list-defaults` for a full list of available program options and their default valaues.

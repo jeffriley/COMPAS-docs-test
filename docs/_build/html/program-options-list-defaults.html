@@ -47,7 +47,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Grid files" href="grid-files.html" />
-    <link rel="prev" title="Mixing ranges and sets" href="program-options-mixing-ranges-sets.html" /> 
+    <link rel="prev" title="Vector program options" href="program-options-vector-options.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="program-options-ranges.html">Program option ranges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="program-options-sets.html">Program option sets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="program-options-mixing-ranges-sets.html">Mixing ranges and sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="program-options-vector-options.html">Vector program options</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Program option list and default values</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#compas-information">COMPAS information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#alphabetical-listing">Alphabetical listing</a></li>
@@ -277,7 +278,7 @@ Default = FALLBACK</p>
 <p id="options-props-c"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--case-bb-stability-prescription</strong> <br />
 Prescription for the stability of case BB/BC mass transfer. <br />
-Options: { ALWAYS_STABLE, ALWAYS_STABLE_ONTO_NSBH, TREAT_AS_OTHER_MT, NEVER_STABLE } <br />
+Options: { ALWAYS_STABLE, ALWAYS_STABLE_ONTO_NSBH, TREAT_AS_OTHER_MT, ALWAYS_UNSTABLE } <br />
 Default = ALWAYS_STABLE</p>
 <p><strong>--check-photon-tiring-limit</strong> <br />
 Check the photon tiring limit is not exceeded during mass loss. <br />
@@ -337,8 +338,8 @@ Only applicable when <code class="docutils literal notranslate"><span class="pre
 Default = 1.0</p>
 <p id="options-props-d"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--debug-classes</strong> <br />
-Debug classes enabled. <br />
-Default = ’’ (None)</p>
+Debug classes enabled to be enable (vactor). <br />
+Default = <cite>All debug classes enabled (e.g. no filtering)</cite></p>
 <p><strong>--debug-level</strong> <br />
 Determines which print statements are displayed for debugging. <br />
 Default = 0</p>
@@ -519,8 +520,8 @@ binary system when evolving in BSE mode, should it undergo a supernova event (ra
 Default = Random number drawn uniformly from <span class="math notranslate nohighlight">\([0.0, 2\pi)\)</span></p>
 <p id="options-props-l"><a class="reference internal" href="#options-props-top"><span class="std std-ref">Back to Top</span></a></p>
 <p><strong>--log-classes</strong> <br />
-Logging classes enabled. <br />
-Default = ’’ (None)</p>
+Logging classes to be enabled (vector). <br />
+Default = <cite>All debug classes enabled (e.g. no filtering)</cite></p>
 <p><strong>--logfile-common-envelopes</strong> <br />
 Filename for Common Envelopes logfile (BSE mode). <br />
 Default = ’BSE_Common_Envelopes’</p>
@@ -669,6 +670,12 @@ Default = 0.1</p>
 Neutron star equation of state. <br />
 Options: { SSE, ARP3 } <br />
 Default = SSE</p>
+<p><strong>--notes</strong> <br />
+Annotation strings (vector). <br />
+Default = &quot;&quot;</p>
+<p><strong>--notes-hdrs</strong> <br />
+Annotations header strings (vector). <br />
+Default = <cite>No annotations</cite></p>
 <p><strong>--number-of-systems [ -n ]</strong> <br />
 The number of systems to simulate. <br />
 Single stars for SSE mode; binary stars for BSE mode. <br />
@@ -857,7 +864,7 @@ Default = 6.5</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="grid-files.html" class="btn btn-neutral float-right" title="Grid files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="program-options-mixing-ranges-sets.html" class="btn btn-neutral float-left" title="Mixing ranges and sets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="program-options-vector-options.html" class="btn btn-neutral float-left" title="Vector program options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
