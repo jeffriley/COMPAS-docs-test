@@ -109,10 +109,10 @@ Compile-time configuration
 The property specifier ``PROGRAM_OPTION::NOTES`` is available to be included in any of the default log file record specifiers in
 ``constants.h``.  If the property specifier ``PROGRAM_OPTION::NOTES`` is included in a default log file record specifier:
 
-- a column will be included in the log file for each of the annotation header strings specfied by the user (via the ``notes-hdrs``
-  program option), with each column having the respective header string specified by the user
-- each record in the log file will include an annotation string for each annotation column, the contents of which is determined by
-  what the user specified using the ``--notes`` program option.
+    - a column will be included in the log file for each of the annotation header strings specfied by the user (via the ``notes-hdrs``
+      program option), with each column having the respective header string specified by the user
+    - each record in the log file will include an annotation string for each annotation column, the contents of which is determined by
+      what the user specified using the ``--notes`` program option.
 
 Adding the property specifier ``PROGRAM_OPTION::NOTES`` to the default record specifier in ``constants.h`` for a log file causes
 *all* annotation columns (as specified via the ``notes-hdrs`` program option) to be included in the log file: including annotations
@@ -155,11 +155,13 @@ These entries::
 
     BSE_CEE_REC += { PROGRAM_OPTION::NOTES }
 
-- remove all annotations columns from the BSE System Parameters log file
-- add annotations columns 1 and 3 to the BSE System Parameters log file
-- add annotations columns 2, 3, and 7 to the BSE Supernovae log file
-- remove annotations column 5 from the BSE RLOF log file
-- add all annotation columns to the BSE Common envelopes files
+will:
+
+    - remove all annotations columns from the BSE System Parameters log file
+    - add annotations columns 1 and 3 to the BSE System Parameters log file
+    - add annotations columns 2, 3, and 7 to the BSE Supernovae log file
+    - remove annotations column 5 from the BSE RLOF log file
+    - add all annotation columns to the BSE Common envelopes files
 
 Specifying an index value less than 1 or greater than the number of annotation headers specified will result in an error.
 

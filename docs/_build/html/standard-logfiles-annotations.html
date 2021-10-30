@@ -297,12 +297,14 @@ file definitions file (run-time configuration: see <a class="reference internal"
 <h3>Compile-time configuration<a class="headerlink" href="#compile-time-configuration" title="Permalink to this headline">¶</a></h3>
 <p>The property specifier <code class="docutils literal notranslate"><span class="pre">PROGRAM_OPTION::NOTES</span></code> is available to be included in any of the default log file record specifiers in
 <code class="docutils literal notranslate"><span class="pre">constants.h</span></code>.  If the property specifier <code class="docutils literal notranslate"><span class="pre">PROGRAM_OPTION::NOTES</span></code> is included in a default log file record specifier:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>a column will be included in the log file for each of the annotation header strings specfied by the user (via the <code class="docutils literal notranslate"><span class="pre">notes-hdrs</span></code>
 program option), with each column having the respective header string specified by the user</p></li>
 <li><p>each record in the log file will include an annotation string for each annotation column, the contents of which is determined by
 what the user specified using the <code class="docutils literal notranslate"><span class="pre">--notes</span></code> program option.</p></li>
 </ul>
+</div></blockquote>
 <p>Adding the property specifier <code class="docutils literal notranslate"><span class="pre">PROGRAM_OPTION::NOTES</span></code> to the default record specifier in <code class="docutils literal notranslate"><span class="pre">constants.h</span></code> for a log file causes
 <em>all</em> annotation columns (as specified via the <code class="docutils literal notranslate"><span class="pre">notes-hdrs</span></code> program option) to be included in the log file: including annotations
 in a log file via compile-time configuration is an all-or-nothing proposition.</p>
@@ -338,13 +340,16 @@ users can add specific annotations columns to, or remove them from, any of the l
 <span class="n">BSE_CEE_REC</span> <span class="o">+=</span> <span class="p">{</span> <span class="n">PROGRAM_OPTION</span><span class="p">::</span><span class="n">NOTES</span> <span class="p">}</span>
 </pre></div>
 </div>
-<ul class="simple">
+<p>will:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>remove all annotations columns from the BSE System Parameters log file</p></li>
 <li><p>add annotations columns 1 and 3 to the BSE System Parameters log file</p></li>
 <li><p>add annotations columns 2, 3, and 7 to the BSE Supernovae log file</p></li>
 <li><p>remove annotations column 5 from the BSE RLOF log file</p></li>
 <li><p>add all annotation columns to the BSE Common envelopes files</p></li>
 </ul>
+</div></blockquote>
 <p>Specifying an index value less than 1 or greater than the number of annotation headers specified will result in an error.</p>
 <p>See <a class="reference internal" href="standard-logfiles-record-specification.html"><span class="doc">Standard log file record specification</span></a> for more details.</p>
 <p><br />
