@@ -54,4 +54,16 @@ in which all source files are compiled, type::
 The `clean` option instructs ``make`` to remove all existing object files (.o), and the COMPAS executable.  A subsequent ``make`` is then forced to compile
 all source files and link the resultant object files (and external libraries) into a new executable.
 
+
 See :doc:`COMPAS-local-build` for a detailed description of ``Makefile`` functionality.
+
+
+:bolditalictext:`A note for Mac users:`
+
+If you are using MacOS and running into linking issues with the boost libraries, try::
+
+    make clean
+    make CPP=clang++ -j$(sysctl -n hw.ncpu)
+
+In some Mac installations, the GNU C++ compiler is not installed how we might expect, so trying to compile and link with ``clang++`` might help.
+

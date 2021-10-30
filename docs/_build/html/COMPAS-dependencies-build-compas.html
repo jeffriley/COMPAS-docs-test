@@ -251,6 +251,13 @@ in which all source files are compiled, type:</p>
 <p>The <cite>clean</cite> option instructs <code class="docutils literal notranslate"><span class="pre">make</span></code> to remove all existing object files (.o), and the COMPAS executable.  A subsequent <code class="docutils literal notranslate"><span class="pre">make</span></code> is then forced to compile
 all source files and link the resultant object files (and external libraries) into a new executable.</p>
 <p>See <a class="reference internal" href="COMPAS-local-build.html"><span class="doc">Building COMPAS locally</span></a> for a detailed description of <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> functionality.</p>
+<p><span class="bolditalictext">A note for Mac users:</span></p>
+<p>If you are using MacOS and running into linking issues with the boost libraries, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>make clean
+make CPP=clang++ -j$(sysctl -n hw.ncpu)
+</pre></div>
+</div>
+<p>In some Mac installations, the GNU C++ compiler is not installed how we might expect, so trying to compile and link with <code class="docutils literal notranslate"><span class="pre">clang++</span></code> might help.</p>
 </div>
 
 
