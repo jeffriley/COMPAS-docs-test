@@ -22,21 +22,21 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   ./'Getting started'/getting-started
+   ./pages/Getting started/getting-started
 
-   ./'User guide'/user-guide
-   developer-guide
+   ./pages/User guide/user-guide
+   ./pages/Developer guide/developer-guide
 
     Code repository <https://github.com/TeamCOMPAS/COMPAS>
     Request an enhancement <https://github.com/TeamCOMPAS/COMPAS/issues/new>
     Report a problem <https://github.com/TeamCOMPAS/COMPAS/issues/new>
    
-   references
+   ./pages/references
 
-   contact-us
+   ./pages/contact-us
 
 
-If you use COMPAS in the preparation of a publication, please :doc:`cite COMPAS <how-to-cite>`.
+If you use COMPAS in the preparation of a publication, please :doc:`cite COMPAS <./pages/how-to-cite>`.
 
 Licence
 -------
