@@ -1,7 +1,7 @@
 BSE evolution model
 -------------------
 
-The high-level binary evolution model is shown in Figure 4.
+The high-level binary evolution model is shown in :ref:`Figure 4 <fig-4>`.
 
 .. _fig-4:
 
