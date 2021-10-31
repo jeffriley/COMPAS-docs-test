@@ -22,9 +22,9 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   getting-started
+   ./'Getting started'/getting-started
 
-   user-guide
+   ./'User guide'/user-guide
    developer-guide
 
     Code repository <https://github.com/TeamCOMPAS/COMPAS>

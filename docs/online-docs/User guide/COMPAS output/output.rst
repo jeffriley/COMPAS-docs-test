@@ -1,4 +1,4 @@
-COMPAS Output
+COMPAS output
 =============
 
 Summary and status information during the evolution of stars is written to stdout; how much is written depends upon the value of the 
